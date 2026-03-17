@@ -2,13 +2,62 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#0B1120">
-<title>CapEye Mobile | Auto Capital</title>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CapEye">
+<meta name="theme-color" content="#001A5E">
+<meta name="application-name" content="CapEye">
+
+<!-- WhatsApp / iMessage / Telegram link preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Auto Capital">
+<meta property="og:title" content="CapEye — Auto Capital Staff App">
+<meta property="og:description" content="Log in to see your vehicle queue, complete stage forms, capture photos and hand over to the next department.">
+<meta property="og:image" content="https://tripfactory-ajay.github.io/capeye-mobile/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://tripfactory-ajay.github.io/capeye-mobile/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CapEye — Auto Capital Staff App">
+<meta name="twitter:description" content="Vehicle workflow management for the Auto Capital team.">
+
+<title>CapEye | Auto Capital Staff App</title>
+
+<!-- PWA icons -->
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=">
+
+<!-- Inline manifest via blob (works on GitHub Pages) -->
+<script>
+(function(){
+  var manifest = {
+    "name": "CapEye — Auto Capital",
+    "short_name": "CapEye",
+    "description": "Vehicle workflow management for Auto Capital staff",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#0B1120",
+    "theme_color": "#001A5E",
+    "orientation": "portrait-primary",
+    "icons": [
+      {"src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any maskable"},
+      {"src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable"}
+    ]
+  };
+  var blob = new Blob([JSON.stringify(manifest)], {type:'application/manifest+json'});
+  var url  = URL.createObjectURL(blob);
+  var link = document.createElement('link');
+  link.rel  = 'manifest';
+  link.href = url;
+  document.head.appendChild(link);
+})();
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="./ac-data.js"></script>
+
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
@@ -403,148 +452,622 @@ html,body{height:100%;font-family:"DM Sans",sans-serif;background:#0e1422;color:
   .sb{height:36px;padding:0 16px 6px}
 }
 </style>
+<style>
+/* ═══ PWA STANDALONE OVERRIDES ═══ */
+html, body {
+  width:100%;height:100%;overflow:hidden;
+  background:#0B1120;
+}
+/* Force full screen — hide desktop wrapper */
+.outer {
+  display:block!important;padding:0!important;
+  background:#0B1120!important;
+  min-height:100vh;
+}
+.infop, .phonel { display:none!important; }
+.phonew { display:block!important;padding:0!important; }
+.phone {
+  width:100vw!important;
+  height:100vh!important;
+  height:100dvh!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  max-width:100%!important;
+}
+.di { display:none!important; }
+.sb {
+  height:env(safe-area-inset-top,44px)!important;
+  min-height:44px;
+  padding:env(safe-area-inset-top,10px) 18px 8px!important;
+  background:#0B1120!important;
+}
+/* Safe area for bottom nav */
+.bnav {
+  padding-bottom:env(safe-area-inset-bottom,0px)!important;
+}
+
+
+/* ═══ PWA FULL SCREEN OVERRIDE ═══ */
+html, body {
+  width: 100%; height: 100%; overflow: hidden;
+  background: #0B1120;
+  font-family: "DM Sans", sans-serif;
+}
+.outer { 
+  display: block !important; 
+  padding: 0 !important; 
+  background: #0B1120 !important;
+  min-height: 100vh;
+}
+.infop, .phonew .phone-lbl { display: none !important; }
+.phonew { display: block !important; padding: 0 !important; }
+.phone { 
+  width: 100vw !important; 
+  height: 100vh !important; 
+  height: 100dvh !important;
+  border-radius: 0 !important; 
+  box-shadow: none !important;
+  max-width: 100% !important;
+}
+.di { display: none !important; }
+.sb { height: 44px !important; padding: 0 18px 8px !important; }
+
+/* ═══ SPLASH SCREEN ═══ */
+#splashScreen {
+  position: fixed; inset: 0; z-index: 99999;
+  background: linear-gradient(160deg, #060c1a 0%, #001240 55%, #060c1a 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0;
+  transition: opacity .5s ease, transform .5s ease;
+}
+#splashScreen.hide {
+  opacity: 0; transform: scale(1.05); pointer-events: none;
+}
+.splash-grid {
+  position: absolute; inset: 0; opacity: .025;
+  background-image: 
+    repeating-linear-gradient(0deg,transparent,transparent 28px,#fff 28px,#fff 29px),
+    repeating-linear-gradient(90deg,transparent,transparent 28px,#fff 28px,#fff 29px);
+}
+.splash-glow {
+  position: absolute; inset: 0;
+  background: 
+    radial-gradient(circle at 20% 65%, rgba(200,16,46,.22) 0%, transparent 50%),
+    radial-gradient(circle at 85% 25%, rgba(0,26,94,.35) 0%, transparent 50%);
+}
+.splash-content {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; gap: 0;
+  animation: splashIn .6s ease both;
+}
+@keyframes splashIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.splash-logo-row {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+}
+.splash-logo { height: 38px; filter: brightness(0) invert(1); opacity: .9; }
+.splash-divider { width: 1px; height: 28px; background: rgba(255,255,255,.15); }
+.splash-badge {
+  background: #C8102E; color: #fff;
+  font-size: 11px; font-weight: 700; 
+  padding: 4px 10px; border-radius: 5px; letter-spacing: 1.5px;
+}
+.splash-title {
+  font-size: 32px; font-weight: 800; color: #fff;
+  text-align: center; line-height: 1.15; margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.splash-title em { color: #C8102E; font-style: normal; }
+.splash-sub {
+  font-size: 12px; color: rgba(255,255,255,.35);
+  text-align: center; margin-bottom: 48px;
+}
+.splash-loader {
+  width: 36px; height: 36px; position: relative;
+}
+.splash-loader::before, .splash-loader::after {
+  content: ''; position: absolute; border-radius: 50%;
+}
+.splash-loader::before {
+  inset: 0; border: 2.5px solid rgba(255,255,255,.1);
+}
+.splash-loader::after {
+  inset: 0; border: 2.5px solid transparent;
+  border-top-color: #C8102E; border-right-color: rgba(200,16,46,.3);
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.splash-version {
+  position: absolute; bottom: 40px;
+  font-size: 10px; color: rgba(255,255,255,.18);
+  text-align: center; letter-spacing: 1px;
+}
+
+/* ═══ ALERTS SCREEN ═══ */
+.alerts-screen {
+  display: none; flex-direction: column; flex: 1; overflow: hidden; background: var(--bg);
+  animation: fadeUp .2s ease;
+}
+.alerts-screen.active { display: flex; }
+.alert-hdr {
+  background: #fff; border-bottom: 1px solid var(--border);
+  padding: 13px 15px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.alert-hdr-title { font-size: 13px; font-weight: 800; color: var(--text); }
+.alert-badge-count {
+  background: var(--red); color: #fff;
+  font-size: 10px; font-weight: 700; padding: 3px 8px;
+  border-radius: 20px; min-width: 22px; text-align: center;
+}
+.alerts-body { flex: 1; overflow-y: auto; padding: 12px; }
+.alerts-body::-webkit-scrollbar { display: none; }
+.alert-item {
+  background: #fff; border: 1px solid var(--border);
+  border-left: 4px solid var(--ac, var(--red));
+  border-radius: var(--r); padding: 12px 14px;
+  margin-bottom: 8px; box-shadow: var(--sh); cursor: pointer;
+  transition: .14s;
+}
+.alert-item:active { transform: scale(.99); }
+.alert-item-type {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--ac, var(--red)); margin-bottom: 4px;
+}
+.alert-item-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.alert-item-sub { font-size: 11px; color: var(--muted); }
+.alert-item-time { font-size: 10px; color: var(--muted); margin-top: 6px; }
+
+/* ═══ CAMERA OVERLAY ═══ */
+#cameraOverlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: #000;
+  display: none; flex-direction: column;
+}
+#cameraOverlay.active { display: flex; }
+#cameraVideo {
+  flex: 1; width: 100%; object-fit: cover; background: #000;
+}
+.camera-hdr {
+  position: absolute; top: 0; left: 0; right: 0;
+  padding: env(safe-area-inset-top, 44px) 16px 16px;
+  background: linear-gradient(to bottom, rgba(0,0,0,.7), transparent);
+  display: flex; align-items: center; justify-content: space-between; z-index: 1;
+}
+.camera-close {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
+  border: none; color: #fff; font-size: 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.camera-label-tag {
+  background: rgba(0,0,0,.5); color: #fff; backdrop-filter: blur(8px);
+  padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+}
+.camera-footer {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 24px 0 max(env(safe-area-inset-bottom,20px),28px);
+  background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
+  display: flex; flex-direction: column; align-items: center; gap: 12px; z-index: 1;
+}
+.camera-shutter {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: #fff; border: 4px solid rgba(255,255,255,.4);
+  cursor: pointer; transition: .15s; box-shadow: 0 0 0 3px rgba(255,255,255,.2);
+}
+.camera-shutter:active { transform: scale(.92); background: #eee; }
+.camera-hint { font-size: 11px; color: rgba(255,255,255,.5); }
+.camera-preview-strip {
+  display: flex; gap: 8px; padding: 0 16px; overflow-x: auto;
+  max-width: 100%;
+}
+.camera-preview-strip::-webkit-scrollbar { display: none; }
+.cam-thumb {
+  width: 52px; height: 52px; border-radius: 8px; object-fit: cover;
+  flex-shrink: 0; border: 2px solid rgba(255,255,255,.3);
+}
+
+/* ═══ PHOTO SLOTS — real camera capable ═══ */
+.pslot { cursor: pointer; }
+.pslot.has-img img { 
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  border-radius: 7px;
+}
+.pslot.has-img { border-style: solid; border-color: var(--green); }
+
+/* ═══ NOTIFICATION PANEL ═══ */
+.notif-panel {
+  position: absolute; top: 48px; right: 12px; width: 280px;
+  background: #fff; border: 1px solid var(--border); border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.18); z-index: 500;
+  overflow: hidden; display: none;
+}
+.notif-panel.open { display: block; animation: dropIn .2s ease; }
+@keyframes dropIn { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
+.notif-panel-hdr {
+  padding: 12px 14px; border-bottom: 1px solid var(--border);
+  font-size: 11px; font-weight: 700; color: var(--text);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.notif-panel-clear { font-size: 10px; color: var(--navy); cursor: pointer; font-weight: 700; }
+.notif-item {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  display: flex; gap: 9px; align-items: flex-start; cursor: pointer;
+}
+.notif-item:last-child { border-bottom: none; }
+.notif-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
+.notif-item-text { font-size: 12px; color: var(--text2); line-height: 1.4; }
+.notif-item-time { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+/* ═══ SAFE AREA PADDING ═══ */
+.bnav { padding-bottom: env(safe-area-inset-bottom, 0px) !important; }
+.bnav .bn { padding-bottom: max(6px, env(safe-area-inset-bottom, 6px)) !important; }
+
+/* ═══ APP INSTALL BANNER ═══ */
+#installBanner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9000;
+  background: #fff; border-top: 1px solid var(--border);
+  padding: 14px 18px max(env(safe-area-inset-bottom,14px),14px);
+  box-shadow: 0 -4px 20px rgba(0,0,0,.12);
+  display: none; gap: 12px; align-items: center;
+  animation: slideUp2 .3s ease;
+}
+@keyframes slideUp2 { from { transform: translateY(100%); } to { transform: translateY(0); } }
+#installBanner.show { display: flex; }
+.ib-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: linear-gradient(135deg, #001A5E, #C8102E);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ib-icon span { font-size: 20px; }
+.ib-text { flex: 1; }
+.ib-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+.ib-sub { font-size: 11px; color: var(--muted); }
+.ib-add-btn {
+  background: var(--navy); color: #fff; border: none;
+  border-radius: 8px; padding: 9px 14px;
+  font-size: 12px; font-weight: 700; font-family: "DM Sans", sans-serif;
+  cursor: pointer; flex-shrink: 0;
+}
+.ib-dismiss { 
+  background: none; border: none; color: var(--muted);
+  font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0;
+}
+
+</style>
+
+<script>
+/* ═══ INLINE AC-DATA.JS ═══ */
+// Auto Capital - CapeEye System Data
+// Generated from ClickDealer export - 305 vehicles
+
+const AC_VEHICLES = [{"stockNo":"R0461","registration":"RF66UBC","regDate":"09/12/2016","make":"AUDI","model":"A7","variant":"3.0 TDI V6 ultra S line Sportback S Tronic 220 BHP Euro 6 ULEZ Free","colour":"BLACK","mileage":"95986","body":"Saloon","doors":"5","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":165.0,"mot":"14/11/2026","price":11999.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"03/12/2025","daysInStock":84,"workflowStage":"Advertising","workflowDept":"Marketing","stageStarted":"24/02/2026","daysInStage":1,"blocked":false},{"stockNo":"11064","registration":"CU21NBO","regDate":"31/03/2021","make":"BMW","model":"R SERIES","variant":"1254cc R 1250 GS ADVENTURE TE 134 BHP","colour":"BLACK","mileage":"0","body":"Not set","doors":"0","fuel":"Petrol","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"31/03/2024","price":5000.0,"status":"In Stock","location":"Stanmore 2","dateAdded":"18/01/2026","daysInStock":38,"workflowStage":"Valeting","workflowDept":"Valeting","stageStarted":"21/02/2026","daysInStage":4,"blocked":false},{"stockNo":"12672","registration":"BP21GYK","regDate":"28/05/2021","make":"BMW","model":"3 SERIES","variant":"2.0 320D SE PRO MHEV 4d AUTO 188 BHP","colour":"BLUE","mileage":"20089","body":"Saloon","doors":"4","fuel":"Elec D","gearbox":"Auto","fsh":"N","rfl":0,"mot":"27/06/2025","price":0.0,"status":"Off-site R","location":"ACL","dateAdded":"05/02/2026","daysInStock":20,"workflowStage":"External Work","workflowDept":"Workshop","stageStarted":"14/02/2026","daysInStage":11,"blocked":false},{"stockNo":"11332","registration":"LM61YPN","regDate":"10/11/2011","make":"CHEVROLET","model":"SPARK","variant":"1.0 PLUS 70 BHP Petrol","colour":"RED","mileage":"67552","body":"Hatchback","doors":"5","fuel":"Petrol","gearbox":"Manual","fsh":"N","rfl":35.0,"mot":"06/07/2026","price":2990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"15/12/2025","daysInStock":72,"workflowStage":"Advertising","workflowDept":"Marketing","stageStarted":"15/02/2026","daysInStage":10,"blocked":false},{"stockNo":"14245","registration":"WV72CVW","regDate":"30/11/2022","make":"CITROEN","model":"DISPATCH","variant":"1.5 BlueHDi 1000 X Pro M FWD 100 BHP Euro 6 ULEZ Free","colour":"WHITE","mileage":"85928","body":"PANEL VAN","doors":"6","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"29/11/2026","price":8490.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"19/02/2026","daysInStock":6,"workflowStage":"Intake","workflowDept":"Intake","stageStarted":"23/02/2026","daysInStage":2,"blocked":false},{"stockNo":"14222","registration":"KJ24ZSO","regDate":"31/07/2024","make":"CITROEN","model":"DISPATCH","variant":"1.5 BlueHDi Driver XL Panel Van 6dr Diesel Manual LWB Euro 6 (s/s) (120 ps)","colour":"WHITE","mileage":"31673","body":"PANEL VAN","doors":"6","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"31/07/2027","price":0.0,"status":"In Transit","location":"Stanmore Retail","dateAdded":"24/01/2026","daysInStock":32,"workflowStage":"Test Drive","workflowDept":"Sales","stageStarted":"15/02/2026","daysInStage":10,"blocked":true},{"stockNo":"14100","registration":"SY71VVA","regDate":"28/10/2021","make":"CITROEN","model":"BERLINGO","variant":"1.5 BlueHDi 650 Enterprise M Pro Panel Van 5dr Diesel Manual SWB Euro 6 (75 ps)","colour":"WHITE","mileage":"44224","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"27/10/2026","price":0.0,"status":"In Stock","location":"With Supplier","dateAdded":"28/01/2026","daysInStock":28,"workflowStage":"Test Drive","workflowDept":"Sales","stageStarted":"18/02/2026","daysInStage":7,"blocked":false},{"stockNo":"13083","registration":"HK73KKY","regDate":"29/11/2023","make":"FORD","model":"TRANSIT CUSTOM","variant":"2.0 320 Limited EcoBlue Automatic 136 BHP (New Shape) L1 H1 Euro 6 ULEZ Free","colour":"GREY","mileage":"18611","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":345.0,"mot":"28/11/2026","price":23990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"25/01/2026","daysInStock":31,"workflowStage":"Advertising","workflowDept":"Marketing","stageStarted":"15/02/2026","daysInStage":10,"blocked":true},{"stockNo":"13906","registration":"WR72ZGX","regDate":"11/11/2022","make":"FORD","model":"TRANSIT CUSTOM","variant":"2.0 320 EcoBlue Limited Automatic 170 BHP L1 H1 Combi Van Euro ULEZ Free","colour":"BLACK","mileage":"31640","body":"Combi Van","doors":"5","fuel":"Diesel","gearbox":"Auto","fsh":"Y","rfl":345.0,"mot":"03/12/2026","price":21990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"22/02/2026","daysInStock":3,"workflowStage":"Intake","workflowDept":"Intake","stageStarted":"22/02/2026","daysInStage":3,"blocked":false},{"stockNo":"13954","registration":"WV73YRR","regDate":"01/09/2023","make":"FORD","model":"TRANSIT CUSTOM","variant":"2.0 320 Limited EcoBlue Automatic 170 BHP L2 H1 Euro 6 ULEZ Free","colour":"WHITE","mileage":"26564","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":345.0,"mot":"01/09/2026","price":20490.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"30/12/2025","daysInStock":57,"workflowStage":"Accounts","workflowDept":"Finance","stageStarted":"20/02/2026","daysInStage":5,"blocked":false},{"stockNo":"13908","registration":"HX24SVK","regDate":"31/07/2024","make":"FORD","model":"TRANSIT","variant":"2.0 350 EcoBlue Leader Automatic FWD 165 BHP L3 H2 Euro 6 ULEZ Free","colour":"SILVER","mileage":"6895","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":345.0,"mot":"31/07/2027","price":23990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"03/02/2026","daysInStock":22,"workflowStage":"Valeting","workflowDept":"Valeting","stageStarted":"19/02/2026","daysInStage":6,"blocked":false},{"stockNo":"13764","registration":"WN74RSY","regDate":"27/09/2024","make":"FORD","model":"E-Transit Custom","variant":"320 65kWh Sport Automatic 218 BHP (New Shape) L2 H1 Electric Zero-Emission","colour":"BLUE","mileage":"15707","body":"PANEL VAN","doors":"5","fuel":"Electric","gearbox":"Auto","fsh":"N","rfl":0.0,"mot":"27/09/2027","price":24990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"09/02/2026","daysInStock":16,"workflowStage":"Paint","workflowDept":"Bodyshop","stageStarted":"18/02/2026","daysInStage":7,"blocked":false},{"stockNo":"13310","registration":"FL19NMA","regDate":"05/03/2019","make":"FORD","model":"FOCUS","variant":"1.0T EcoBoost ST-Line X 125 BHP Petrol Hatchback Euro 6 ULEZ Free","colour":"BLUE","mileage":"78488","body":"Hatchback","doors":"5","fuel":"Petrol","gearbox":"Manual","fsh":"N","rfl":195.0,"mot":"21/04/2026","price":8990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"10/02/2026","daysInStock":15,"workflowStage":"Mechanical","workflowDept":"Workshop","stageStarted":"19/02/2026","daysInStage":6,"blocked":false},{"stockNo":"13973","registration":"BT73NNB","regDate":"29/11/2023","make":"ISUZU","model":"D-MAX","variant":"1.9 TD DL20 Pickup Double Cab 165 BHP 4WD Euro 6 ULEZ Free","colour":"BLACK","mileage":"22458","body":"PICKUP","doors":"4","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"29/11/2026","price":23990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"07/12/2025","daysInStock":80,"workflowStage":"Accounts","workflowDept":"Finance","stageStarted":"24/02/2026","daysInStage":1,"blocked":false},{"stockNo":"R0465","registration":"RO75HDV","regDate":"30/09/2025","make":"KGM","model":"MUSSO","variant":"2.2D Rebel 4WD 202 BHP Double Cab Pickup Euro 6 ULEZ Free","colour":"BLACK","mileage":"22","body":"PICKUP","doors":"4","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"30/09/2028","price":24990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"26/12/2025","daysInStock":61,"workflowStage":"Advertising","workflowDept":"Marketing","stageStarted":"18/02/2026","daysInStage":7,"blocked":false},{"stockNo":"R0466","registration":"RO75HFH","regDate":"30/09/2025","make":"KGM","model":"MUSSO","variant":"2.2D Saracen 4WD Automatic 202 BHP Double Cab Pickup Euro 6 ULEZ Free","colour":"GREEN","mileage":"11","body":"PICKUP","doors":"4","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":345.0,"mot":"30/09/2028","price":26750.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"12/02/2026","daysInStock":13,"workflowStage":"Valeting","workflowDept":"Valeting","stageStarted":"20/02/2026","daysInStage":5,"blocked":false},{"stockNo":"14326","registration":"MF22RBX","regDate":"11/05/2022","make":"MAXUS","model":"EDELIVER 9","variant":"72kWh Automatic 204 BHP L3 H2 Fully Electric Zero-emission","colour":"WHITE","mileage":"4316","body":"PANEL VAN","doors":"5","fuel":"Electric","gearbox":"Auto","fsh":"N","rfl":0.0,"mot":"29/06/2026","price":17990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"04/12/2025","daysInStock":83,"workflowStage":"Accounts","workflowDept":"Finance","stageStarted":"15/02/2026","daysInStage":10,"blocked":true},{"stockNo":"13649","registration":"LR71KYU","regDate":"06/10/2021","make":"MAXUS","model":"EDELIVER 3","variant":"52 kWh Automatic 122 BHP L1 SWB Fully Electric Zero-emission","colour":"WHITE","mileage":"18838","body":"PANEL VAN","doors":"5","fuel":"Electric","gearbox":"Auto","fsh":"N","rfl":0.0,"mot":"05/10/2026","price":7990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"14/02/2026","daysInStock":11,"workflowStage":"Paint","workflowDept":"Bodyshop","stageStarted":"14/02/2026","daysInStage":11,"blocked":true},{"stockNo":"12802","registration":"KN72PUK","regDate":"08/09/2022","make":"MERCEDES-BENZ","model":"SPRINTER","variant":"2.0 315 CDI PREMIUM FWD 150 BHP L2 H2 Euro 6 ULEZ Free","colour":"SILVER","mileage":"28720","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"07/07/2026","price":22990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"16/01/2026","daysInStock":40,"workflowStage":"Advertising","workflowDept":"Marketing","stageStarted":"21/02/2026","daysInStage":4,"blocked":false},{"stockNo":"13992","registration":"YC72VUO","regDate":"24/10/2022","make":"MERCEDES-BENZ","model":"SPRINTER","variant":"2.0 315 CDI PREMIUM RWD 150 BHP L3 H2 Euro 6 ULEZ Free","colour":"WHITE","mileage":"32595","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"11/01/2027","price":25990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"10/02/2026","daysInStock":15,"workflowStage":"External Work","workflowDept":"Workshop","stageStarted":"20/02/2026","daysInStage":5,"blocked":false},{"stockNo":"14260","registration":"NL71WCJ","regDate":"28/10/2021","make":"MERCEDES-BENZ","model":"VITO","variant":"2.0 114 CDI Progressive G-Tronic RWD 136 BHP L2 LWB Euro 6 ULEZ Compliant","colour":"WHITE","mileage":"85759","body":"PANEL VAN","doors":"6","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":345.0,"mot":"28/10/2026","price":12990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"26/12/2025","daysInStock":61,"workflowStage":"Accounts","workflowDept":"Finance","stageStarted":"22/02/2026","daysInStage":3,"blocked":false},{"stockNo":"13341","registration":"GY69WNR","regDate":"18/11/2019","make":"MERCEDES-BENZ","model":"A-CLASS","variant":"2.0 A35 AMG Premium SpdS DCT 4MATIC 306 BHP Petrol Hatchback Euro 6 ULEZ Free","colour":"BLUE","mileage":"47188","body":"Hatchback","doors":"5","fuel":"Petrol","gearbox":"Auto","fsh":"N","rfl":0,"mot":"25/11/2026","price":21990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"06/01/2026","daysInStock":50,"workflowStage":"Accounts","workflowDept":"Finance","stageStarted":"21/02/2026","daysInStage":4,"blocked":false},{"stockNo":"14201","registration":"YH73VXM","regDate":"30/10/2023","make":"NISSAN","model":"TOWNSTAR","variant":"1.3 TCe Acenta 130 BHP Petrol SWB L1 Euro 6 ULEZ Free","colour":"GREY","mileage":"8984","body":"PANEL VAN","doors":"6","fuel":"Petrol","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"06/10/2026","price":13790.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"19/01/2026","daysInStock":37,"workflowStage":"External Work","workflowDept":"Workshop","stageStarted":"15/02/2026","daysInStage":10,"blocked":false},{"stockNo":"14150","registration":"MD22EEO","regDate":"30/06/2022","make":"PEUGEOT","model":"BOXER","variant":"2.2 BlueHDi 435 Professional 140 BHP L4 H2 Euro 6 ULEZ free","colour":"WHITE","mileage":"56633","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"01/10/2026","price":13990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"16/12/2025","daysInStock":71,"workflowStage":"Test Drive","workflowDept":"Sales","stageStarted":"22/02/2026","daysInStage":3,"blocked":false},{"stockNo":"14298","registration":"KS74LHM","regDate":"31/10/2024","make":"PEUGEOT","model":"EXPERT","variant":"1.5 BlueHDi Asphalt 120 BHP LWB Euro 6 ULEZ Compliant","colour":"WHITE","mileage":"13819","body":"PANEL VAN","doors":"6","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"31/10/2027","price":19990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"25/12/2025","daysInStock":62,"workflowStage":"Management","workflowDept":"Management","stageStarted":"20/02/2026","daysInStage":5,"blocked":false},{"stockNo":"13626","registration":"HN16NNL","regDate":"31/03/2016","make":"RENAULT","model":"CLIO","variant":"0.9 TCe Dynamique Nav 90 BHP Petrol Hatchback Euro 6 ULEZ Free","colour":"RED","mileage":"80000","body":"Hatchback","doors":"5","fuel":"Petrol","gearbox":"Manual","fsh":"N","rfl":20.0,"mot":"12/08/2026","price":3490.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"03/12/2025","daysInStock":84,"workflowStage":"Test Drive","workflowDept":"Sales","stageStarted":"14/02/2026","daysInStage":11,"blocked":false},{"stockNo":"13898","registration":"CV22ODG","regDate":"25/05/2022","make":"TOYOTA","model":"PROACE CITY","variant":"1.5 BlueHDi Active 100 BHP SWB Euro 6 ULEZ Free","colour":"WHITE","mileage":"103207","body":"PANEL VAN","doors":"6","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"24/05/2026","price":6990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"15/02/2026","daysInStock":10,"workflowStage":"Legal & Docs","workflowDept":"Management","stageStarted":"24/02/2026","daysInStage":1,"blocked":false},{"stockNo":"14144","registration":"DV71JCJ","regDate":"25/10/2021","make":"VAUXHALL","model":"MOVANO","variant":"2.3 CDTi 3500 BiTurbo Edition FWD 135 BHP L3 H2 Euro 6 ULEZ Free","colour":"WHITE","mileage":"82178","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"20/07/2026","price":8490.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"13/01/2026","daysInStock":43,"workflowStage":"Management","workflowDept":"Management","stageStarted":"20/02/2026","daysInStage":5,"blocked":false},{"stockNo":"14194","registration":"DY21JZD","regDate":"31/03/2021","make":"VAUXHALL","model":"COMBO","variant":"1.5 Turbo D 2300 Dynamic 100 BHP L2 H1 Euro 6 ULEZ Free","colour":"WHITE","mileage":"44762","body":"PANEL VAN","doors":"6","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"02/02/2027","price":10490.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"14/02/2026","daysInStock":11,"workflowStage":"Legal & Docs","workflowDept":"Management","stageStarted":"15/02/2026","daysInStage":10,"blocked":false},{"stockNo":"R0463","registration":"GY73NDN","regDate":"03/01/2024","make":"VOLKSWAGEN","model":"TRANSPORTER","variant":"2.0 TDI T30 Startline 110 BHP SWB Euro 6 ULEZ Free","colour":"GREY","mileage":"31157","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"03/01/2027","price":19990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"13/01/2026","daysInStock":43,"workflowStage":"Test Drive","workflowDept":"Sales","stageStarted":"14/02/2026","daysInStage":11,"blocked":false},{"stockNo":"14029","registration":"LX23CKC","regDate":"22/05/2023","make":"VOLKSWAGEN","model":"CRAFTER","variant":"2.0 TDI CR35 Trendline Automatic FWD 140 BHP LWB High Roof Euro 6 ULEZ Free","colour":"WHITE","mileage":"113626","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":345.0,"mot":"22/05/2026","price":18990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"02/12/2025","daysInStock":85,"workflowStage":"Management","workflowDept":"Management","stageStarted":"22/02/2026","daysInStage":3,"blocked":false},{"stockNo":"14187","registration":"FE72ZKD","regDate":"31/10/2022","make":"VOLKSWAGEN","model":"CRAFTER","variant":"2.0 TDI CR35 Trendline FWD 140 BHP MWB Euro 6 ULEZ Compliant","colour":"WHITE","mileage":"51419","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"05/01/2027","price":18990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"20/01/2026","daysInStock":36,"workflowStage":"Valeting","workflowDept":"Valeting","stageStarted":"21/02/2026","daysInStage":4,"blocked":false},{"stockNo":"14249","registration":"FN72OOU","regDate":"28/12/2022","make":"VOLKSWAGEN","model":"CADDY","variant":"2.0 TDI C20 Commerce 102 BHP SWB Euro 6 ULEZ Compliant","colour":"WHITE","mileage":"43582","body":"PANEL VAN","doors":"5","fuel":"Diesel","gearbox":"Manual","fsh":"N","rfl":345.0,"mot":"27/12/2026","price":12490.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"13/12/2025","daysInStock":74,"workflowStage":"Accounts","workflowDept":"Finance","stageStarted":"13/02/2026","daysInStage":12,"blocked":false},{"stockNo":"R0478","registration":"AE74VYX","regDate":"30/09/2024","make":"VOLKSWAGEN","model":"AMAROK","variant":"2.0 TDI Life Pickup Double Cab Automatic 4WD 205 BHP 4Motion Euro 6 ULEZ Free","colour":"BLACK","mileage":"18520","body":"PICKUP","doors":"4","fuel":"Diesel","gearbox":"Auto","fsh":"N","rfl":345.0,"mot":"30/09/2027","price":25990.0,"status":"In Stock","location":"Stanmore Retail","dateAdded":"10/12/2025","daysInStock":77,"workflowStage":"Management","workflowDept":"Management","stageStarted":"19/02/2026","daysInStage":6,"blocked":false}];
+
+const AC_STAFF = [
+  {name:"Sol Adam",        role:"CEO",                    dept:"Management"},
+  {name:"Ali Amood",       role:"CEO",                    dept:"Management"},
+  {name:"Keith Hardy",     role:"General Manager",        dept:"Management"},
+  {name:"Ibrahim Ata",     role:"Sales Manager",          dept:"Sales"},
+  {name:"Ali Soliemani",   role:"Showroom Manager",       dept:"Sales"},
+  {name:"Germaine Dua",    role:"Sales",                  dept:"Sales"},
+  {name:"Haider Ahmed",    role:"Sales",                  dept:"Sales"},
+  {name:"Moamel Al Ameri", role:"Sales",                  dept:"Sales"},
+  {name:"Ismael Al Ameri", role:"Advertising",            dept:"Marketing"},
+  {name:"Mustafa Naama",   role:"Advertising",            dept:"Marketing"},
+  {name:"Abu Amarts",      role:"Accounts",               dept:"Finance"},
+  {name:"Morteza Rahamian",role:"Mechanic",               dept:"Workshop"},
+  {name:"Marcin Kiljan",   role:"Mechanic",               dept:"Workshop"},
+  {name:"Sia Vajihi",      role:"Mechanic",               dept:"Workshop"},
+  {name:"Iman Zarien",     role:"Mechanic",               dept:"Workshop"},
+  {name:"Gorgino Barnes",  role:"Valeting",               dept:"Valeting"},
+  {name:"Stanslaw Marzec", role:"Pre Inspection / Intake",dept:"Intake"}
+];
+
+const AC_DEPARTMENTS = [
+  {name:"Management", icon:"👔", color:"#64748b"},
+  {name:"Sales",      icon:"🤝", color:"#3b7ff5"},
+  {name:"Workshop",   icon:"🔧", color:"#ef4444"},
+  {name:"Valeting",   icon:"🧹", color:"#10b981"},
+  {name:"Marketing",  icon:"📢", color:"#8b5cf6"},
+  {name:"Finance",    icon:"💰", color:"#a855f7"},
+  {name:"Bodyshop",   icon:"🎨", color:"#f97316"},
+  {name:"Intake",     icon:"📋", color:"#6366f1"}
+];
+
+const AC_LOCATIONS = ["Main Yard","Showroom","With Supplier","Workshop - Bay 1","Workshop - Bay 2","Workshop - Bay 3","Workshop - Bay 4","Workshop - Bay 5","Workshop - Bay 6","Valeting","Bodywork","Jay - Detailing","External Tyre Shop","External Garage","MOT Centre","Stanmore Retail","Stanmore 2","Stanmore PDI","Non-Driveable"];
+
+const AC_FAULTS = ["Engine Fault","Transmission / Gearbox Fault","Clutch Fault","Brakes Fault","Suspension Fault","Steering Fault","Electrical Fault","Battery / Charging Fault","Exhaust / Emissions Fault","DPF / AdBlue Fault","Cooling System Fault","Air Conditioning Fault","Fuel System Fault","Turbocharger Fault","Drivetrain / Differential Fault","Bodywork / Corrosion","Locks / Security / Keys","Lighting Fault","Interior / Trim Fault","Tyres / Wheels Fault","General Maintenance / Service","Other / Unknown Fault"];
+
+const AC_REPAIRS = ["Inspection Only","Adjust / Calibrate","Clean","Lubricate","Replace Part","Repair Part","Software Update / Reset","Recharge / Refill Fluid","Road Test","Remove & Refit","Upgrade / Retrofit","Outsource Repair"];
+
+const AC_PARTS = ["Air Filter","Cabin / Pollen Filter","Fuel Filter","Oil Filter","Timing Belt / Cambelt","Timing Chain","Drive Belt / Serpentine Belt","Alternator Belt","Spark Plug","Glow Plug","Ignition Coil","Battery","Starter Motor","Alternator","Turbocharger","Intercooler","Radiator","Coolant Expansion Tank","Water Pump","Thermostat","Brake Pads","Brake Discs","Caliper","Wheel Bearing","CV Joint","Driveshaft","Shock Absorber","Spring","Tie Rod","Ball Joint","Steering Rack","Power Steering Pump","Clutch Kit","Flywheel","Gearbox Oil","Engine Oil","Coolant","Brake Fluid","Tyres"];
+
+const AC_WORKFLOW_STAGES = [
+  {id:1,  name:'Intake',        dept:'Intake',      color:'#6366f1', handoverTo:'Workshop'},
+  {id:2,  name:'Bodywork',      dept:'Bodyshop',    color:'#f59e0b', handoverTo:'Bodyshop'},
+  {id:3,  name:'Paint',         dept:'Bodyshop',    color:'#f97316', handoverTo:'Workshop'},
+  {id:4,  name:'Legal & Docs',  dept:'Management',  color:'#8b5cf6', handoverTo:'Workshop'},
+  {id:5,  name:'Mechanical',    dept:'Workshop',    color:'#ef4444', handoverTo:'Workshop'},
+  {id:6,  name:'External Work', dept:'Workshop',    color:'#dc2626', handoverTo:'Valeting'},
+  {id:7,  name:'Valeting',      dept:'Valeting',    color:'#10b981', handoverTo:'Workshop'},
+  {id:8,  name:'Fault Overview',dept:'Workshop',    color:'#06b6d4', handoverTo:'Marketing'},
+  {id:9,  name:'Advertising',   dept:'Marketing',   color:'#3b82f6', handoverTo:'Sales'},
+  {id:10, name:'Test Drive',    dept:'Sales',       color:'#84cc16', handoverTo:'Finance'},
+  {id:11, name:'Accounts',      dept:'Finance',     color:'#a855f7', handoverTo:'Management'},
+  {id:12, name:'Management',    dept:'Management',  color:'#64748b', handoverTo:null}
+];
+
+// ─── localStorage helpers ───────────────────────────────────────────
+function getVehicles() {
+  try { const s = JSON.parse(localStorage.getItem('ac_vehicles')||'[]'); return s.length ? s : AC_VEHICLES; }
+  catch(e) { return AC_VEHICLES; }
+}
+function saveVehicles(v) { localStorage.setItem('ac_vehicles', JSON.stringify(v)); }
+function getWorkflow(stockNo) { return JSON.parse(localStorage.getItem('ac_wf_'+stockNo)||'{}'); }
+function saveWorkflow(stockNo, data) { localStorage.setItem('ac_wf_'+stockNo, JSON.stringify(data)); }
+
+// ─── Handover / task queue ───────────────────────────────────────────
+function saveHandover(stockNo, stageId, data) {
+  localStorage.setItem('ac_ho_'+stockNo+'_'+stageId, JSON.stringify({...data, ts: new Date().toISOString()}));
+}
+function getHandover(stockNo, stageId) {
+  return JSON.parse(localStorage.getItem('ac_ho_'+stockNo+'_'+stageId)||'null');
+}
+function assignTask(staffName, stockNo, stageId, stageName, note, vehicle) {
+  const key = 'ac_tasks_'+staffName.replace(/\s/g,'_');
+  const tasks = JSON.parse(localStorage.getItem(key)||'[]');
+  tasks.unshift({id:Date.now(), stockNo, stageId, stageName, note, vehicle, assignedAt:new Date().toISOString(), status:'pending'});
+  localStorage.setItem(key, JSON.stringify(tasks));
+  // Also log to global alert feed
+  addAlert({type:'handover', level:'info',
+    title:`${stageName} complete — handover to ${staffName}`,
+    body:`${vehicle?.registration||stockNo} · ${vehicle?.make||''} ${vehicle?.model||''} · ${note||'No note'}`,
+    stockNo});
+}
+function getMyTasks(staffName) {
+  return JSON.parse(localStorage.getItem('ac_tasks_'+staffName.replace(/\s/g,'_'))||'[]');
+}
+function completeTask(staffName, taskId) {
+  const key = 'ac_tasks_'+staffName.replace(/\s/g,'_');
+  const tasks = JSON.parse(localStorage.getItem(key)||'[]');
+  localStorage.setItem(key, JSON.stringify(tasks.map(t => t.id===taskId ? {...t, status:'done', completedAt:new Date().toISOString()} : t)));
+}
+
+// ─── Alerts ──────────────────────────────────────────────────────────
+function getAlerts() { return JSON.parse(localStorage.getItem('ac_alerts')||'[]'); }
+function addAlert(alert) {
+  const alerts = getAlerts();
+  alerts.unshift({...alert, id:Date.now(), ts:new Date().toISOString(), read:false});
+  localStorage.setItem('ac_alerts', JSON.stringify(alerts.slice(0,300)));
+}
+function markAlertRead(id) {
+  localStorage.setItem('ac_alerts', JSON.stringify(getAlerts().map(a => a.id===id?{...a,read:true}:a)));
+}
+function markAllAlertsRead() {
+  localStorage.setItem('ac_alerts', JSON.stringify(getAlerts().map(a => ({...a,read:true}))));
+}
+
+// ─── Utility ─────────────────────────────────────────────────────────
+function formatGBP(n) {
+  return new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(n||0);
+}
+function daysSince(dateStr) {
+  if (!dateStr) return 0;
+  const parts = dateStr.split('/');
+  if (parts.length!==3) return 0;
+  return Math.floor((Date.now()-new Date(parts[2],parts[1]-1,parts[0]).getTime())/86400000);
+}
+function hoursInStage(stockNo, stageId) {
+  const stage = getWorkflow(stockNo)[stageId];
+  if (!stage || !stage.startedAt) return 0;
+  return Math.floor((Date.now()-new Date(stage.startedAt).getTime())/3600000);
+}
+
+</script>
 </head>
 <body>
-<div class="outer">
 
-<!-- INFO PANEL -->
-<div class="infop">
-  <a href="./index.html" class="ip-back"><i class="fas fa-arrow-left"></i> Back to CapEye</a>
-  <div class="ip-lr">
-    <img src="./auto-capital-logo.png" class="ip-logo" onerror="this.style.display='none'">
-    <div class="ip-sep"></div>
-    <div class="ip-ce">CAPEYE</div>
+<!-- ═══ SPLASH ═══ -->
+<div id="splashScreen">
+  <div class="splash-grid"></div>
+  <div class="splash-glow"></div>
+  <div class="splash-content">
+    <div class="splash-logo-row">
+      <img src="data:image/png;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="splash-logo" alt="Auto Capital">
+      <div class="splash-divider"></div>
+      <div class="splash-badge">CAPEYE</div>
+    </div>
+    <div class="splash-title">Staff <em>Portal</em></div>
+    <div class="splash-sub">Auto Capital Command Centre</div>
+    <div class="splash-loader"></div>
   </div>
-  <div>
-    <div class="ip-h">Staff<br><em>Login</em></div>
-    <div class="ip-d">Select a team member below to auto-fill the login. All demo passwords are <strong style="color:rgba(255,255,255,.55)">demo123</strong>.</div>
-  </div>
-  <div class="ip-div"></div>
-  <div class="ip-sl">Operational Team</div>
-  <div id="selectorCards"></div>
-  <div class="ip-div"></div>
-  <div class="ip-sl">Management</div>
-  <div id="selectorMgmt"></div>
-  <div class="ip-note" style="margin-top:8px">Each role sees only their own department queue and relevant stage forms. Management see everything.</div>
+  <div class="splash-version">v1.0 · Demo Build</div>
 </div>
 
-<!-- PHONE -->
-<div class="phonew">
-  <div class="phonel">Live interactive demo</div>
-  <div class="phone" id="thePhone">
-    <div class="di"><div class="di-cam"></div></div>
-    <div class="sb"><span id="phoneTime">9:41</span><div class="sb-r"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-three-quarters"></i></div></div>
+<!-- ═══ CAMERA OVERLAY ═══ -->
+<div id="cameraOverlay">
+  <div class="camera-hdr">
+    <button class="camera-close" onclick="closeCamera()"><i class="fas fa-times"></i></button>
+    <div class="camera-label-tag" id="cameraSlotLabel">Photo</div>
+    <div style="width:36px"></div>
+  </div>
+  <video id="cameraVideo" autoplay playsinline muted style="flex:1;width:100%;object-fit:cover;background:#111;display:block"></video>
+  <div id="simModeMsg" style="display:none;flex:1;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:linear-gradient(160deg,#0B1120,#001750);padding:40px 24px;text-align:center">
+    <div style="font-size:48px">📸</div>
+    <div style="font-size:16px;font-weight:700;color:#fff">Demo Photo Mode</div>
+    <div style="font-size:13px;color:rgba(255,255,255,.4);max-width:240px;line-height:1.65">Camera access not available. Tap the button below to simulate capturing a photo — it will be saved to the vehicle record.</div>
+  </div>
+  <div id="cameraFlash" style="position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .12s;z-index:1"></div>
+  <canvas id="cameraCanvas" style="display:none"></canvas>
+  <div class="camera-footer">
+    <div class="camera-preview-strip" id="camPreviewStrip"></div>
+    <button class="camera-shutter" onclick="capturePhoto()" title="Capture photo"></button>
+    <div class="camera-hint">Tap to capture</div>
+  </div>
+</div>
 
-    <!-- LOGIN -->
-    <div class="screen active" id="sc-login">
-      <div class="lhero">
-        <div class="lhero-g"></div><div class="lhero-glow"></div>
-        <div class="lhero-c">
-          <div class="lhero-lr">
-            <img src="./auto-capital-logo.png" class="lhero-logo" onerror="this.style.display='none'">
-            <div class="lhero-s"></div>
-            <div class="lhero-ce">CAPEYE</div>
-          </div>
-          <div class="lhero-t">Staff <em>Portal</em></div>
-          <div class="lhero-sub">Auto Capital Command Centre</div>
-        </div>
+<!-- ═══ MAIN APP ═══ -->
+<div class="outer">
+<div class="phonew">
+<div class="phone" id="thePhone">
+<div class="di"><div class="di-cam"></div></div>
+<div class="sb" id="statusBar">
+  <span id="phoneTime">9:41</span>
+  <div class="sb-r"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-three-quarters"></i></div>
+</div>
+
+<!-- ═════════════ LOGIN SCREEN ═════════════ -->
+<div class="screen active" id="sc-login">
+  <div class="lhero">
+    <div class="lhero-g"></div><div class="lhero-glow"></div>
+    <div class="lhero-c">
+      <div class="lhero-lr">
+        <img src="data:image/png;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="lhero-logo" alt="Auto Capital">
+        <div class="lhero-s"></div>
+        <div class="lhero-ce">CAPEYE</div>
       </div>
-      <div class="lform">
-        <div class="lg">Welcome back</div>
-        <div class="lgs">Sign in to see your tasks and vehicles</div>
-        <div class="lfg">
+      <div class="lhero-t">Staff <em>Portal</em></div>
+      <div class="lhero-sub">Auto Capital Command Centre</div>
+    </div>
+  </div>
+  <div class="lform">
+    <div class="lg">Select your account</div>
+    <div class="lgs">Tap your name or sign in manually</div>
+    <!-- Quick select cards -->
+    <div id="loginQuickCards" style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px"></div>
+    <!-- Manual login -->
+    <details style="margin-bottom:10px">
+      <summary style="font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:4px 0;list-style:none;display:flex;align-items:center;gap:5px">
+        <i class="fas fa-keyboard" style="font-size:9px"></i> Sign in manually
+      </summary>
+      <div style="padding-top:10px;display:flex;flex-direction:column;gap:8px">
+        <div class="lfg" style="margin:0">
           <label>Username</label>
           <div class="lfiw"><i class="fas fa-user lfii"></i><input class="lfi" id="loginUser" placeholder="e.g. keith" autocomplete="off"></div>
         </div>
-        <div class="lfg">
+        <div class="lfg" style="margin:0">
           <label>Password</label>
           <div class="lfiw"><i class="fas fa-lock lfii"></i><input class="lfi" id="loginPass" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"></div>
         </div>
-        <div class="lerr" id="loginErr"><i class="fas fa-exclamation-circle"></i> Incorrect username or password</div>
-        <button class="lbtn" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</button>
-        <div class="lql">Quick login</div>
-        <div class="lchips" id="loginChips"></div>
       </div>
-    </div>
+    </details>
+    <div class="lerr" id="loginErr"><i class="fas fa-exclamation-circle"></i> Incorrect username or password</div>
+    <button class="lbtn" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+    <div style="font-size:10px;color:var(--muted);text-align:center;padding-bottom:20px">All demo passwords: <strong style="color:var(--text2)">demo123</strong></div>
+  </div>
+</div>
 
-    <!-- APP SHELL -->
-    <div class="appsh" id="appShell">
-      <div class="ahdr">
-        <div class="ahdr-top">
-          <div class="ahdr-l">
-            <img src="./auto-capital-logo.png" class="ahdr-logo" onerror="this.style.display='none'">
-            <div class="ahdr-sep"></div>
-            <div class="ahdr-ce">CE</div>
+<!-- ═════════════ APP SHELL ═════════════ -->
+<div class="appsh" id="appShell">
+  <div class="ahdr">
+    <div class="ahdr-top">
+      <div class="ahdr-l">
+        <img src="data:image/png;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="ahdr-logo" alt="Auto Capital" style="height:22px">
+        <div class="ahdr-sep"></div>
+        <div class="ahdr-ce">CE</div>
+      </div>
+      <div class="ahdr-r">
+        <div class="ahdr-user">
+          <div class="ahdr-name" id="hdrName"></div>
+          <div class="ahdr-role" id="hdrRole"></div>
+        </div>
+        <!-- Bell with notification panel -->
+        <div style="position:relative">
+          <div class="nbtn" id="notifBtn" onclick="toggleNotifPanel()">
+            <i class="fas fa-bell"></i>
+            <div class="nbadge" id="nbadge"></div>
           </div>
-          <div class="ahdr-r">
-            <div class="ahdr-user">
-              <div class="ahdr-name" id="hdrName"></div>
-              <div class="ahdr-role" id="hdrRole"></div>
+          <div class="notif-panel" id="notifPanel">
+            <div class="notif-panel-hdr">
+              Notifications
+              <span class="notif-panel-clear" onclick="toggleNotifPanel()">Done</span>
             </div>
-            <div class="nbtn" onclick="showToast('No new notifications')">
-              <i class="fas fa-bell"></i>
-              <div class="nbadge" id="nbadge"></div>
-            </div>
+            <div class="notif-items"></div>
           </div>
         </div>
       </div>
-      <div class="abody" id="abody">
-        <div class="pv active" id="pv-home"></div>
-        <div class="pv" id="pv-tasks"></div>
-        <div class="pv" id="pv-keys"></div>
-        <div class="pv" id="pv-me"></div>
-      </div>
-      <div class="bnav">
-        <div class="bn active" id="bn-home" onclick="setTab('home')"><i class="fas fa-home"></i>Home</div>
-        <div class="bn" id="bn-tasks" onclick="setTab('tasks')"><i class="fas fa-tasks"></i>Tasks<div class="bn-pip" id="taskpip"></div></div>
-        <div class="bn" id="bn-keys" onclick="setTab('keys')"><i class="fas fa-key"></i>Keys</div>
-        <div class="bn" id="bn-me" onclick="setTab('me')"><i class="fas fa-user"></i>Me</div>
-      </div>
     </div>
+  </div>
 
-    <!-- VEHICLE DETAIL -->
-    <div class="vds" id="vdScreen">
-      <div class="vdhdr">
-        <div class="vdhtop">
-          <div class="backbtn" onclick="closeVehicle()"><i class="fas fa-chevron-left"></i></div>
-          <div class="vdhi">
-            <div class="vdhtitle" id="vdTitle"></div>
-            <div class="vdhsub" id="vdSub"></div>
-          </div>
-          <div class="vdreg" id="vdReg"></div>
-        </div>
-      </div>
-      <div class="vhero">
-        <div class="vhero-g"></div>
-        <div class="vhero-c">
-          <div class="vhero-row">
-            <div><div class="vhero-make" id="vhMake"></div><div class="vhero-var" id="vhVar"></div></div>
-            <div><div class="vhero-price" id="vhPrice"></div><div class="vhero-plbl">Listed price</div></div>
-          </div>
-          <div class="vchips" id="vhChips"></div>
-        </div>
-      </div>
-      <div class="vdprog">
-        <div class="vdprog-lbl">Pipeline progress</div>
-        <div class="strack" id="strack"></div>
-      </div>
-      <div class="vdtabs" id="vdtabs"></div>
-      <div class="vdbody" id="vdbody"></div>
+  <div class="abody" id="abody">
+    <div class="pv active" id="pv-home"></div>
+    <div class="pv" id="pv-tasks"></div>
+    <div class="pv" id="pv-alerts"></div>
+    <div class="pv" id="pv-keys"></div>
+    <div class="pv" id="pv-me"></div>
+  </div>
+
+  <div class="bnav">
+    <div class="bn active" id="bn-home" onclick="setTab('home')"><i class="fas fa-home"></i>Home</div>
+    <div class="bn" id="bn-tasks" onclick="setTab('tasks')"><i class="fas fa-tasks"></i>Tasks<div class="bn-pip" id="taskpip"></div></div>
+    <div class="bn" id="bn-alerts" onclick="setTab('alerts')">
+      <i class="fas fa-bell"></i>Alerts
+      <div class="bn-pip" id="alertpip"></div>
+      <span id="alertNavBadge" style="display:none;position:absolute;top:5px;right:calc(50% - 18px);background:var(--red);color:#fff;font-size:8px;font-weight:700;padding:1px 4px;border-radius:8px;border:1.5px solid #fff;min-width:14px;text-align:center"></span>
     </div>
+    <div class="bn" id="bn-keys" onclick="setTab('keys')"><i class="fas fa-key"></i>Keys</div>
+    <div class="bn" id="bn-me" onclick="setTab('me')"><i class="fas fa-user"></i>Me</div>
+  </div>
+</div>
 
-    <!-- SUCCESS -->
-    <div class="sucsc" id="sucScreen">
-      <div class="sucico">✅</div>
-      <div class="such" id="sucH">Stage Complete!</div>
-      <div class="sucs" id="sucS">Handed over successfully. Audit trail updated.</div>
-      <button class="sucback" onclick="afterSuccess()">← Back to Tasks</button>
+<!-- ═════════════ VEHICLE DETAIL ═════════════ -->
+<div class="vds" id="vdScreen">
+  <div class="vdhdr">
+    <div class="vdhtop">
+      <div class="backbtn" onclick="closeVehicle()"><i class="fas fa-chevron-left"></i></div>
+      <div class="vdhi">
+        <div class="vdhtitle" id="vdTitle"></div>
+        <div class="vdhsub" id="vdSub"></div>
+      </div>
+      <div class="vdreg" id="vdReg"></div>
     </div>
+  </div>
+  <div class="vhero"><div class="vhero-g"></div>
+    <div class="vhero-c">
+      <div class="vhero-row">
+        <div><div class="vhero-make" id="vhMake"></div><div class="vhero-var" id="vhVar"></div></div>
+        <div><div class="vhero-price" id="vhPrice"></div><div class="vhero-plbl">Listed price</div></div>
+      </div>
+      <div class="vchips" id="vhChips"></div>
+    </div>
+  </div>
+  <div class="vdprog">
+    <div class="vdprog-lbl">Pipeline progress</div>
+    <div class="strack" id="strack"></div>
+  </div>
+  <div class="vdtabs" id="vdtabs"></div>
+  <div class="vdbody" id="vdbody"></div>
+</div>
 
-  </div><!-- /phone -->
+<!-- ═════════════ SUCCESS ═════════════ -->
+<div class="sucsc" id="sucScreen">
+  <div class="sucico">✅</div>
+  <div class="such" id="sucH">Stage Complete!</div>
+  <div class="sucs" id="sucS">Handed over successfully. Audit trail updated.</div>
+  <button class="sucback" onclick="afterSuccess()">← Back to Tasks</button>
+</div>
+
+</div><!-- /phone -->
 </div><!-- /phonew -->
 </div><!-- /outer -->
 
+<!-- ═══ INSTALL BANNER ═══ -->
+<div id="installBanner">
+  <div class="ib-icon"><span>🚐</span></div>
+  <div class="ib-text">
+    <div class="ib-title">Add CapEye to Home Screen</div>
+    <div class="ib-sub">One tap access — works offline</div>
+  </div>
+  <button class="ib-add-btn" onclick="triggerInstall()">Add</button>
+  <button class="ib-dismiss" onclick="dismissInstall()">&times;</button>
+</div>
+
 <script>
+/* ═══ CORE APP JS ═══ */
+
 // ════════════════════════════════════════════════════
 // USERS & CONSTANTS
 // ════════════════════════════════════════════════════
@@ -1536,6 +2059,439 @@ function afterSuccess() {
 function closeVehicle() {
   document.getElementById('vdScreen').classList.remove('active');
   document.getElementById('appShell').classList.add('active');
+}
+
+</script>
+<script>
+/* ═══ PWA ENHANCEMENTS ═══ */
+
+// ═══════════════════════════════════════════════════
+// SPLASH SCREEN
+// ═══════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', function() {
+  // Show splash for 2s then fade out
+  setTimeout(function() {
+    var splash = document.getElementById('splashScreen');
+    if (splash) {
+      splash.classList.add('hide');
+      setTimeout(function() { splash.style.display = 'none'; }, 500);
+    }
+  }, 2000);
+});
+
+// ═══════════════════════════════════════════════════
+// PWA INSTALL PROMPT
+// ═══════════════════════════════════════════════════
+var deferredInstallPrompt = null;
+window.addEventListener('beforeinstallprompt', function(e) {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  var banner = document.getElementById('installBanner');
+  if (banner && !localStorage.getItem('installDismissed')) {
+    setTimeout(function() { banner.classList.add('show'); }, 3000);
+  }
+});
+window.triggerInstall = function() {
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then(function(r) {
+      deferredInstallPrompt = null;
+      document.getElementById('installBanner').classList.remove('show');
+    });
+  } else {
+    // iOS instructions
+    showToast('Tap Share → Add to Home Screen');
+  }
+};
+window.dismissInstall = function() {
+  document.getElementById('installBanner').classList.remove('show');
+  localStorage.setItem('installDismissed', '1');
+};
+
+// ═══════════════════════════════════════════════════
+// ALERTS TAB
+// ═══════════════════════════════════════════════════
+function getAlertData() {
+  var vs = getVehicles();
+  var alerts = [];
+  vs.forEach(function(v) {
+    if (v.daysInStock > 60) {
+      alerts.push({
+        type: 'AGED STOCK', color: '#C8102E',
+        title: v.registration + ' — ' + v.make + ' ' + v.model,
+        sub: v.daysInStock + ' days in stock · ' + (v.workflowStage || 'Unknown stage'),
+        time: 'Flagged today', sn: v.stockNo
+      });
+    }
+    if (v.blocked) {
+      alerts.push({
+        type: 'VEHICLE BLOCKED', color: '#ea580c',
+        title: v.registration + ' — ' + v.make + ' ' + v.model,
+        sub: 'Blocked at ' + (v.workflowStage || 'stage') + ' · ' + v.daysInStage + 'd at this stage',
+        time: 'Needs attention', sn: v.stockNo
+      });
+    }
+    if (v.daysInStage > 5) {
+      alerts.push({
+        type: 'STAGE OVERDUE', color: '#d4980a',
+        title: v.registration + ' — ' + v.workflowStage,
+        sub: v.make + ' ' + v.model + ' · ' + v.daysInStage + ' days at this stage',
+        time: v.daysInStage + 'd overdue', sn: v.stockNo
+      });
+    }
+  });
+  return alerts.slice(0, 30);
+}
+
+function renderAlerts() {
+  var el = document.getElementById('pv-alerts');
+  if (!el) return;
+  var alerts = CU && CU.admin ? getAlertData() :
+    getAlertData().filter(function(a) {
+      var v = getVehicles().find(function(vv) { return vv.stockNo === a.sn; });
+      if (!v) return false;
+      var st = AC_WORKFLOW_STAGES.find(function(s) { return s.name === v.workflowStage; });
+      return st && (CU ? st.dept === CU.dept : false);
+    });
+
+  var count = alerts.length;
+  var badge = document.getElementById('alertCountBadge');
+  if (badge) badge.textContent = count;
+  var pipEl = document.getElementById('alertpip');
+  if (pipEl) pipEl.style.display = count > 0 ? 'block' : 'none';
+
+  if (count === 0) {
+    el.innerHTML = '<div class="emp"><i class="fas fa-check-circle" style="color:var(--green);opacity:1"></i><p>All clear</p><span>No active alerts for your vehicles</span></div>';
+    return;
+  }
+
+  var html = '';
+  alerts.forEach(function(a, i) {
+    html += '<div class="alert-item" style="--ac:' + a.color + '" onclick="openVehicle(\'' + a.sn + '\')">';
+    html += '<div class="alert-item-type">' + a.type + '</div>';
+    html += '<div class="alert-item-title">' + a.title + '</div>';
+    html += '<div class="alert-item-sub">' + a.sub + '</div>';
+    html += '<div class="alert-item-time"><i class="fas fa-clock" style="font-size:9px;margin-right:3px"></i>' + a.time + '</div>';
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════
+// CAMERA / PHOTO CAPTURE
+// ═══════════════════════════════════════════════════
+var cameraStream = null;
+var currentPhotoSlot = null;
+var currentPhotoVehicle = null;
+var capturedPhotos = {}; // stockNo -> { slotIdx: dataURL }
+
+window.openCamera = function(slotIdx, vehicleSn, slotLabel) {
+  currentPhotoSlot = slotIdx;
+  currentPhotoVehicle = vehicleSn;
+  var overlay = document.getElementById('cameraOverlay');
+  var video   = document.getElementById('cameraVideo');
+  var labelEl = document.getElementById('cameraSlotLabel');
+  if (labelEl) labelEl.textContent = slotLabel || 'Photo';
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Show existing captures in preview strip
+  updatePreviewStrip(vehicleSn);
+
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ 
+      video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 960 } }
+    }).then(function(stream) {
+      cameraStream = stream;
+      video.srcObject = stream;
+      video.play();
+    }).catch(function(err) {
+      // No camera — show simulated capture mode
+      video.style.background = 'linear-gradient(135deg, #0B1120, #001750)';
+      video.style.display = 'none';
+      document.getElementById('simModeMsg').style.display = 'flex';
+    });
+  } else {
+    document.getElementById('simModeMsg').style.display = 'flex';
+  }
+};
+
+window.closeCamera = function() {
+  if (cameraStream) {
+    cameraStream.getTracks().forEach(function(t) { t.stop(); });
+    cameraStream = null;
+  }
+  document.getElementById('cameraOverlay').classList.remove('active');
+  document.getElementById('cameraVideo').style.display = 'block';
+  document.getElementById('simModeMsg').style.display = 'none';
+  document.body.style.overflow = '';
+  currentPhotoSlot = null;
+  currentPhotoVehicle = null;
+};
+
+window.capturePhoto = function() {
+  var sn  = currentPhotoVehicle;
+  var idx = currentPhotoSlot;
+  if (!sn) return;
+
+  var video   = document.getElementById('cameraVideo');
+  var canvas  = document.getElementById('cameraCanvas');
+  var ctx     = canvas.getContext('2d');
+  var dataUrl = null;
+
+  if (cameraStream && video.readyState >= 2) {
+    canvas.width  = video.videoWidth  || 640;
+    canvas.height = video.videoHeight || 480;
+    ctx.drawImage(video, 0, 0);
+    dataUrl = canvas.toDataURL('image/jpeg', 0.8);
+  } else {
+    // Simulate: generate a placeholder image
+    canvas.width = 320; canvas.height = 240;
+    ctx.fillStyle = '#0B1120';
+    ctx.fillRect(0, 0, 320, 240);
+    ctx.fillStyle = 'rgba(255,255,255,.08)';
+    for (var i = 0; i < 8; i++) {
+      ctx.fillRect(i * 40, 0, 1, 240);
+      ctx.fillRect(0, i * 30, 320, 1);
+    }
+    ctx.fillStyle = '#C8102E';
+    ctx.fillRect(130, 100, 60, 40);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 11px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('Photo Captured', 160, 195);
+    ctx.fillStyle = 'rgba(255,255,255,.4)';
+    ctx.font = '9px Arial';
+    ctx.fillText(new Date().toLocaleTimeString(), 160, 210);
+    dataUrl = canvas.toDataURL('image/jpeg', 0.8);
+  }
+
+  if (!capturedPhotos[sn]) capturedPhotos[sn] = {};
+  capturedPhotos[sn][idx] = dataUrl;
+
+  if (!STATE.photos[sn]) STATE.photos[sn] = {};
+  STATE.photos[sn][idx] = true;
+
+  // Flash effect
+  var flash = document.getElementById('cameraFlash');
+  if (flash) {
+    flash.style.opacity = '1';
+    setTimeout(function() { flash.style.opacity = '0'; }, 150);
+  }
+
+  // Update preview strip
+  updatePreviewStrip(sn);
+
+  // Update photo slot in UI if visible
+  var slotEl = document.getElementById('ps_' + sn + '_' + idx);
+  if (slotEl) {
+    slotEl.classList.add('taken', 'has-img');
+    slotEl.classList.remove('pslot');
+    slotEl.innerHTML = '<img src="' + dataUrl + '" style="width:100%;height:100%;object-fit:cover;border-radius:7px">' +
+      '<div class="pstick" style="display:flex">✓</div>';
+  }
+
+  showToast('📸 Photo saved');
+
+  // Auto-advance to next empty slot
+  if (currentPhotoVehicle) {
+    setTimeout(function() {
+      closeCamera();
+    }, 400);
+  }
+};
+
+function updatePreviewStrip(sn) {
+  var strip = document.getElementById('camPreviewStrip');
+  if (!strip || !capturedPhotos[sn]) return;
+  var html = '';
+  var photos = capturedPhotos[sn];
+  Object.keys(photos).forEach(function(idx) {
+    html += '<img class="cam-thumb" src="' + photos[idx] + '" alt="Photo ' + idx + '">';
+  });
+  strip.innerHTML = html;
+}
+
+// Override the photo tab to use real camera
+window.tPhoto = function(i, sn, label) {
+  var resolvedSn = sn || (CV ? CV.stockNo : null);
+  if (!resolvedSn) return;
+  
+  var photoLabels = ['Front view','Rear view','Driver side','Passenger side',
+    'Dashboard','Odometer','Engine bay','Boot / load area',
+    'Damage 1','Damage 2','Interior','Windscreen'];
+  
+  openCamera(i, resolvedSn, label || photoLabels[i] || 'Photo ' + (i+1));
+};
+
+// ═══════════════════════════════════════════════════
+// NOTIFICATION PANEL
+// ═══════════════════════════════════════════════════
+window.toggleNotifPanel = function() {
+  var panel = document.getElementById('notifPanel');
+  if (!panel) return;
+  panel.classList.toggle('open');
+};
+
+function buildNotifPanel() {
+  var alerts = getAlertData().slice(0, 5);
+  var panel  = document.getElementById('notifPanel');
+  if (!panel) return;
+  var items = alerts.map(function(a) {
+    return '<div class="notif-item" onclick="openVehicle(\'' + a.sn + '\');toggleNotifPanel()">' +
+      '<div class="notif-dot" style="background:' + a.color + '"></div>' +
+      '<div><div class="notif-item-text">' + a.title + '</div>' +
+      '<div class="notif-item-time">' + a.type + ' · ' + a.time + '</div></div>' +
+      '</div>';
+  }).join('');
+  panel.querySelector('.notif-items').innerHTML = items || 
+    '<div style="padding:14px;text-align:center;font-size:12px;color:var(--muted)">All clear ✓</div>';
+}
+
+// Close notification panel on outside click
+document.addEventListener('click', function(e) {
+  var panel = document.getElementById('notifPanel');
+  var btn   = document.getElementById('notifBtn');
+  if (panel && panel.classList.contains('open') && !panel.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+    panel.classList.remove('open');
+  }
+});
+
+// ═══════════════════════════════════════════════════
+// OVERRIDE setTab to include alerts
+// ═══════════════════════════════════════════════════
+var _origSetTab = setTab;
+window.setTab = function(tab) {
+  activeTab = tab;
+  document.querySelectorAll('.bn').forEach(function(b) { b.classList.remove('active'); });
+  var bnEl = document.getElementById('bn-' + tab);
+  if (bnEl) bnEl.classList.add('active');
+  document.querySelectorAll('.pv').forEach(function(p) { p.classList.remove('active'); });
+  var pv = document.getElementById('pv-' + tab);
+  if (pv) pv.classList.add('active');
+  var bodyEl = document.getElementById('abody');
+  if (bodyEl) bodyEl.scrollTop = 0;
+  var renders = { home: renderHome, tasks: renderTasks, keys: renderKeys, me: renderMe, alerts: renderAlerts };
+  if (renders[tab]) renders[tab]();
+};
+
+// ═══════════════════════════════════════════════════
+// OVERRIDE doLogin to also refresh alerts + notif
+// ═══════════════════════════════════════════════════
+var _origDoLogin = doLogin;
+window.doLogin = function() {
+  var u = document.getElementById('loginUser').value.trim().toLowerCase();
+  var p = document.getElementById('loginPass').value;
+  var user = USERS[u];
+  var err  = document.getElementById('loginErr');
+  if (!user || user.pass !== p) {
+    err.style.display = 'block';
+    setTimeout(function() { err.style.display = 'none'; }, 2500);
+    return;
+  }
+  CU = user;
+  document.getElementById('hdrName').textContent = CU.name;
+  document.getElementById('hdrRole').textContent = CU.role;
+  
+  var allAlerts = getAlertData();
+  var myAlerts = CU.admin ? allAlerts : allAlerts.filter(function(a) {
+    var v = getVehicles().find(function(vv) { return vv.stockNo === a.sn; });
+    if (!v) return false;
+    var st = AC_WORKFLOW_STAGES.find(function(s) { return s.name === v.workflowStage; });
+    return st && st.dept === CU.dept;
+  });
+  
+  var urgCount = myAlerts.length;
+  var nbadge = document.getElementById('nbadge');
+  var taskpip = document.getElementById('taskpip');
+  var alertpip = document.getElementById('alertpip');
+  if (nbadge) nbadge.style.display = urgCount > 0 ? 'block' : 'none';
+  if (taskpip) { 
+    var urgTasks = getMyVehicles().filter(function(v) { return v.daysInStock > 60 || v.blocked; });
+    taskpip.style.display = urgTasks.length > 0 ? 'block' : 'none';
+  }
+  if (alertpip) alertpip.style.display = urgCount > 0 ? 'block' : 'none';
+  
+  var alertBadge = document.getElementById('alertNavBadge');
+  if (alertBadge && urgCount > 0) {
+    alertBadge.textContent = urgCount > 9 ? '9+' : urgCount;
+    alertBadge.style.display = 'flex';
+  }
+  
+  buildNotifPanel();
+  
+  document.getElementById('sc-login').classList.remove('active');
+  document.getElementById('appShell').classList.add('active');
+  setTab('home');
+};
+
+// Override selectUser to also sync login
+window.selectUser = function(key) {
+  window._selectedUser = key;
+  document.querySelectorAll('.selcard').forEach(function(c) { c.classList.remove('selected'); });
+  var card = document.getElementById('sc_' + key);
+  if (card) card.classList.add('selected');
+  document.getElementById('loginUser').value = key;
+  document.getElementById('loginPass').value = 'demo123';
+};
+
+
+/* ═══ QUICK-SELECT LOGIN CARDS ═══ */
+(function buildLoginCards() {
+  var ops  = ['stanslaw','morteza','marcin','sia','gorgino','germaine'];
+  var mgmt = ['keith','ibrahim'];
+  var wrap = document.getElementById('loginQuickCards');
+  if (!wrap) return;
+
+  function roleColor(dept) {
+    var m = {Management:'#64748b',Sales:'#3b82f6',Workshop:'#ef4444',Valeting:'#10b981',Intake:'#6366f1','Dent Repair':'#06b6d4'};
+    return m[dept] || '#888';
+  }
+  function makeCard(key) {
+    if (!USERS[key]) return;
+    var u  = USERS[key];
+    var dc = roleColor(u.dept);
+    var ini = u.name.split(' ').map(function(p){return p[0];}).join('').toUpperCase().slice(0,2);
+    var div = document.createElement('div');
+    div.style.cssText = 'display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:11px;cursor:pointer;border:1.5px solid '+dc+'30;background:'+dc+'08;transition:.14s;-webkit-tap-highlight-color:transparent';
+    div.innerHTML = '<div style="width:36px;height:36px;border-radius:50%;background:'+dc+';color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0">'+ini+'</div>'
+      + '<div style="flex:1"><div style="font-size:13px;font-weight:700;color:var(--text)">'+u.name+'</div>'
+      + '<div style="font-size:10px;color:var(--muted)">'+u.role+' &middot; <span style="color:'+dc+';font-weight:700">'+u.dept+'</span></div></div>'
+      + '<div style="width:24px;height:24px;border-radius:50%;background:'+dc+'18;display:flex;align-items:center;justify-content:center;font-size:10px;color:'+dc+'"><i class="fas fa-chevron-right"></i></div>';
+    div.addEventListener('touchstart', function() { div.style.background = dc+'18'; }, {passive:true});
+    div.addEventListener('touchend',   function() { div.style.background = dc+'08'; }, {passive:true});
+    div.onclick = function() { selectUser(key); doLogin(); };
+    wrap.appendChild(div);
+  }
+
+  // Section label
+  function addLabel(text) {
+    var lbl = document.createElement('div');
+    lbl.style.cssText = 'font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:6px 0 4px';
+    lbl.textContent = text;
+    wrap.appendChild(lbl);
+  }
+
+  addLabel('Operations');
+  ops.forEach(makeCard);
+  addLabel('Management');
+  mgmt.forEach(makeCard);
+})();
+</script>
+
+<!-- Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  // Register inline service worker for offline caching
+  var swCode = [
+    "const CACHE='capeye-v1';",
+    "const ASSETS=['./','/'];",
+    "self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});",
+    "self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));})"
+  ].join('\n');
+  var swBlob = new Blob([swCode], {type:'text/javascript'});
+  var swUrl  = URL.createObjectURL(swBlob);
+  navigator.serviceWorker.register(swUrl).catch(function(){});
 }
 </script>
 </body>
