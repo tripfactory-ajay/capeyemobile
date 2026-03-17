@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="CapEye">
 <meta name="theme-color" content="#001A5E">
-<meta name="application-name" content="CapEye">
+<meta name="description" content="CapEye — Auto Capital vehicle workflow staff app. Log in to see your queue, complete stage forms and hand over vehicles.">
 
-<!-- WhatsApp / iMessage / Telegram link preview -->
+<!-- WhatsApp / iMessage / Telegram preview card -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Auto Capital">
 <meta property="og:title" content="CapEye — Auto Capital Staff App">
-<meta property="og:description" content="Log in to see your vehicle queue, complete stage forms, capture photos and hand over to the next department.">
+<meta property="og:description" content="Your vehicle queue, stage forms, photo capture and handovers — all in one place. Tap to open.">
 <meta property="og:image" content="https://tripfactory-ajay.github.io/capeye-mobile/preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,43 +22,17 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CapEye — Auto Capital Staff App">
 <meta name="twitter:description" content="Vehicle workflow management for the Auto Capital team.">
+<meta name="twitter:image" content="https://tripfactory-ajay.github.io/capeye-mobile/preview.png">
 
-<title>CapEye | Auto Capital Staff App</title>
-
-<!-- PWA icons -->
+<title>CapEye | Auto Capital</title>
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=">
-
-<!-- Inline manifest via blob (works on GitHub Pages) -->
-<script>
-(function(){
-  var manifest = {
-    "name": "CapEye — Auto Capital",
-    "short_name": "CapEye",
-    "description": "Vehicle workflow management for Auto Capital staff",
-    "start_url": "./",
-    "display": "standalone",
-    "background_color": "#0B1120",
-    "theme_color": "#001A5E",
-    "orientation": "portrait-primary",
-    "icons": [
-      {"src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any maskable"},
-      {"src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable"}
-    ]
-  };
-  var blob = new Blob([JSON.stringify(manifest)], {type:'application/manifest+json'});
-  var url  = URL.createObjectURL(blob);
-  var link = document.createElement('link');
-  link.rel  = 'manifest';
-  link.href = url;
-  document.head.appendChild(link);
-})();
-</script>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
+/* ─── RESET ─── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
   --red:#C8102E;--navy:#003DA5;--dark:#0B1120;
@@ -66,187 +40,295 @@
   --bg:#F2F5F9;--card:#fff;--border:#E5EAF2;--border2:#CBD5E1;
   --text:#0F1923;--text2:#3D4D5C;--muted:#8A9AB0;
   --sh:0 1px 3px rgba(0,0,0,.07),0 4px 12px rgba(0,0,0,.05);
-  --shl:0 8px 28px rgba(0,0,0,.13);
-  --r:14px;--rsm:10px;--rxs:7px;
+  --r:14px;--rsm:10px;
 }
-html,body{height:100%;font-family:"DM Sans",sans-serif;background:#0e1422;color:var(--text);-webkit-font-smoothing:antialiased;overflow:hidden}
+html,body{
+  height:100%;width:100%;overflow:hidden;
+  font-family:"DM Sans",sans-serif;
+  background:#0B1120;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
 
-/* ═══ OUTER LAYOUT ═══ */
-.outer{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;gap:44px;padding:28px 20px;
-  background:linear-gradient(150deg,#070d1c 0%,#001040 52%,#070d1c 100%)}
+/* ─── APP WRAPPER ─── */
+#app{
+  position:fixed;inset:0;
+  display:flex;flex-direction:column;
+  background:#fff;
+  /* Safe area padding */
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
 
-/* ═══ INFO PANEL ═══ */
-.infop{width:310px;flex-shrink:0;color:#fff;padding-top:10px;display:flex;flex-direction:column;gap:16px;
-  position:sticky;top:28px;max-height:calc(100vh - 56px);overflow-y:auto}
-.infop::-webkit-scrollbar{display:none}
-.ip-back{display:inline-flex;align-items:center;gap:5px;color:rgba(255,255,255,.25);font-size:11px;text-decoration:none;transition:.15s}
-.ip-back:hover{color:#fff}
-.ip-lr{display:flex;align-items:center;gap:7px}
-.ip-logo{height:26px;filter:brightness(0) invert(1);opacity:.72}
-.ip-sep{width:1px;height:18px;background:rgba(255,255,255,.1)}
-.ip-ce{background:var(--red);color:#fff;font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;letter-spacing:1.5px}
-.ip-h{font-size:20px;font-weight:800;color:#fff;line-height:1.2}
-.ip-h em{color:var(--red);font-style:normal}
-.ip-d{font-size:11px;color:rgba(255,255,255,.35);line-height:1.65;margin-top:6px}
-.ip-div{height:1px;background:rgba(255,255,255,.06)}
-.ip-sl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:8px}
-.ip-feats{display:flex;flex-direction:column;gap:9px}
-.ip-feat{display:flex;gap:9px;align-items:flex-start}
-.ip-fi{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
-.ip-ft{font-size:11px;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:1px}
-.ip-fd{font-size:10px;color:rgba(255,255,255,.28);line-height:1.5}
-.ip-accts{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:11px 12px}
-.ia-h{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:8px}
-.ia-row{display:flex;justify-content:space-between;align-items:center;padding:5px 4px;border-bottom:1px solid rgba(255,255,255,.05);font-size:11px;cursor:pointer;border-radius:5px;transition:.12s}
-.ia-row:last-child{border-bottom:none}
-.ia-row:hover{background:rgba(255,255,255,.05)}
-.ia-name{font-weight:600;color:rgba(255,255,255,.62)}
-.ia-dept{font-size:9px;padding:2px 5px;border-radius:3px;font-weight:700;flex-shrink:0;margin:0 5px}
-.ia-cred{font-family:"DM Mono",monospace;font-size:9px;color:rgba(255,255,255,.2)}
-.ip-note{font-size:9px;color:rgba(255,255,255,.16);line-height:1.6;padding-bottom:16px}
-/* Selector cards */
-.selcard{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;
-  border:1px solid rgba(255,255,255,.07);margin-bottom:6px;transition:.15s;
-  background:rgba(255,255,255,.03);position:relative;overflow:hidden}
-.selcard::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--sc,transparent) 0,transparent 100%);
-  opacity:0;transition:.15s}
-.selcard:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14)}
-.selcard.selected{border-color:var(--sc,#fff);background:rgba(255,255,255,.06)}
-.selcard.selected::before{opacity:.08}
-.selcard-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:800;color:#fff;flex-shrink:0;background:var(--sc,#888)}
-.selcard-info{flex:1}
-.selcard-name{font-size:12px;font-weight:700;color:rgba(255,255,255,.78);margin-bottom:1px}
-.selcard-role{font-size:10px;color:rgba(255,255,255,.3)}
-.selcard-dept{font-size:9px;padding:2px 7px;border-radius:10px;font-weight:700;background:var(--sc,#888);
-  background:rgba(255,255,255,.08);color:rgba(255,255,255,.45);flex-shrink:0}
-.selcard-tick{width:18px;height:18px;border-radius:50%;background:var(--sc,#888);
-  display:none;align-items:center;justify-content:center;flex-shrink:0}
-.selcard-tick i{font-size:9px;color:#fff}
-.selcard.selected .selcard-tick{display:flex}
-.login-as-btn{width:100%;background:linear-gradient(135deg,var(--navy),#001f70);color:#fff;border:none;
-  border-radius:10px;padding:12px;font-size:13px;font-weight:700;font-family:"DM Sans",sans-serif;
-  cursor:pointer;display:none;align-items:center;justify-content:center;gap:7px;transition:.18s;
-  box-shadow:0 4px 14px rgba(0,61,165,.3);margin-top:12px}
-.login-as-btn.show{display:flex}
-.login-as-btn:active{transform:scale(.98)}
-
-/* ═══ PHONE ═══ */
-.phonew{display:flex;flex-direction:column;align-items:center;gap:10px}
-.phonel{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.16)}
-.phone{width:390px;height:844px;background:#fff;border-radius:50px;
-  box-shadow:0 0 0 9px #141929,0 0 0 11px #1c2338,0 28px 72px rgba(0,0,0,.72);
-  position:relative;overflow:hidden;display:flex;flex-direction:column;flex-shrink:0}
-.di{position:absolute;top:9px;left:50%;transform:translateX(-50%);
-  width:112px;height:30px;background:#0b1020;border-radius:18px;z-index:300;
-  display:flex;align-items:center;justify-content:center;gap:7px}
-.di-cam{width:8px;height:8px;border-radius:50%;background:#141e36;border:1.5px solid #1d2c50}
-.sb{height:48px;display:flex;align-items:flex-end;justify-content:space-between;
-  padding:0 22px 8px;font-size:13px;font-weight:700;color:var(--text);
-  flex-shrink:0;position:relative;z-index:10;background:inherit}
+/* ─── STATUS BAR ─── */
+.sb{
+  height:44px;flex-shrink:0;
+  display:flex;align-items:flex-end;justify-content:space-between;
+  padding:0 20px 8px;
+  font-size:13px;font-weight:700;
+  position:relative;z-index:10;
+  background:inherit;
+}
 .sb-r{display:flex;align-items:center;gap:5px;font-size:11px}
 
-/* ═══ SCREENS ═══ */
-.screen{display:none;flex-direction:column;flex:1;overflow:hidden;background:#fff}
+/* ─── SCREENS ─── */
+.screen{display:none;flex-direction:column;flex:1;overflow:hidden;background:#fff;min-height:0}
 .screen.active{display:flex}
 
-/* ═══ LOGIN ═══ */
+/* ═══════════════════════════════
+   SPLASH
+═══════════════════════════════ */
+#sc-splash{
+  background:linear-gradient(160deg,#060c18 0%,#001240 55%,#060c18 100%);
+  align-items:center;justify-content:center;position:relative;overflow:hidden;
+}
+.splash-grid{
+  position:absolute;inset:0;opacity:.025;
+  background-image:repeating-linear-gradient(0deg,transparent,transparent 28px,#fff 28px,#fff 29px),
+    repeating-linear-gradient(90deg,transparent,transparent 28px,#fff 28px,#fff 29px);
+}
+.splash-glow{
+  position:absolute;inset:0;
+  background:radial-gradient(circle at 20% 65%,rgba(200,16,46,.2) 0%,transparent 50%),
+    radial-gradient(circle at 85% 25%,rgba(0,26,94,.3) 0%,transparent 50%);
+}
+.splash-c{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  animation:splashIn .7s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes splashIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.splash-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.splash-logo{height:36px;filter:brightness(0) invert(1);opacity:.92}
+.splash-div{width:1px;height:26px;background:rgba(255,255,255,.15)}
+.splash-pill{
+  background:var(--red);color:#fff;
+  font-size:10px;font-weight:700;padding:4px 10px;border-radius:5px;letter-spacing:1.5px;
+}
+.splash-title{
+  font-size:36px;font-weight:800;color:#fff;text-align:center;line-height:1.15;
+  margin-bottom:8px;letter-spacing:-.5px;
+}
+.splash-title em{color:var(--red);font-style:normal}
+.splash-sub{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:52px}
+.splash-spinner{
+  width:38px;height:38px;border-radius:50%;
+  border:2.5px solid rgba(255,255,255,.1);
+  border-top-color:var(--red);border-right-color:rgba(200,16,46,.3);
+  animation:spin .75s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.splash-vsn{
+  position:absolute;bottom:max(env(safe-area-inset-bottom,20px),24px);
+  font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.5px;
+}
+
+/* ═══════════════════════════════
+   LOGIN
+═══════════════════════════════ */
 #sc-login{background:#fff}
-.lhero{height:228px;flex-shrink:0;
+.lhero{
+  height:220px;flex-shrink:0;
   background:linear-gradient(160deg,#060c18 0%,#001240 60%,#060c18 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:7px;position:relative;overflow:hidden}
+  gap:7px;position:relative;overflow:hidden;
+}
 .lhero-g{position:absolute;inset:0;opacity:.025;
-  background-image:repeating-linear-gradient(0deg,transparent,transparent 25px,#fff 25px,#fff 26px),
-  repeating-linear-gradient(90deg,transparent,transparent 25px,#fff 25px,#fff 26px)}
+  background-image:repeating-linear-gradient(0deg,transparent,transparent 26px,#fff 26px,#fff 27px),
+  repeating-linear-gradient(90deg,transparent,transparent 26px,#fff 26px,#fff 27px)}
 .lhero-glow{position:absolute;inset:0;
-  background:radial-gradient(circle at 22% 65%,rgba(200,16,46,.15) 0%,transparent 48%),
-  radial-gradient(circle at 82% 28%,rgba(0,61,165,.2) 0%,transparent 46%)}
+  background:radial-gradient(circle at 22% 65%,rgba(200,16,46,.16) 0%,transparent 50%),
+  radial-gradient(circle at 82% 28%,rgba(0,61,165,.22) 0%,transparent 48%)}
 .lhero-c{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:6px}
-.lhero-lr{display:flex;align-items:center;gap:7px}
-.lhero-logo{height:30px;filter:brightness(0) invert(1);opacity:.85}
-.lhero-s{width:1px;height:22px;background:rgba(255,255,255,.1)}
-.lhero-ce{background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:1.5px}
-.lhero-t{font-size:18px;font-weight:800;color:#fff;text-align:center;line-height:1.2}
+.lhero-lr{display:flex;align-items:center;gap:8px}
+.lhero-logo{height:30px;filter:brightness(0) invert(1);opacity:.88}
+.lhero-s{width:1px;height:22px;background:rgba(255,255,255,.12)}
+.lhero-ce{background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:4px;letter-spacing:1.5px}
+.lhero-t{font-size:19px;font-weight:800;color:#fff;text-align:center;line-height:1.2}
 .lhero-t em{color:var(--red);font-style:normal}
-.lhero-sub{font-size:10px;color:rgba(255,255,255,.32)}
-.lform{flex:1;overflow-y:auto;padding:18px 20px 0}
-.lform::-webkit-scrollbar{display:none}
-.lg{font-size:17px;font-weight:800;color:var(--text)}
-.lgs{font-size:11px;color:var(--muted);margin-bottom:14px;margin-top:2px}
-.lfg{margin-bottom:12px}
-.lfg label{font-size:10px;font-weight:700;color:var(--text2);display:block;margin-bottom:5px}
-.lfiw{position:relative}
-.lfii{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:12px;pointer-events:none}
-.lfi{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--rsm);
-  padding:11px 12px 11px 34px;font-size:14px;font-family:"DM Sans",sans-serif;color:var(--text);outline:none;transition:.18s}
-.lfi:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(0,61,165,.08)}
-.lfi::placeholder{color:var(--muted)}
-.lbtn{width:100%;background:linear-gradient(135deg,var(--navy) 0%,#001f70 100%);color:#fff;border:none;
-  border-radius:var(--r);padding:13px;font-size:14px;font-weight:700;font-family:"DM Sans",sans-serif;
-  cursor:pointer;box-shadow:0 4px 14px rgba(0,61,165,.28);display:flex;align-items:center;justify-content:center;
-  gap:7px;transition:.18s;margin-bottom:10px}
+.lhero-sub{font-size:11px;color:rgba(255,255,255,.32)}
+
+.lbody{flex:1;overflow-y:auto;padding:20px 18px 0;-webkit-overflow-scrolling:touch}
+.lbody::-webkit-scrollbar{display:none}
+.lhd{font-size:18px;font-weight:800;color:var(--text);margin-bottom:2px}
+.lsd{font-size:11px;color:var(--muted);margin-bottom:16px}
+
+/* Staff login cards */
+.staff-card{
+  display:flex;align-items:center;gap:11px;
+  padding:10px 13px;border-radius:12px;
+  border:1.5px solid var(--border);
+  background:#fff;cursor:pointer;
+  transition:all .12s ease;
+  margin-bottom:7px;
+  -webkit-tap-highlight-color:transparent;
+  position:relative;overflow:hidden;
+}
+.staff-card::before{
+  content:'';position:absolute;inset:0;
+  background:var(--dc,#888);opacity:0;transition:.12s;
+}
+.staff-card:active::before{opacity:.06}
+.staff-card.pressed{transform:scale(.98);background:rgba(0,61,165,.02)}
+.sc-av{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:800;color:#fff;
+  background:var(--dc,#888);
+}
+.sc-info{flex:1}
+.sc-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.sc-role{font-size:10px;color:var(--muted)}
+.sc-role em{color:var(--dc,#888);font-style:normal;font-weight:700}
+.sc-arrow{width:24px;height:24px;border-radius:50%;background:var(--border);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sc-arrow i{font-size:9px;color:var(--muted)}
+.staff-card.loading .sc-arrow{background:var(--dc,#888)}
+.staff-card.loading .sc-arrow i{color:#fff}
+
+.sec-lbl{
+  font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin:14px 0 8px;
+}
+.sec-lbl:first-child{margin-top:4px}
+
+/* Manual login toggle */
+.manual-toggle{
+  display:flex;align-items:center;gap:7px;
+  padding:10px 0 4px;cursor:pointer;
+  font-size:11px;font-weight:600;color:var(--muted);
+  border-top:1px solid var(--border);margin-top:8px;
+}
+.manual-toggle i{font-size:10px}
+.manual-fields{display:none;flex-direction:column;gap:10px;padding:12px 0 4px}
+.manual-fields.open{display:flex}
+.mfg label{font-size:10px;font-weight:700;color:var(--text2);display:block;margin-bottom:5px}
+.mfg-wrap{position:relative}
+.mfg-ico{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:12px;pointer-events:none}
+.mfi{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;
+  padding:11px 12px 11px 34px;font-size:14px;font-family:"DM Sans",sans-serif;
+  color:var(--text);outline:none;transition:.18s}
+.mfi:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(0,61,165,.08)}
+.lbtn{
+  width:100%;background:linear-gradient(135deg,var(--navy),#001f70);color:#fff;
+  border:none;border-radius:var(--r);padding:13px;font-size:14px;font-weight:700;
+  font-family:"DM Sans",sans-serif;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  margin-top:6px;transition:.15s;
+}
 .lbtn:active{transform:scale(.98)}
 .lerr{background:rgba(200,16,46,.07);border:1px solid rgba(200,16,46,.2);border-radius:7px;
-  padding:8px 12px;font-size:11px;color:var(--red);font-weight:600;text-align:center;display:none;margin-bottom:9px}
-.lql{font-size:9px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:7px}
-.lchips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
-.lchip{background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:5px 10px;
-  font-size:10px;font-weight:600;color:var(--text2);cursor:pointer;transition:.15s;display:flex;align-items:center;gap:4px}
-.lchip:active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.lchip-dot{width:6px;height:6px;border-radius:50%}
+  padding:8px 12px;font-size:11px;color:var(--red);font-weight:600;text-align:center;
+  display:none;margin-top:8px}
+.demo-note{font-size:10px;color:var(--muted);text-align:center;padding:12px 0 20px}
 
-/* ═══ APP SHELL ═══ */
-.appsh{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg)}
-.appsh.active{display:flex}
+/* ═══════════════════════════════
+   APP SHELL
+═══════════════════════════════ */
+#sc-app{background:var(--bg)}
 
-/* App Header */
-.ahdr{background:#fff;border-bottom:1px solid var(--border);flex-shrink:0;box-shadow:0 1px 6px rgba(0,0,0,.05)}
-.ahdr-top{display:flex;align-items:center;justify-content:space-between;padding:9px 14px}
-.ahdr-l{display:flex;align-items:center;gap:7px}
+/* Header */
+.ahdr{
+  background:#fff;border-bottom:1px solid var(--border);
+  flex-shrink:0;box-shadow:0 1px 6px rgba(0,0,0,.06);
+  padding:10px 15px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.ahdr-l{display:flex;align-items:center;gap:8px}
 .ahdr-logo{height:22px;object-fit:contain}
-.ahdr-sep{width:1px;height:16px;background:var(--border)}
+.ahdr-sep{width:1px;height:17px;background:var(--border)}
 .ahdr-ce{background:var(--red);color:#fff;font-size:8px;font-weight:700;padding:2px 5px;border-radius:3px;letter-spacing:1px}
-.ahdr-r{display:flex;align-items:center;gap:7px}
-.ahdr-user{text-align:right}
-.ahdr-name{font-size:11px;font-weight:700;color:var(--text)}
-.ahdr-role{font-size:9px;color:var(--muted)}
-.nbtn{width:30px;height:30px;border-radius:50%;background:var(--bg);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text2);position:relative}
-.nbadge{position:absolute;top:3px;right:3px;width:7px;height:7px;border-radius:50%;background:var(--red);border:1.5px solid #fff;display:none}
+.ahdr-r{display:flex;align-items:center;gap:8px}
+.ahdr-user .ahdr-name{font-size:11px;font-weight:700;color:var(--text);text-align:right}
+.ahdr-user .ahdr-role{font-size:9px;color:var(--muted);text-align:right}
+.notif-btn{
+  width:32px;height:32px;border-radius:50%;background:var(--bg);
+  border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:13px;color:var(--text2);position:relative;
+  flex-shrink:0;
+}
+.notif-dot{
+  position:absolute;top:3px;right:3px;width:8px;height:8px;
+  border-radius:50%;background:var(--red);border:1.5px solid #fff;display:none;
+}
 
-/* Bottom Nav */
-.bnav{display:flex;background:#fff;border-top:1px solid var(--border);flex-shrink:0;box-shadow:0 -1px 6px rgba(0,0,0,.05)}
-.bn{flex:1;padding:8px 0 6px;text-align:center;font-size:9px;font-weight:600;color:var(--muted);
-  cursor:pointer;transition:.15s;border-top:2px solid transparent;
-  display:flex;flex-direction:column;align-items:center;gap:2px;position:relative}
-.bn i{font-size:16px}
-.bn.active{color:var(--navy);border-top-color:var(--navy)}
-.bn-pip{position:absolute;top:5px;right:calc(50% - 14px);width:6px;height:6px;border-radius:50%;background:var(--red);border:1.5px solid #fff;display:none}
+/* Notification dropdown */
+.notif-drop{
+  position:absolute;top:52px;right:14px;width:290px;
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  box-shadow:0 8px 32px rgba(0,0,0,.16);z-index:400;
+  display:none;overflow:hidden;animation:dropIn .18s ease;
+}
+.notif-drop.open{display:block}
+@keyframes dropIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.nd-hdr{padding:12px 15px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between}
+.nd-title{font-size:12px;font-weight:700;color:var(--text)}
+.nd-done{font-size:11px;color:var(--navy);font-weight:700;cursor:pointer}
+.nd-items{max-height:240px;overflow-y:auto}
+.nd-item{
+  padding:10px 15px;border-bottom:1px solid var(--border);
+  display:flex;gap:9px;cursor:pointer;transition:.12s;
+}
+.nd-item:last-child{border-bottom:none}
+.nd-item:active{background:var(--bg)}
+.nd-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.nd-txt{font-size:12px;color:var(--text2);line-height:1.4;flex:1}
+.nd-time{font-size:10px;color:var(--muted);margin-top:2px}
 
 /* Body / Pages */
-.abody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.abody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;min-height:0}
 .abody::-webkit-scrollbar{display:none}
-.pv{display:none;padding:13px;animation:fadeUp .2s ease}
+.pv{display:none;padding:13px;animation:fadeUp .2s ease;min-height:100%}
 .pv.active{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 
-/* Section headers */
+/* Bottom nav */
+.bnav{
+  display:flex;background:#fff;border-top:1px solid var(--border);
+  flex-shrink:0;box-shadow:0 -1px 8px rgba(0,0,0,.06);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.bn{
+  flex:1;padding:9px 0 7px;text-align:center;font-size:9px;font-weight:600;
+  color:var(--muted);cursor:pointer;transition:.14s;
+  border-top:2px solid transparent;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  position:relative;
+}
+.bn i{font-size:18px}
+.bn.active{color:var(--navy);border-top-color:var(--navy)}
+.bn-pip{
+  position:absolute;top:6px;right:calc(50% - 15px);
+  width:6px;height:6px;border-radius:50%;
+  background:var(--red);border:1.5px solid #fff;display:none;
+}
+.alert-count-badge{
+  position:absolute;top:5px;right:calc(50% - 18px);
+  background:var(--red);color:#fff;
+  font-size:8px;font-weight:700;padding:1px 5px;
+  border-radius:8px;border:1.5px solid #fff;min-width:14px;text-align:center;
+  display:none;
+}
+
+/* ── SHARED COMPONENTS ── */
 .sh{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);
-  display:flex;align-items:center;justify-content:space-between;margin:13px 0 7px}
+  display:flex;align-items:center;justify-content:space-between;margin:14px 0 8px}
 .sh:first-child{margin-top:0}
 .sha{font-size:11px;color:var(--navy);font-weight:700;cursor:pointer;letter-spacing:0;text-transform:none}
-
-/* Summary row */
-.sumrow{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px}
-.sumc{background:#fff;border:1px solid var(--border);border-radius:var(--rsm);padding:10px 8px;text-align:center;box-shadow:var(--sh)}
-.sumbar{height:3px;border-radius:2px;background:var(--sc,#888);margin:0 auto 6px;width:24px}
-.sumv{font-size:20px;font-weight:800;color:var(--sc,#888);line-height:1}
-.suml{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:2px}
+.sumrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:13px}
+.sumc{background:#fff;border:1px solid var(--border);border-radius:var(--rsm);padding:11px 8px;text-align:center;box-shadow:var(--sh)}
+.sumbar{height:3px;border-radius:2px;background:var(--sc,#888);margin:0 auto 7px;width:26px}
+.sumv{font-size:21px;font-weight:800;color:var(--sc,#888);line-height:1}
+.suml{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:3px}
+.emp{text-align:center;padding:40px 16px;color:var(--muted)}
+.emp i{font-size:34px;display:block;margin-bottom:10px;opacity:.28}
+.emp p{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:4px}
+.emp span{font-size:11px}
 
 /* Task card */
 .tk{background:#fff;border:1px solid var(--border);border-left:4px solid var(--tlc,var(--border));
-  border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-bottom:9px;cursor:pointer;transition:.14s}
+  border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-bottom:10px;cursor:pointer;transition:.13s}
 .tk:active{transform:scale(.99);box-shadow:none}
 .tkh{padding:9px 13px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:7px}
 .tkreg{font-family:"DM Mono",monospace;font-size:11px;background:#fffbdb;color:#7a5c00;padding:2px 7px;border-radius:4px;border:1px solid #e6d080;letter-spacing:1.2px;flex-shrink:0}
@@ -256,17 +338,11 @@ html,body{height:100%;font-family:"DM Sans",sans-serif;background:#0e1422;color:
 .tkmeta{font-size:10px;color:var(--muted);display:flex;flex-wrap:wrap;gap:7px}
 .tkf{padding:8px 13px;background:var(--bg);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .ptag{font-size:9px;font-weight:700;padding:2px 8px;border-radius:5px}
-.obtn{background:var(--navy);color:#fff;border:none;border-radius:7px;padding:6px 12px;font-size:10px;font-weight:700;font-family:"DM Sans",sans-serif;cursor:pointer;display:flex;align-items:center;gap:4px}
+.obtn{background:var(--navy);color:#fff;border:none;border-radius:7px;padding:7px 13px;font-size:10px;font-weight:700;font-family:"DM Sans",sans-serif;cursor:pointer;display:flex;align-items:center;gap:4px}
 .obtn:active{opacity:.85}
 
-/* Empty state */
-.emp{text-align:center;padding:36px 16px;color:var(--muted)}
-.emp i{font-size:32px;display:block;margin-bottom:9px;opacity:.28}
-.emp p{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:3px}
-.emp span{font-size:10px}
-
-/* Key items */
-.kitem{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:11px 13px;margin-bottom:7px;display:flex;align-items:center;gap:11px;box-shadow:var(--sh)}
+/* Keys */
+.kitem{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:11px 13px;margin-bottom:8px;display:flex;align-items:center;gap:11px;box-shadow:var(--sh)}
 .kreg{font-family:"DM Mono",monospace;font-size:11px;background:#fffbdb;color:#7a5c00;padding:3px 8px;border-radius:4px;border:1px solid #e6d080;letter-spacing:1.2px;flex-shrink:0}
 .kinfo{flex:1}
 .kdesc{font-size:12px;font-weight:600;color:var(--text)}
@@ -277,86 +353,87 @@ html,body{height:100%;font-family:"DM Sans",sans-serif;background:#0e1422;color:
 .irow{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px}
 .irow:last-child{border-bottom:none}
 .irlbl{color:var(--muted);font-weight:600;display:flex;align-items:center;gap:5px}
-.irval{color:var(--text);font-weight:700;text-align:right;max-width:58%}
+.irval{color:var(--text);font-weight:700;text-align:right;max-width:60%}
 
-/* ═══ VEHICLE DETAIL SCREEN ═══ */
-.vds{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);animation:slin .2s ease}
+/* Alerts */
+.alert-item{background:#fff;border:1px solid var(--border);border-left:4px solid var(--ac,var(--red));border-radius:var(--r);padding:12px 14px;margin-bottom:9px;box-shadow:var(--sh);cursor:pointer;transition:.13s}
+.alert-item:active{transform:scale(.99)}
+.ai-type{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ac,var(--red));margin-bottom:4px}
+.ai-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.ai-sub{font-size:11px;color:var(--muted)}
+.ai-foot{display:flex;align-items:center;justify-content:space-between;margin-top:7px}
+.ai-time{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:3px}
+.ai-open{font-size:10px;color:var(--navy);font-weight:700}
+.abanner{border-radius:var(--rsm);padding:9px 12px;font-size:11px;display:flex;align-items:flex-start;gap:7px;margin-bottom:8px;line-height:1.5}
+.abanner.info{background:rgba(0,61,165,.07);border:1px solid rgba(0,61,165,.18);color:var(--navy)}
+.abanner.warn{background:rgba(212,152,10,.07);border:1px solid rgba(212,152,10,.18);color:var(--gold)}
+
+/* ═══════════════════════════════
+   VEHICLE DETAIL
+═══════════════════════════════ */
+.vds{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);animation:slideIn .22s ease;min-height:0}
 .vds.active{display:flex}
-@keyframes slin{from{transform:translateX(16px);opacity:0}to{transform:translateX(0);opacity:1}}
-
+@keyframes slideIn{from{transform:translateX(18px);opacity:0}to{transform:translateX(0);opacity:1}}
 .vdhdr{background:#fff;border-bottom:1px solid var(--border);flex-shrink:0;box-shadow:0 1px 5px rgba(0,0,0,.06)}
-.vdhtop{display:flex;align-items:center;gap:9px;padding:10px 13px}
-.backbtn{width:30px;height:30px;border-radius:8px;background:var(--bg);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text2);font-size:12px;flex-shrink:0;transition:.13s}
+.vdhtop{display:flex;align-items:center;gap:9px;padding:11px 14px}
+.backbtn{width:32px;height:32px;border-radius:8px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text2);font-size:13px;flex-shrink:0}
 .backbtn:active{background:var(--border2)}
 .vdhi{flex:1;min-width:0}
-.vdhtitle{font-size:13px;font-weight:800;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.vdhsub{font-size:9px;color:var(--muted)}
+.vdhtitle{font-size:14px;font-weight:800;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vdhsub{font-size:10px;color:var(--muted)}
 .vdreg{font-family:"DM Mono",monospace;font-size:11px;background:#fffbdb;color:#7a5c00;padding:3px 9px;border-radius:4px;border:1px solid #e6d080;letter-spacing:1.5px;flex-shrink:0}
-
-/* Vehicle hero */
 .vhero{padding:13px 15px;background:linear-gradient(135deg,#0B1120,#001750);position:relative;overflow:hidden;flex-shrink:0}
 .vhero-g{position:absolute;inset:0;background:radial-gradient(circle at 80% 35%,rgba(200,16,46,.15),transparent 52%)}
 .vhero-c{position:relative;z-index:1}
 .vhero-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px}
-.vhero-make{font-size:15px;font-weight:800;color:#fff;line-height:1.1}
+.vhero-make{font-size:16px;font-weight:800;color:#fff;line-height:1.1}
 .vhero-var{font-size:9px;color:rgba(255,255,255,.32);margin-top:3px;max-width:185px;line-height:1.4}
-.vhero-price{font-size:17px;font-weight:800;color:#fff;text-align:right}
+.vhero-price{font-size:18px;font-weight:800;color:#fff;text-align:right}
 .vhero-plbl{font-size:8px;color:rgba(255,255,255,.28);text-align:right;margin-top:1px}
 .vchips{display:flex;flex-wrap:wrap;gap:4px}
-.vchip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:3px 8px;font-size:9px;font-weight:600;color:rgba(255,255,255,.58);display:flex;align-items:center;gap:3px}
-
-/* Stage track */
-.vdprog{background:#fff;border-bottom:1px solid var(--border);padding:9px 13px 10px;flex-shrink:0}
+.vchip{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:3px 9px;font-size:9px;font-weight:600;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:3px}
+.vdprog{background:#fff;border-bottom:1px solid var(--border);padding:10px 14px 11px;flex-shrink:0}
 .vdprog-lbl{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
 .strack{display:flex;align-items:center;overflow-x:auto;padding-bottom:1px}
 .strack::-webkit-scrollbar{display:none}
-.sstep{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0;min-width:30px}
+.sstep{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0;min-width:32px}
 .sdot{width:9px;height:9px;border-radius:50%;background:var(--border);transition:.18s}
 .sdot.done{background:var(--green)}
-.sdot.cur{background:var(--navy);box-shadow:0 0 0 3px rgba(0,61,165,.18);width:13px;height:13px}
+.sdot.cur{background:var(--navy);box-shadow:0 0 0 3px rgba(0,61,165,.2);width:13px;height:13px}
 .sdot.nxt{border:2px solid var(--gold);background:#fff}
 .sname{font-size:7px;font-weight:600;color:var(--muted);text-align:center;line-height:1.2;max-width:30px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .sname.cur{color:var(--navy);font-weight:700}
 .sline{flex:1;height:2px;background:var(--border);min-width:5px;margin:0 1px;align-self:flex-start;margin-top:3.5px}
 .sline.done{background:var(--green)}
-
-/* VD tabs */
 .vdtabs{display:flex;background:#fff;border-bottom:1px solid var(--border);overflow-x:auto;flex-shrink:0}
 .vdtabs::-webkit-scrollbar{display:none}
-.vdt{padding:9px 13px;font-size:10px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:.13s;flex-shrink:0}
+.vdt{padding:10px 14px;font-size:10px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:.13s;flex-shrink:0}
 .vdt.active{color:var(--navy);border-bottom-color:var(--navy)}
-
-/* VD body */
-.vdbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.vdbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;min-height:0}
 .vdbody::-webkit-scrollbar{display:none}
 .vtc{display:none;padding:13px;animation:fadeUp .18s ease}
 .vtc.active{display:block}
 
-/* Form sections */
+/* Forms */
 .fs{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:11px}
 .fsh{padding:9px 13px;background:var(--bg);border-bottom:1px solid var(--border);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);display:flex;align-items:center;gap:5px}
 .fsb{padding:12px;display:flex;flex-direction:column;gap:10px}
 .ff{display:flex;flex-direction:column;gap:4px}
 .ff label{font-size:10px;font-weight:700;color:var(--text2)}
-.ff input,.ff select,.ff textarea{
-  background:var(--bg);border:1.5px solid var(--border);border-radius:8px;
-  padding:10px 11px;font-size:13px;font-family:"DM Sans",sans-serif;color:var(--text);outline:none;width:100%;transition:.18s}
+.ff input,.ff select,.ff textarea{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:10px 11px;font-size:13px;font-family:"DM Sans",sans-serif;color:var(--text);outline:none;width:100%;transition:.18s}
 .ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(0,61,165,.07)}
 .ff textarea{resize:none}
 .ffrow{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .ff-warn label{color:var(--red)}
-.ff-warn input,.ff-warn textarea{border-color:rgba(200,16,46,.2)}
-
-/* Checklist */
-.ci{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:.1s}
+.ff-warn textarea{border-color:rgba(200,16,46,.2)}
+.ci{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);cursor:pointer}
 .ci:last-child{border-bottom:none}
-.cib{width:20px;height:20px;border-radius:5px;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.13s;background:#fff}
+.cib{width:21px;height:21px;border-radius:5px;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.13s;background:#fff}
 .cib.on{background:var(--navy);border-color:var(--navy)}
 .cil{font-size:12px;color:var(--text2);flex:1;line-height:1.3}
 .cil.on{color:var(--muted);text-decoration:line-through}
 
-/* Damage zones */
+/* Damage */
 .dmgg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px}
 .dmgz{background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:10px 7px;text-align:center;cursor:pointer;transition:.13s;position:relative}
 .dmgz:active{transform:scale(.97)}
@@ -370,17 +447,24 @@ html,body{height:100%;font-family:"DM Sans",sans-serif;background:#0e1422;color:
 .dmgnote.show{display:block}
 
 /* Photos */
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:10px}
-.pslot{aspect-ratio:1;border-radius:9px;border:2px dashed var(--border2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;background:var(--bg);transition:.13s;overflow:hidden;position:relative}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.pslot{
+  aspect-ratio:1;border-radius:10px;border:2px dashed var(--border2);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;cursor:pointer;background:var(--bg);transition:.13s;
+  overflow:hidden;position:relative;
+}
 .pslot:active{background:var(--border)}
 .pslot.taken{border-style:solid;border-color:var(--green)}
-.pstick{position:absolute;top:4px;right:4px;width:16px;height:16px;border-radius:50%;background:var(--green);color:#fff;font-size:9px;font-weight:700;display:none;align-items:center;justify-content:center}
-.pslot.taken .pstick{display:flex}
-.psico{font-size:18px;color:var(--muted)}
-.pslbl{font-size:8px;color:var(--muted);font-weight:600;text-align:center;padding:0 3px;line-height:1.3}
+.pslot.has-photo{border-style:solid;border-color:var(--green);background:#000}
+.pslot.has-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pstick{position:absolute;top:4px;right:4px;width:18px;height:18px;border-radius:50%;background:var(--green);color:#fff;font-size:10px;font-weight:700;display:none;align-items:center;justify-content:center;z-index:1}
+.pslot.taken .pstick,.pslot.has-photo .pstick{display:flex}
 .pslot.taken .psico,.pslot.taken .pslbl{opacity:.3}
+.psico{font-size:19px;color:var(--muted)}
+.pslbl{font-size:8px;color:var(--muted);font-weight:600;text-align:center;padding:0 3px;line-height:1.3}
 
-/* Notes thread */
+/* Notes */
 .nthread{display:flex;flex-direction:column;gap:0;margin-bottom:11px}
 .nitem{display:flex;gap:8px}
 .nline{display:flex;flex-direction:column;align-items:center}
@@ -403,18 +487,14 @@ html,body{height:100%;font-family:"DM Sans",sans-serif;background:#0e1422;color:
 .hoarr{font-size:11px;color:rgba(255,255,255,.32)}
 .hoto{font-size:13px;font-weight:800;color:var(--gold)}
 .hoflds{display:flex;flex-direction:column;gap:7px;margin-bottom:11px}
-.hofl label{font-size:9px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:3px}
-.hofl select,.hofl textarea{width:100%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.13);border-radius:7px;padding:9px 11px;font-size:12px;font-family:"DM Sans",sans-serif;color:#fff;outline:none;transition:.18s}
+.hofl label{font-size:9px;font-weight:700;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:3px}
+.hofl select,.hofl textarea{width:100%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:7px;padding:9px 11px;font-size:12px;font-family:"DM Sans",sans-serif;color:#fff;outline:none}
 .hofl select option{color:var(--text);background:#fff}
 .hofl textarea{resize:none}
-.hobtn{width:100%;background:#fff;color:var(--navy);border:none;border-radius:9px;padding:12px;font-size:12px;font-weight:800;font-family:"DM Sans",sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:.18s}
+.hobtn{width:100%;background:#fff;color:var(--navy);border:none;border-radius:9px;padding:12px;font-size:12px;font-weight:800;font-family:"DM Sans",sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
 .hobtn:active{opacity:.9}
-
-/* Complete button */
-.completebtn{width:100%;background:linear-gradient(135deg,var(--green),#14803d);color:#fff;border:none;border-radius:var(--r);padding:13px;font-size:13px;font-weight:800;font-family:"DM Sans",sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 14px rgba(22,163,74,.28);transition:.18s;margin-bottom:11px}
+.completebtn{width:100%;background:linear-gradient(135deg,var(--green),#14803d);color:#fff;border:none;border-radius:var(--r);padding:13px;font-size:13px;font-weight:800;font-family:"DM Sans",sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 14px rgba(22,163,74,.28);margin-bottom:11px}
 .completebtn:active{transform:scale(.98)}
-
-/* Read-only notice */
 .readonly-notice{background:rgba(100,116,139,.07);border:1px solid rgba(100,116,139,.18);border-radius:var(--rsm);padding:10px 12px;font-size:11px;color:var(--muted);display:flex;align-items:flex-start;gap:7px;margin-bottom:11px}
 
 /* Success */
@@ -427,320 +507,81 @@ html,body{height:100%;font-family:"DM Sans",sans-serif;background:#0e1422;color:
 .sucback{background:#22c55e;color:#fff;border:none;border-radius:var(--r);padding:12px 22px;font-size:13px;font-weight:700;font-family:"DM Sans",sans-serif;cursor:pointer}
 
 /* Toast */
-.toast{position:absolute;bottom:64px;left:50%;transform:translateX(-50%);
-  background:rgba(10,15,28,.92);color:#fff;padding:8px 15px;border-radius:20px;
-  font-size:11px;font-weight:600;z-index:9999;white-space:nowrap;backdrop-filter:blur(8px);
-  border:1px solid rgba(255,255,255,.09);animation:tin .18s ease}
-@keyframes tin{from{opacity:0;transform:translateX(-50%) translateY(7px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.toast{position:fixed;bottom:max(env(safe-area-inset-bottom,16px),20px);left:50%;transform:translateX(-50%);background:rgba(10,15,28,.93);color:#fff;padding:9px 18px;border-radius:22px;font-size:12px;font-weight:600;z-index:9999;white-space:nowrap;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);animation:tin .18s ease;pointer-events:none}
+@keyframes tin{from{opacity:0;transform:translateX(-50%) translateY(8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 
-/* Alert banner */
-.abanner{border-radius:var(--rsm);padding:9px 12px;font-size:11px;display:flex;align-items:flex-start;gap:7px;margin-bottom:8px;line-height:1.5}
-.abanner.urgent{background:rgba(200,16,46,.07);border:1px solid rgba(200,16,46,.18);color:var(--red)}
-.abanner.warn{background:rgba(212,152,10,.07);border:1px solid rgba(212,152,10,.18);color:var(--gold)}
-.abanner.info{background:rgba(0,61,165,.07);border:1px solid rgba(0,61,165,.18);color:var(--navy)}
+/* ═══════════════════════════════
+   CAMERA
+═══════════════════════════════ */
+#cameraOverlay{
+  position:fixed;inset:0;z-index:10000;
+  background:#000;display:none;flex-direction:column;
+}
+#cameraOverlay.active{display:flex}
+#camVideo{flex:1;width:100%;object-fit:cover;background:#111;display:block}
+.cam-hdr{
+  position:absolute;top:0;left:0;right:0;z-index:1;
+  padding:max(env(safe-area-inset-top,14px),14px) 16px 16px;
+  background:linear-gradient(to bottom,rgba(0,0,0,.65),transparent);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.cam-close{
+  width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.18);
+  backdrop-filter:blur(8px);border:none;color:#fff;font-size:16px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+}
+.cam-label{background:rgba(0,0,0,.55);backdrop-filter:blur(8px);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600}
+#camSimMode{
+  display:none;flex:1;align-items:center;justify-content:center;
+  flex-direction:column;gap:14px;
+  background:linear-gradient(160deg,#0B1120,#001750);
+  padding:40px 24px;text-align:center;
+}
+.cam-sim-ico{font-size:52px}
+.cam-sim-t{font-size:16px;font-weight:700;color:#fff}
+.cam-sim-d{font-size:13px;color:rgba(255,255,255,.4);max-width:240px;line-height:1.65}
+#camFlash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .1s;z-index:2}
+#camCanvas{display:none}
+.cam-footer{
+  position:absolute;bottom:0;left:0;right:0;z-index:1;
+  padding:20px 0 max(env(safe-area-inset-bottom,24px),28px);
+  background:linear-gradient(to top,rgba(0,0,0,.75),transparent);
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+}
+.cam-preview{display:flex;gap:8px;padding:0 16px;overflow-x:auto;max-width:100%}
+.cam-preview::-webkit-scrollbar{display:none}
+.cam-thumb{width:52px;height:52px;border-radius:8px;object-fit:cover;border:2px solid rgba(255,255,255,.3);flex-shrink:0}
+.cam-shutter{
+  width:74px;height:74px;border-radius:50%;background:#fff;
+  border:4px solid rgba(255,255,255,.35);cursor:pointer;transition:.13s;
+  box-shadow:0 0 0 4px rgba(255,255,255,.15);
+}
+.cam-shutter:active{transform:scale(.91);background:#e0e0e0}
+.cam-hint{font-size:11px;color:rgba(255,255,255,.45)}
 
-/* Dept badge */
-.dbadge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:20px;font-size:9px;font-weight:700}
-
-/* Mobile full-screen */
-@media(max-width:420px){
-  .outer{padding:0;background:#fff}
-  .infop,.phonel{display:none}
-  .phonew{padding:0}
-  .phone{width:100vw;height:100vh;border-radius:0;box-shadow:none}
-  .di{display:none}
-  .sb{height:36px;padding:0 16px 6px}
+/* ═══════════════════════════════
+   INSTALL BANNER
+═══════════════════════════════ */
+#installBanner{
+  position:fixed;bottom:0;left:0;right:0;z-index:8000;
+  background:#fff;border-top:1px solid var(--border);
+  padding:14px 18px;padding-bottom:max(env(safe-area-inset-bottom,14px),14px);
+  box-shadow:0 -4px 20px rgba(0,0,0,.12);
+  display:none;gap:12px;align-items:center;
+  animation:slideUpBanner .3s ease;
 }
-</style>
-<style>
-/* ═══ PWA STANDALONE OVERRIDES ═══ */
-html, body {
-  width:100%;height:100%;overflow:hidden;
-  background:#0B1120;
-}
-/* Force full screen — hide desktop wrapper */
-.outer {
-  display:block!important;padding:0!important;
-  background:#0B1120!important;
-  min-height:100vh;
-}
-.infop, .phonel { display:none!important; }
-.phonew { display:block!important;padding:0!important; }
-.phone {
-  width:100vw!important;
-  height:100vh!important;
-  height:100dvh!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  max-width:100%!important;
-}
-.di { display:none!important; }
-.sb {
-  height:env(safe-area-inset-top,44px)!important;
-  min-height:44px;
-  padding:env(safe-area-inset-top,10px) 18px 8px!important;
-  background:#0B1120!important;
-}
-/* Safe area for bottom nav */
-.bnav {
-  padding-bottom:env(safe-area-inset-bottom,0px)!important;
-}
-
-
-/* ═══ PWA FULL SCREEN OVERRIDE ═══ */
-html, body {
-  width: 100%; height: 100%; overflow: hidden;
-  background: #0B1120;
-  font-family: "DM Sans", sans-serif;
-}
-.outer { 
-  display: block !important; 
-  padding: 0 !important; 
-  background: #0B1120 !important;
-  min-height: 100vh;
-}
-.infop, .phonew .phone-lbl { display: none !important; }
-.phonew { display: block !important; padding: 0 !important; }
-.phone { 
-  width: 100vw !important; 
-  height: 100vh !important; 
-  height: 100dvh !important;
-  border-radius: 0 !important; 
-  box-shadow: none !important;
-  max-width: 100% !important;
-}
-.di { display: none !important; }
-.sb { height: 44px !important; padding: 0 18px 8px !important; }
-
-/* ═══ SPLASH SCREEN ═══ */
-#splashScreen {
-  position: fixed; inset: 0; z-index: 99999;
-  background: linear-gradient(160deg, #060c1a 0%, #001240 55%, #060c1a 100%);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 0;
-  transition: opacity .5s ease, transform .5s ease;
-}
-#splashScreen.hide {
-  opacity: 0; transform: scale(1.05); pointer-events: none;
-}
-.splash-grid {
-  position: absolute; inset: 0; opacity: .025;
-  background-image: 
-    repeating-linear-gradient(0deg,transparent,transparent 28px,#fff 28px,#fff 29px),
-    repeating-linear-gradient(90deg,transparent,transparent 28px,#fff 28px,#fff 29px);
-}
-.splash-glow {
-  position: absolute; inset: 0;
-  background: 
-    radial-gradient(circle at 20% 65%, rgba(200,16,46,.22) 0%, transparent 50%),
-    radial-gradient(circle at 85% 25%, rgba(0,26,94,.35) 0%, transparent 50%);
-}
-.splash-content {
-  position: relative; z-index: 1;
-  display: flex; flex-direction: column; align-items: center; gap: 0;
-  animation: splashIn .6s ease both;
-}
-@keyframes splashIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.splash-logo-row {
-  display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
-}
-.splash-logo { height: 38px; filter: brightness(0) invert(1); opacity: .9; }
-.splash-divider { width: 1px; height: 28px; background: rgba(255,255,255,.15); }
-.splash-badge {
-  background: #C8102E; color: #fff;
-  font-size: 11px; font-weight: 700; 
-  padding: 4px 10px; border-radius: 5px; letter-spacing: 1.5px;
-}
-.splash-title {
-  font-size: 32px; font-weight: 800; color: #fff;
-  text-align: center; line-height: 1.15; margin-bottom: 6px;
-  letter-spacing: -0.5px;
-}
-.splash-title em { color: #C8102E; font-style: normal; }
-.splash-sub {
-  font-size: 12px; color: rgba(255,255,255,.35);
-  text-align: center; margin-bottom: 48px;
-}
-.splash-loader {
-  width: 36px; height: 36px; position: relative;
-}
-.splash-loader::before, .splash-loader::after {
-  content: ''; position: absolute; border-radius: 50%;
-}
-.splash-loader::before {
-  inset: 0; border: 2.5px solid rgba(255,255,255,.1);
-}
-.splash-loader::after {
-  inset: 0; border: 2.5px solid transparent;
-  border-top-color: #C8102E; border-right-color: rgba(200,16,46,.3);
-  animation: spin .8s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-.splash-version {
-  position: absolute; bottom: 40px;
-  font-size: 10px; color: rgba(255,255,255,.18);
-  text-align: center; letter-spacing: 1px;
-}
-
-/* ═══ ALERTS SCREEN ═══ */
-.alerts-screen {
-  display: none; flex-direction: column; flex: 1; overflow: hidden; background: var(--bg);
-  animation: fadeUp .2s ease;
-}
-.alerts-screen.active { display: flex; }
-.alert-hdr {
-  background: #fff; border-bottom: 1px solid var(--border);
-  padding: 13px 15px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.alert-hdr-title { font-size: 13px; font-weight: 800; color: var(--text); }
-.alert-badge-count {
-  background: var(--red); color: #fff;
-  font-size: 10px; font-weight: 700; padding: 3px 8px;
-  border-radius: 20px; min-width: 22px; text-align: center;
-}
-.alerts-body { flex: 1; overflow-y: auto; padding: 12px; }
-.alerts-body::-webkit-scrollbar { display: none; }
-.alert-item {
-  background: #fff; border: 1px solid var(--border);
-  border-left: 4px solid var(--ac, var(--red));
-  border-radius: var(--r); padding: 12px 14px;
-  margin-bottom: 8px; box-shadow: var(--sh); cursor: pointer;
-  transition: .14s;
-}
-.alert-item:active { transform: scale(.99); }
-.alert-item-type {
-  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--ac, var(--red)); margin-bottom: 4px;
-}
-.alert-item-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
-.alert-item-sub { font-size: 11px; color: var(--muted); }
-.alert-item-time { font-size: 10px; color: var(--muted); margin-top: 6px; }
-
-/* ═══ CAMERA OVERLAY ═══ */
-#cameraOverlay {
-  position: fixed; inset: 0; z-index: 10000;
-  background: #000;
-  display: none; flex-direction: column;
-}
-#cameraOverlay.active { display: flex; }
-#cameraVideo {
-  flex: 1; width: 100%; object-fit: cover; background: #000;
-}
-.camera-hdr {
-  position: absolute; top: 0; left: 0; right: 0;
-  padding: env(safe-area-inset-top, 44px) 16px 16px;
-  background: linear-gradient(to bottom, rgba(0,0,0,.7), transparent);
-  display: flex; align-items: center; justify-content: space-between; z-index: 1;
-}
-.camera-close {
-  width: 36px; height: 36px; border-radius: 50%;
-  background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
-  border: none; color: #fff; font-size: 16px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-}
-.camera-label-tag {
-  background: rgba(0,0,0,.5); color: #fff; backdrop-filter: blur(8px);
-  padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
-}
-.camera-footer {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 24px 0 max(env(safe-area-inset-bottom,20px),28px);
-  background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
-  display: flex; flex-direction: column; align-items: center; gap: 12px; z-index: 1;
-}
-.camera-shutter {
-  width: 72px; height: 72px; border-radius: 50%;
-  background: #fff; border: 4px solid rgba(255,255,255,.4);
-  cursor: pointer; transition: .15s; box-shadow: 0 0 0 3px rgba(255,255,255,.2);
-}
-.camera-shutter:active { transform: scale(.92); background: #eee; }
-.camera-hint { font-size: 11px; color: rgba(255,255,255,.5); }
-.camera-preview-strip {
-  display: flex; gap: 8px; padding: 0 16px; overflow-x: auto;
-  max-width: 100%;
-}
-.camera-preview-strip::-webkit-scrollbar { display: none; }
-.cam-thumb {
-  width: 52px; height: 52px; border-radius: 8px; object-fit: cover;
-  flex-shrink: 0; border: 2px solid rgba(255,255,255,.3);
-}
-
-/* ═══ PHOTO SLOTS — real camera capable ═══ */
-.pslot { cursor: pointer; }
-.pslot.has-img img { 
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-  border-radius: 7px;
-}
-.pslot.has-img { border-style: solid; border-color: var(--green); }
-
-/* ═══ NOTIFICATION PANEL ═══ */
-.notif-panel {
-  position: absolute; top: 48px; right: 12px; width: 280px;
-  background: #fff; border: 1px solid var(--border); border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(0,0,0,.18); z-index: 500;
-  overflow: hidden; display: none;
-}
-.notif-panel.open { display: block; animation: dropIn .2s ease; }
-@keyframes dropIn { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
-.notif-panel-hdr {
-  padding: 12px 14px; border-bottom: 1px solid var(--border);
-  font-size: 11px; font-weight: 700; color: var(--text);
-  display: flex; align-items: center; justify-content: space-between;
-}
-.notif-panel-clear { font-size: 10px; color: var(--navy); cursor: pointer; font-weight: 700; }
-.notif-item {
-  padding: 10px 14px; border-bottom: 1px solid var(--border);
-  display: flex; gap: 9px; align-items: flex-start; cursor: pointer;
-}
-.notif-item:last-child { border-bottom: none; }
-.notif-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
-.notif-item-text { font-size: 12px; color: var(--text2); line-height: 1.4; }
-.notif-item-time { font-size: 10px; color: var(--muted); margin-top: 2px; }
-
-/* ═══ SAFE AREA PADDING ═══ */
-.bnav { padding-bottom: env(safe-area-inset-bottom, 0px) !important; }
-.bnav .bn { padding-bottom: max(6px, env(safe-area-inset-bottom, 6px)) !important; }
-
-/* ═══ APP INSTALL BANNER ═══ */
-#installBanner {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9000;
-  background: #fff; border-top: 1px solid var(--border);
-  padding: 14px 18px max(env(safe-area-inset-bottom,14px),14px);
-  box-shadow: 0 -4px 20px rgba(0,0,0,.12);
-  display: none; gap: 12px; align-items: center;
-  animation: slideUp2 .3s ease;
-}
-@keyframes slideUp2 { from { transform: translateY(100%); } to { transform: translateY(0); } }
-#installBanner.show { display: flex; }
-.ib-icon {
-  width: 44px; height: 44px; border-radius: 10px;
-  background: linear-gradient(135deg, #001A5E, #C8102E);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.ib-icon span { font-size: 20px; }
-.ib-text { flex: 1; }
-.ib-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 1px; }
-.ib-sub { font-size: 11px; color: var(--muted); }
-.ib-add-btn {
-  background: var(--navy); color: #fff; border: none;
-  border-radius: 8px; padding: 9px 14px;
-  font-size: 12px; font-weight: 700; font-family: "DM Sans", sans-serif;
-  cursor: pointer; flex-shrink: 0;
-}
-.ib-dismiss { 
-  background: none; border: none; color: var(--muted);
-  font-size: 18px; cursor: pointer; padding: 4px; flex-shrink: 0;
-}
-
+@keyframes slideUpBanner{from{transform:translateY(100%)}to{transform:translateY(0)}}
+#installBanner.show{display:flex}
+.ib-icon{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,#001A5E,#C8102E);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.ib-text{flex:1}
+.ib-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:1px}
+.ib-sub{font-size:11px;color:var(--muted)}
+.ib-add{background:var(--navy);color:#fff;border:none;border-radius:8px;padding:9px 15px;font-size:12px;font-weight:700;font-family:"DM Sans",sans-serif;cursor:pointer;flex-shrink:0}
+.ib-dismiss{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;padding:4px;flex-shrink:0;line-height:1}
 </style>
 
 <script>
-/* ═══ INLINE AC-DATA.JS ═══ */
+/* - INLINE DATA - */
 // Auto Capital - CapeEye System Data
 // Generated from ClickDealer export - 305 vehicles
 
@@ -800,7 +641,7 @@ const AC_WORKFLOW_STAGES = [
   {id:12, name:'Management',    dept:'Management',  color:'#64748b', handoverTo:null}
 ];
 
-// ─── localStorage helpers ───────────────────────────────────────────
+// --- localStorage helpers -------------------------------------------
 function getVehicles() {
   try { const s = JSON.parse(localStorage.getItem('ac_vehicles')||'[]'); return s.length ? s : AC_VEHICLES; }
   catch(e) { return AC_VEHICLES; }
@@ -809,7 +650,7 @@ function saveVehicles(v) { localStorage.setItem('ac_vehicles', JSON.stringify(v)
 function getWorkflow(stockNo) { return JSON.parse(localStorage.getItem('ac_wf_'+stockNo)||'{}'); }
 function saveWorkflow(stockNo, data) { localStorage.setItem('ac_wf_'+stockNo, JSON.stringify(data)); }
 
-// ─── Handover / task queue ───────────────────────────────────────────
+// --- Handover / task queue -------------------------------------------
 function saveHandover(stockNo, stageId, data) {
   localStorage.setItem('ac_ho_'+stockNo+'_'+stageId, JSON.stringify({...data, ts: new Date().toISOString()}));
 }
@@ -823,8 +664,8 @@ function assignTask(staffName, stockNo, stageId, stageName, note, vehicle) {
   localStorage.setItem(key, JSON.stringify(tasks));
   // Also log to global alert feed
   addAlert({type:'handover', level:'info',
-    title:`${stageName} complete — handover to ${staffName}`,
-    body:`${vehicle?.registration||stockNo} · ${vehicle?.make||''} ${vehicle?.model||''} · ${note||'No note'}`,
+    title:`${stageName} complete -- handover to ${staffName}`,
+    body:`${(vehicle ? vehicle.registration : stockNo)} . ${(vehicle ? vehicle.make : '')} ${(vehicle ? vehicle.model : '')} . ${note||'No note'}`,
     stockNo});
 }
 function getMyTasks(staffName) {
@@ -836,7 +677,7 @@ function completeTask(staffName, taskId) {
   localStorage.setItem(key, JSON.stringify(tasks.map(t => t.id===taskId ? {...t, status:'done', completedAt:new Date().toISOString()} : t)));
 }
 
-// ─── Alerts ──────────────────────────────────────────────────────────
+// --- Alerts ----------------------------------------------------------
 function getAlerts() { return JSON.parse(localStorage.getItem('ac_alerts')||'[]'); }
 function addAlert(alert) {
   const alerts = getAlerts();
@@ -850,7 +691,7 @@ function markAllAlertsRead() {
   localStorage.setItem('ac_alerts', JSON.stringify(getAlerts().map(a => ({...a,read:true}))));
 }
 
-// ─── Utility ─────────────────────────────────────────────────────────
+// --- Utility ---------------------------------------------------------
 function formatGBP(n) {
   return new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(n||0);
 }
@@ -870,102 +711,73 @@ function hoursInStage(stockNo, stageId) {
 </head>
 <body>
 
-<!-- ═══ SPLASH ═══ -->
-<div id="splashScreen">
-  <div class="splash-grid"></div>
-  <div class="splash-glow"></div>
-  <div class="splash-content">
-    <div class="splash-logo-row">
-      <img src="data:image/png;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="splash-logo" alt="Auto Capital">
-      <div class="splash-divider"></div>
-      <div class="splash-badge">CAPEYE</div>
-    </div>
-    <div class="splash-title">Staff <em>Portal</em></div>
-    <div class="splash-sub">Auto Capital Command Centre</div>
-    <div class="splash-loader"></div>
+<!-- ─── SPLASH ─── -->
+<div id="app">
+  <div class="sb" id="mainSb" style="background:#0B1120;position:absolute;top:0;left:0;right:0;z-index:50">
+    <span id="phoneTime" style="color:#fff">9:41</span>
+    <div class="sb-r" style="color:#fff"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-three-quarters"></i></div>
   </div>
-  <div class="splash-version">v1.0 · Demo Build</div>
-</div>
 
-<!-- ═══ CAMERA OVERLAY ═══ -->
-<div id="cameraOverlay">
-  <div class="camera-hdr">
-    <button class="camera-close" onclick="closeCamera()"><i class="fas fa-times"></i></button>
-    <div class="camera-label-tag" id="cameraSlotLabel">Photo</div>
-    <div style="width:36px"></div>
-  </div>
-  <video id="cameraVideo" autoplay playsinline muted style="flex:1;width:100%;object-fit:cover;background:#111;display:block"></video>
-  <div id="simModeMsg" style="display:none;flex:1;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:linear-gradient(160deg,#0B1120,#001750);padding:40px 24px;text-align:center">
-    <div style="font-size:48px">📸</div>
-    <div style="font-size:16px;font-weight:700;color:#fff">Demo Photo Mode</div>
-    <div style="font-size:13px;color:rgba(255,255,255,.4);max-width:240px;line-height:1.65">Camera access not available. Tap the button below to simulate capturing a photo — it will be saved to the vehicle record.</div>
-  </div>
-  <div id="cameraFlash" style="position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .12s;z-index:1"></div>
-  <canvas id="cameraCanvas" style="display:none"></canvas>
-  <div class="camera-footer">
-    <div class="camera-preview-strip" id="camPreviewStrip"></div>
-    <button class="camera-shutter" onclick="capturePhoto()" title="Capture photo"></button>
-    <div class="camera-hint">Tap to capture</div>
-  </div>
-</div>
-
-<!-- ═══ MAIN APP ═══ -->
-<div class="outer">
-<div class="phonew">
-<div class="phone" id="thePhone">
-<div class="di"><div class="di-cam"></div></div>
-<div class="sb" id="statusBar">
-  <span id="phoneTime">9:41</span>
-  <div class="sb-r"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-three-quarters"></i></div>
-</div>
-
-<!-- ═════════════ LOGIN SCREEN ═════════════ -->
-<div class="screen active" id="sc-login">
-  <div class="lhero">
-    <div class="lhero-g"></div><div class="lhero-glow"></div>
-    <div class="lhero-c">
-      <div class="lhero-lr">
-        <img src="data:image/png;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="lhero-logo" alt="Auto Capital">
-        <div class="lhero-s"></div>
-        <div class="lhero-ce">CAPEYE</div>
+  <!-- SPLASH SCREEN -->
+  <div class="screen active" id="sc-splash" style="position:relative">
+    <div class="splash-grid"></div>
+    <div class="splash-glow"></div>
+    <div class="splash-c">
+      <div class="splash-logo-row">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="splash-logo" alt="Auto Capital">
+        <div class="splash-div"></div>
+        <div class="splash-pill">CAPEYE</div>
       </div>
-      <div class="lhero-t">Staff <em>Portal</em></div>
-      <div class="lhero-sub">Auto Capital Command Centre</div>
+      <div class="splash-title">Staff <em>Portal</em></div>
+      <div class="splash-sub">Auto Capital Command Centre</div>
+      <div class="splash-spinner"></div>
     </div>
+    <div class="splash-vsn">v1.0 Demo</div>
   </div>
-  <div class="lform">
-    <div class="lg">Select your account</div>
-    <div class="lgs">Tap your name or sign in manually</div>
-    <!-- Quick select cards -->
-    <div id="loginQuickCards" style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px"></div>
-    <!-- Manual login -->
-    <details style="margin-bottom:10px">
-      <summary style="font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:4px 0;list-style:none;display:flex;align-items:center;gap:5px">
-        <i class="fas fa-keyboard" style="font-size:9px"></i> Sign in manually
-      </summary>
-      <div style="padding-top:10px;display:flex;flex-direction:column;gap:8px">
-        <div class="lfg" style="margin:0">
+
+  <!-- LOGIN SCREEN -->
+  <div class="screen" id="sc-login">
+    <div class="lhero">
+      <div class="lhero-g"></div><div class="lhero-glow"></div>
+      <div class="lhero-c">
+        <div class="lhero-lr">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="lhero-logo" alt="Auto Capital">
+          <div class="lhero-s"></div>
+          <div class="lhero-ce">CAPEYE</div>
+        </div>
+        <div class="lhero-t">Staff <em>Portal</em></div>
+        <div class="lhero-sub">Auto Capital Command Centre</div>
+      </div>
+    </div>
+    <div class="lbody">
+      <div class="lhd">Select your account</div>
+      <div class="lsd">Tap your name to sign in instantly</div>
+      <div id="staffCards"></div>
+      <div class="manual-toggle" onclick="toggleManual()">
+        <i class="fas fa-keyboard"></i> Sign in manually
+        <i class="fas fa-chevron-down" id="manualChevron" style="margin-left:auto;font-size:9px"></i>
+      </div>
+      <div class="manual-fields" id="manualFields">
+        <div class="mfg">
           <label>Username</label>
-          <div class="lfiw"><i class="fas fa-user lfii"></i><input class="lfi" id="loginUser" placeholder="e.g. keith" autocomplete="off"></div>
+          <div class="mfg-wrap"><i class="fas fa-user mfg-ico"></i><input class="mfi" id="loginUser" placeholder="e.g. keith" autocomplete="off"></div>
         </div>
-        <div class="lfg" style="margin:0">
+        <div class="mfg">
           <label>Password</label>
-          <div class="lfiw"><i class="fas fa-lock lfii"></i><input class="lfi" id="loginPass" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"></div>
+          <div class="mfg-wrap"><i class="fas fa-lock mfg-ico"></i><input class="mfi" id="loginPass" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"></div>
         </div>
+        <button class="lbtn" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</button>
       </div>
-    </details>
-    <div class="lerr" id="loginErr"><i class="fas fa-exclamation-circle"></i> Incorrect username or password</div>
-    <button class="lbtn" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</button>
-    <div style="font-size:10px;color:var(--muted);text-align:center;padding-bottom:20px">All demo passwords: <strong style="color:var(--text2)">demo123</strong></div>
+      <div class="lerr" id="loginErr"><i class="fas fa-exclamation-circle"></i> Incorrect username or password</div>
+      <div class="demo-note">All demo accounts use password: <strong>demo123</strong></div>
+    </div>
   </div>
-</div>
 
-<!-- ═════════════ APP SHELL ═════════════ -->
-<div class="appsh" id="appShell">
-  <div class="ahdr">
-    <div class="ahdr-top">
+  <!-- APP SHELL -->
+  <div class="screen" id="sc-app" data-alias="appShell">
+    <div class="ahdr">
       <div class="ahdr-l">
-        <img src="data:image/png;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="ahdr-logo" alt="Auto Capital" style="height:22px">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzc0LjEgNjcyLjciPgogICAgPHBhdGggZD0iTTUyNi44IDcuNGg1OS45bDg5LjYgMjQyLjhoLTU3LjRsLTE2LjctNDkuOWgtOTMuM2wtMTcuMiA0OS45aC01NS40TDUyNi44IDcuNHptLTMuNSAxNTEuMWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMTUwLTE1MS4xaDUzLjh2MTQ5LjFjMCAxNi43IDIuMSAyOC45IDYuMiAzNi41IDYuNCAxMy42IDIwLjMgMjAuNCA0MS44IDIwLjRzMzUuMi02LjggNDEuNi0yMC40YzQuMS03LjcgNi4yLTE5LjkgNi4yLTM2LjVWNy40aDUzLjh2MTQ5LjNjMCAyNS44LTQuMiA0NS45LTEyLjUgNjAuMy0xNS42IDI2LjQtNDUuMiAzOS41LTg5IDM5LjVTNzAxLjcgMjQzLjMgNjg2IDIxN2MtOC4zLTE0LjQtMTIuNS0zNC41LTEyLjUtNjAuM1Y3LjRoLS4yem00MzEuMSAwdjQzaC03NS44djE5OS44aC01My4zVjUwLjRoLTc2LjF2LTQzaDIwNS4yem0yMDQuOSAyMjEuM2MtMTkuMSAxOC45LTQ2LjggMjguMy04MyAyOC4zcy02My45LTkuNC04My0yOC4zYy0yNS43LTIzLjItMzguNS01Ni42LTM4LjUtMTAwLjJzMTIuOC03Ny45IDM4LjUtMTAwLjJjMTkuMS0xOC45IDQ2LjgtMjguMyA4My0yOC4zczYzLjkgOS40IDgzIDI4LjNjMjUuNSAyMi4zIDM4LjMgNTUuNyAzOC4zIDEwMC4yIDAgNDMuNi0xMi44IDc3LTM4LjMgMTAwLjJ6bS0zMy4xLTM2LjljMTIuMy0xNC44IDE4LjUtMzUuOSAxOC41LTYzLjNzLTYuMi00OC4zLTE4LjUtNjMuMi0yOS0yMi4zLTQ5LjktMjIuMy0zNy43IDcuNC01MC4yIDIyLjItMTguNyAzNS45LTE4LjcgNjMuMyA2LjIgNDguNCAxOC43IDYzLjNjMTIuNSAxNC44IDI5LjIgMjIuMiA1MC4yIDIyLjJzMzcuNi03LjQgNDkuOS0yMi4yeiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTE0NC43IDI1MS41SDUwLjRMMTM5IDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iIzQzODBiZCIvPgogICAgPHBhdGggZD0iTTI1Ny43IDI1MS41aC05NC4yTDI1Mi4xIDYuNmg5NC4ybC04OC42IDI0NC45eiIgZmlsbD0iI2QyMzgzNiIvPgogICAgPHBhdGggZD0iTTM3MC44IDI1MS41aC05NC4yTDM2NS4xIDYuNmg5NC4ybC04OC41IDI0NC45eiIgZmlsbD0iI2ZhY2Y1NiIvPgogICAgPHBhdGggZD0iTTEzNy45IDYwNi44djcuNmgtMjEuNnY1Ni41aC04Ljh2LTU2LjVIODUuOXYtNy42aDUyem0zOS40IDBoOC44djI2LjVoMzN2LTI2LjVoOC44djY0LjFoLTguOHYtMzBoLTMzdjMwaC04Ljh2LTY0LjF6bTk2LjMgMGg0Ni41djcuOUgyODJ2MTkuNWgzNS4ydjcuNEgyODJ2MjEuN2gzOC43djcuNmgtNDcuMnYtNjQuMWguMXptMTUxLjEgMGwxOC40IDU0LjYgMTguMi01NC42aDkuN2wtMjMuNCA2NC4xaC05LjFsLTIzLjQtNjQuMWg5LjZ6bTk3LjkgMGg5LjhsMjMuMyA2NC4xaC05LjVsLTYuNy0xOS4yaC0yNS4ybC03IDE5LjJoLTguOWwyNC4yLTY0LjF6bTE0LjQgMzcuOGwtOS45LTI4LjMtMTAuMyAyOC4zSDUzN3ptNTcuNy0zNy44aDEwLjJsMzIgNTEuOHYtNTEuOGg4LjN2NjQuMWgtOS44TDYwMyA2MTkuMnY1MS43aC04LjN2LTY0LjF6bTE5Ny4xIDQuN2M0LjQgNC4zIDYuOSA5LjEgNy40IDE0LjZoLTguNWMtLjktNC4xLTIuOC03LjQtNS42LTkuOHMtNi44LTMuNi0xMS45LTMuNmMtNi4yIDAtMTEuMiAyLjItMTUgNi43LTMuOCA0LjQtNS43IDExLjItNS43IDIwLjQgMCA3LjUgMS43IDEzLjYgNS4yIDE4LjMgMy40IDQuNyA4LjYgNyAxNS40IDcgNi4zIDAgMTEuMS0yLjUgMTQuNC03LjQgMS43LTIuNiAzLTYgMy45LTEwLjJoOC41Yy0uNyA2LjgtMy4yIDEyLjQtNy40IDE3LTUgNS41LTExLjggOC4yLTIwLjQgOC4yLTcuNCAwLTEzLjUtMi4zLTE4LjYtNi44LTYuNi02LTkuOS0xNS4yLTkuOS0yNy42IDAtOS41IDIuNS0xNy4yIDcuNC0yMy4zIDUuMy02LjYgMTIuNy05LjkgMjIuMS05LjkgOC0uMSAxNC4yIDIuMSAxOC43IDYuNHptNTEuMi00LjdoNDYuNXY3LjloLTM4djE5LjVoMzUuMnY3LjRoLTM1LjJ2MjEuN2gzOC43djcuNkg4NDN2LTY0LjF6bTkwIDBoMTAuMmwzMiA1MS44di01MS44aDguM3Y2NC4xaC05LjhsLTMyLjQtNTEuN3Y1MS43SDkzM3YtNjQuMXptMTQyLjMgMHY3LjZoLTIxLjZ2NTYuNWgtOC44di01Ni41aC0yMS42di03LjZoNTJ6bTQwLjMgMGgyOS4xYzQuOCAwIDguOC43IDExLjkgMi4xIDUuOSAyLjcgOC45IDcuOCA4LjkgMTUuMSAwIDMuOC0uOCA3LTIuNCA5LjRzLTMuOCA0LjQtNi43IDUuOWMyLjUgMSA0LjQgMi40IDUuNyA0IDEuMyAxLjcgMiA0LjQgMi4xIDguMWwuMyA4LjZjLjEgMi40LjMgNC4zLjYgNS41LjUgMiAxLjUgMy4zIDIuOCAzLjl2MS40aC0xMC42Yy0uMy0uNi0uNS0xLjMtLjctMi4xLS4yLS45LS4zLTIuNi0uNC01LjFsLS41LTEwLjdjLS4yLTQuMi0xLjctNy00LjUtOC40LTEuNi0uOC00LjEtMS4yLTcuNi0xLjJoLTE5LjJ2MjcuNWgtOC43di02NGgtLjF6bTI4LjIgMjkuNGM0IDAgNy4xLS44IDkuNC0yLjRzMy41LTQuNiAzLjUtOC44YzAtNC42LTEuNi03LjctNC44LTkuMy0xLjctLjktNC0xLjMtNi45LTEuM2gtMjAuNnYyMS45aDE5LjR2LS4xem02Ny4zLTI5LjRoNDYuNXY3LjloLTM4LjF2MTkuNWgzNS4ydjcuNGgtMzUuMnYyMS43aDM4Ljd2Ny42SDEyMTFsLjEtNjQuMWgweiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTM1LjEgMzEwLjNjMjAuNC0yMCA0Ni4zLTMwIDc3LjktMzAgNDIuMiAwIDczIDEzLjQgOTIuNSA0MC4yIDEwLjggMTUgMTYuNSAzMC4xIDE3LjMgNDUuM2gtNTIuOWMtMy40LTExLjYtNy43LTIwLjQtMTMtMjYuNC05LjQtMTAuNS0yMy40LTE1LjgtNDEuOS0xNS44cy0zMy43IDcuNC00NC42IDIyLjMtMTYuMyAzNS45LTE2LjMgNjMuMiA1LjcgNDcuNiAxNy4yIDYxLjIgMjYuMSAyMC4zIDQzLjggMjAuMyAzMi01LjggNDEuNS0xNy41YzUuMy02LjMgOS42LTE1LjYgMTMuMS0yOC4yaDUyLjZjLTQuNSAyNi41LTE2LjEgNDgtMzQuOCA2NC42LTE4LjYgMTYuNi00Mi41IDI0LjktNzEuNiAyNC45LTM2IDAtNjQuNC0xMS4yLTg1LTMzLjZDMTAuMyA0NzguMyAwIDQ0Ny40IDAgNDA4LjJjLS4xLTQyLjIgMTEuNi03NC45IDM1LjEtOTcuOXpNMzAyLjMgMjg1aDU5LjlsODkuNSAyNDIuOGgtNTcuNGwtMTYuNy00OS45aC05My4zbC0xNy4xIDQ5LjloLTU1LjRMMzAyLjMgMjg1em0tMy41IDE1MWg2NC45bC0zMi05NS41LTMyLjkgOTUuNXptMzQxLjEtMTMuM2MtMTQuOCAxMS45LTM2IDE3LjgtNjMuNSAxNy44aC01Mi43djg3LjNoLTUyLjZWMjg1aDEwOC43YzI1LjEgMCA0NS4xIDYuMyA2MCAxOC44czIyLjQgMzEuOSAyMi40IDU4LjJjLS4xIDI4LjYtNy41IDQ4LjgtMjIuMyA2MC43em0tNDAuNC04Ny41Yy02LjctNS40LTE2LjEtOC4xLTI4LjItOC4xaC00Ny43djcxLjVoNDcuN2MxMi4xIDAgMjEuNS0yLjkgMjguMi04LjdzMTAuMS0xNSAxMC4xLTI3LjctMy40LTIxLjYtMTAuMS0yN3ptMTM5LjMgMTkyLjZoLTUyLjZWMjg1aDUyLjZ2MjQyLjh6TTk2NS4zIDI4NXY0M2gtNzUuOHYxOTkuOGgtNTMuM1YzMjhoLTc2LjF2LTQzaDIwNS4yem01NC43IDBoNTkuOWw4OS42IDI0Mi44aC01Ny40bC0xNi43LTQ5LjloLTkzLjNsLTE3LjIgNDkuOWgtNTUuNEwxMDIwIDI4NXptLTMuNCAxNTFoNjQuOWwtMzItOTUuNS0zMi45IDk1LjV6bTE3OC4xLTE1MWg1Mi45djE5OS4yaDEyNi41djQzLjZoLTE3OS40VjI4NXoiIGZpbGw9IiM4MDgyODUiLz4KPC9zdmc+" class="ahdr-logo" alt="">
         <div class="ahdr-sep"></div>
         <div class="ahdr-ce">CE</div>
       </div>
@@ -974,103 +786,118 @@ function hoursInStage(stockNo, stageId) {
           <div class="ahdr-name" id="hdrName"></div>
           <div class="ahdr-role" id="hdrRole"></div>
         </div>
-        <!-- Bell with notification panel -->
         <div style="position:relative">
-          <div class="nbtn" id="notifBtn" onclick="toggleNotifPanel()">
+          <div class="notif-btn" id="notifBtn" onclick="toggleNotif()">
             <i class="fas fa-bell"></i>
-            <div class="nbadge" id="nbadge"></div>
+            <div class="notif-dot" id="nbadge"></div>
           </div>
-          <div class="notif-panel" id="notifPanel">
-            <div class="notif-panel-hdr">
-              Notifications
-              <span class="notif-panel-clear" onclick="toggleNotifPanel()">Done</span>
+          <div class="notif-drop" id="notifDrop">
+            <div class="nd-hdr">
+              <span class="nd-title">Alerts</span>
+              <span class="nd-done" onclick="toggleNotif()">Done</span>
             </div>
-            <div class="notif-items"></div>
+            <div class="nd-items" id="notifItems"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="abody" id="abody">
-    <div class="pv active" id="pv-home"></div>
-    <div class="pv" id="pv-tasks"></div>
-    <div class="pv" id="pv-alerts"></div>
-    <div class="pv" id="pv-keys"></div>
-    <div class="pv" id="pv-me"></div>
-  </div>
-
-  <div class="bnav">
-    <div class="bn active" id="bn-home" onclick="setTab('home')"><i class="fas fa-home"></i>Home</div>
-    <div class="bn" id="bn-tasks" onclick="setTab('tasks')"><i class="fas fa-tasks"></i>Tasks<div class="bn-pip" id="taskpip"></div></div>
-    <div class="bn" id="bn-alerts" onclick="setTab('alerts')">
-      <i class="fas fa-bell"></i>Alerts
-      <div class="bn-pip" id="alertpip"></div>
-      <span id="alertNavBadge" style="display:none;position:absolute;top:5px;right:calc(50% - 18px);background:var(--red);color:#fff;font-size:8px;font-weight:700;padding:1px 4px;border-radius:8px;border:1.5px solid #fff;min-width:14px;text-align:center"></span>
+    <div class="abody" id="abody">
+      <div class="pv active" id="pv-home"></div>
+      <div class="pv" id="pv-tasks"></div>
+      <div class="pv" id="pv-alerts"></div>
+      <div class="pv" id="pv-keys"></div>
+      <div class="pv" id="pv-me"></div>
     </div>
-    <div class="bn" id="bn-keys" onclick="setTab('keys')"><i class="fas fa-key"></i>Keys</div>
-    <div class="bn" id="bn-me" onclick="setTab('me')"><i class="fas fa-user"></i>Me</div>
-  </div>
-</div>
 
-<!-- ═════════════ VEHICLE DETAIL ═════════════ -->
-<div class="vds" id="vdScreen">
-  <div class="vdhdr">
-    <div class="vdhtop">
-      <div class="backbtn" onclick="closeVehicle()"><i class="fas fa-chevron-left"></i></div>
-      <div class="vdhi">
-        <div class="vdhtitle" id="vdTitle"></div>
-        <div class="vdhsub" id="vdSub"></div>
+    <div class="bnav">
+      <div class="bn active" id="bn-home" onclick="setTab('home')"><i class="fas fa-home"></i>Home</div>
+      <div class="bn" id="bn-tasks" onclick="setTab('tasks')"><i class="fas fa-tasks"></i>Tasks<div class="bn-pip" id="taskpip"></div></div>
+      <div class="bn" id="bn-alerts" onclick="setTab('alerts')">
+        <i class="fas fa-bell"></i>Alerts
+        <span class="alert-count-badge" id="alertBadge"></span>
       </div>
-      <div class="vdreg" id="vdReg"></div>
+      <div class="bn" id="bn-keys" onclick="setTab('keys')"><i class="fas fa-key"></i>Keys</div>
+      <div class="bn" id="bn-me" onclick="setTab('me')"><i class="fas fa-user"></i>Me</div>
     </div>
   </div>
-  <div class="vhero"><div class="vhero-g"></div>
-    <div class="vhero-c">
-      <div class="vhero-row">
-        <div><div class="vhero-make" id="vhMake"></div><div class="vhero-var" id="vhVar"></div></div>
-        <div><div class="vhero-price" id="vhPrice"></div><div class="vhero-plbl">Listed price</div></div>
+
+  <!-- VEHICLE DETAIL -->
+  <div class="vds" id="vdScreen">
+    <div class="vdhdr">
+      <div class="vdhtop">
+        <div class="backbtn" onclick="closeVehicle()"><i class="fas fa-chevron-left"></i></div>
+        <div class="vdhi"><div class="vdhtitle" id="vdTitle"></div><div class="vdhsub" id="vdSub"></div></div>
+        <div class="vdreg" id="vdReg"></div>
       </div>
-      <div class="vchips" id="vhChips"></div>
     </div>
+    <div class="vhero"><div class="vhero-g"></div>
+      <div class="vhero-c">
+        <div class="vhero-row">
+          <div><div class="vhero-make" id="vhMake"></div><div class="vhero-var" id="vhVar"></div></div>
+          <div><div class="vhero-price" id="vhPrice"></div><div class="vhero-plbl">Listed price</div></div>
+        </div>
+        <div class="vchips" id="vhChips"></div>
+      </div>
+    </div>
+    <div class="vdprog"><div class="vdprog-lbl">Pipeline progress</div><div class="strack" id="strack"></div></div>
+    <div class="vdtabs" id="vdtabs"></div>
+    <div class="vdbody" id="vdbody"></div>
   </div>
-  <div class="vdprog">
-    <div class="vdprog-lbl">Pipeline progress</div>
-    <div class="strack" id="strack"></div>
+
+  <!-- SUCCESS -->
+  <div class="sucsc" id="sucScreen">
+    <div class="sucico">✅</div>
+    <div class="such" id="sucH">Stage Complete!</div>
+    <div class="sucs" id="sucS">Handed over. Audit trail updated.</div>
+    <button class="sucback" onclick="afterSuccess()">← Back to Tasks</button>
   </div>
-  <div class="vdtabs" id="vdtabs"></div>
-  <div class="vdbody" id="vdbody"></div>
+</div><!-- /#app -->
+
+<!-- CAMERA OVERLAY (outside #app so it covers everything) -->
+<div id="cameraOverlay">
+  <div class="cam-hdr">
+    <button class="cam-close" onclick="camClose()"><i class="fas fa-times"></i></button>
+    <div class="cam-label" id="camLabel">Photo</div>
+    <div style="width:38px"></div>
+  </div>
+  <video id="camVideo" autoplay playsinline muted></video>
+  <div id="camSimMode">
+    <div class="cam-sim-ico">📸</div>
+    <div class="cam-sim-t">Demo Photo Mode</div>
+    <div class="cam-sim-d">Camera not available here. Tap the shutter to simulate a photo — it saves to the vehicle record.</div>
+  </div>
+  <div id="camFlash"></div>
+  <canvas id="camCanvas" style="display:none"></canvas>
+  <div class="cam-footer">
+    <div class="cam-preview" id="camPreview"></div>
+    <button class="cam-shutter" onclick="camCapture()" aria-label="Take photo"></button>
+    <div class="cam-hint">Tap to capture</div>
+  </div>
 </div>
 
-<!-- ═════════════ SUCCESS ═════════════ -->
-<div class="sucsc" id="sucScreen">
-  <div class="sucico">✅</div>
-  <div class="such" id="sucH">Stage Complete!</div>
-  <div class="sucs" id="sucS">Handed over successfully. Audit trail updated.</div>
-  <button class="sucback" onclick="afterSuccess()">← Back to Tasks</button>
-</div>
+<!-- appShell alias for base_js compat -->
+<div id="appShell" style="display:none"></div>
 
-</div><!-- /phone -->
-</div><!-- /phonew -->
-</div><!-- /outer -->
-
-<!-- ═══ INSTALL BANNER ═══ -->
+<!-- INSTALL BANNER -->
 <div id="installBanner">
-  <div class="ib-icon"><span>🚐</span></div>
+  <div class="ib-icon">🚐</div>
   <div class="ib-text">
     <div class="ib-title">Add CapEye to Home Screen</div>
-    <div class="ib-sub">One tap access — works offline</div>
+    <div class="ib-sub">Works offline · One-tap access</div>
   </div>
-  <button class="ib-add-btn" onclick="triggerInstall()">Add</button>
+  <button class="ib-add" onclick="installApp()">Add</button>
   <button class="ib-dismiss" onclick="dismissInstall()">&times;</button>
 </div>
 
 <script>
-/* ═══ CORE APP JS ═══ */
+/* ----------------------------------------
+   CORE APP (from mobile.html)
+---------------------------------------- */
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // USERS & CONSTANTS
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 const USERS = {
   keith:    { name:'Keith Hardy',       role:'General Manager',   dept:'Management', pass:'demo123', admin:true  },
   ibrahim:  { name:'Ibrahim Ata',       role:'Sales Manager',     dept:'Sales',      pass:'demo123', admin:true  },
@@ -1096,17 +923,17 @@ const STAGE_COLOR = {
   'Accounts':'#a855f7'
 };
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // STATE
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 let CU = null;    // current user object
 let CV = null;    // current vehicle object
 let activeTab = 'home';
 let STATE = { notes:{}, chk:{}, photos:{}, dmg:{} };
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // HELPERS
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function getVehicles() {
   try { const s = JSON.parse(localStorage.getItem('ac_vehicles')||'[]'); return s.length ? s : AC_VEHICLES; }
   catch(e) { return AC_VEHICLES; }
@@ -1135,9 +962,9 @@ function ts()   { const d=new Date(); return d.toLocaleDateString('en-GB',{day:'
 function getCurStage() { return AC_WORKFLOW_STAGES.find(s => s.name === CV.workflowStage); }
 function getNextStage() { const c=getCurStage(); return c ? AC_WORKFLOW_STAGES.find(s=>s.id===c.id+1) : null; }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // SELECTOR CARDS (desktop info panel)
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 (function buildSelectorCards() {
   const ops = ['stanslaw','morteza','marcin','sia','gorgino','germaine'];
   const mgmt = ['keith','ibrahim'];
@@ -1153,7 +980,7 @@ function getNextStage() { const c=getCurStage(); return c ? AC_WORKFLOW_STAGES.f
       <div class="selcard-av" style="background:${dc}">${initials}</div>
       <div class="selcard-info">
         <div class="selcard-name">${u.name}</div>
-        <div class="selcard-role">${u.role} · ${u.dept}</div>
+        <div class="selcard-role">${u.role} . ${u.dept}</div>
       </div>
       <div class="selcard-tick"><i class="fas fa-check"></i></div>`;
     d.onclick = () => selectUser(key);
@@ -1192,18 +1019,18 @@ function selectUser(key) {
   document.getElementById('loginPass').value = 'demo123';
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // CLOCK
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 (function tick() {
   const d=new Date(),el=document.getElementById('phoneTime');
   if(el) el.textContent = d.getHours()+':'+(d.getMinutes()<10?'0':'')+d.getMinutes();
   setTimeout(tick,15000);
 })();
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // TOAST
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function showToast(msg, ms=2200) {
   document.querySelectorAll('.toast').forEach(t=>t.remove());
   const t = document.createElement('div');
@@ -1212,9 +1039,9 @@ function showToast(msg, ms=2200) {
   setTimeout(() => t.remove(), ms);
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // LOGIN CHIPS
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 (function buildChips() {
   const w = document.getElementById('loginChips');
   if (!w) return;
@@ -1237,9 +1064,9 @@ function quickLogin(u, p) {
   doLogin();
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // LOGIN / LOGOUT
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function doLogin() {
   const u = document.getElementById('loginUser').value.trim().toLowerCase();
   const p = document.getElementById('loginPass').value;
@@ -1252,7 +1079,7 @@ function doLogin() {
   }
   CU = user;
   document.getElementById('hdrName').textContent = CU.name;
-  document.getElementById('hdrRole').textContent = CU.role + ' · ' + CU.dept;
+  document.getElementById('hdrRole').textContent = CU.role + ' . ' + CU.dept;
   // Urgent badge
   const urg = getMyVehicles().filter(v=>v.daysInStock>60||v.blocked);
   if (urg.length) {
@@ -1279,9 +1106,9 @@ function doLogout() {
   if (btn) btn.classList.remove('show');
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // TABS
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function setTab(tab) {
   activeTab = tab;
   document.querySelectorAll('.bn').forEach(b => b.classList.remove('active'));
@@ -1290,12 +1117,12 @@ function setTab(tab) {
   const pv = document.getElementById('pv-'+tab);
   if (pv) pv.classList.add('active');
   document.getElementById('abody').scrollTop = 0;
-  ({ home:renderHome, tasks:renderTasks, keys:renderKeys, me:renderMe })[tab]?.();
+  var _rm={home:renderHome,tasks:renderTasks,keys:renderKeys,me:renderMe}; if(_rm[tab])_rm[tab]();
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // HOME TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderHome() {
   const mine = getMyVehicles();
   const urg  = mine.filter(v => v.daysInStock>60 || v.blocked);
@@ -1307,7 +1134,7 @@ function renderHome() {
     <div style="position:relative;z-index:1">
       <div style="font-size:9px;font-weight:600;color:rgba(255,255,255,.35);margin-bottom:2px">${new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'})}</div>
       <div style="font-size:17px;font-weight:800;color:#fff;margin-bottom:1px">Hi, ${CU.name.split(' ')[0]} 👋</div>
-      <div style="font-size:10px;color:rgba(255,255,255,.38)">${CU.role} · ${CU.dept}</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.38)">${CU.role} . ${CU.dept}</div>
     </div>
   </div>
   <div class="sumrow">
@@ -1350,9 +1177,9 @@ function renderHome() {
   el.innerHTML = h;
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // TASKS TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderTasks() {
   const mine = getMyVehicles();
   const el   = document.getElementById('pv-tasks');
@@ -1403,9 +1230,9 @@ function tkCard(v, pl, pc) {
   </div>`;
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // KEYS TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderKeys() {
   const mine = getMyVehicles();
   const el   = document.getElementById('pv-keys');
@@ -1419,12 +1246,12 @@ function renderKeys() {
         <span class="kreg">${v.registration}</span>
         <div class="kinfo">
           <div class="kdesc">${v.make} ${v.model}</div>
-          <div class="kpos">${v.workflowStage} · ${v.location||'Location TBC'}</div>
+          <div class="kpos">${v.workflowStage} . ${v.location||'Location TBC'}</div>
         </div>
         <span class="kstat" style="background:rgba(22,163,74,.1);color:var(--green)">IN</span>
       </div>`;
     });
-    if (mine.length > 8) h += `<div style="text-align:center;padding:6px 0"><span style="font-size:11px;color:var(--navy);font-weight:700;cursor:pointer" onclick="showToast('Showing top 8 — full list in Keys module')">+${mine.length-8} more keys</span></div>`;
+    if (mine.length > 8) h += `<div style="text-align:center;padding:6px 0"><span style="font-size:11px;color:var(--navy);font-weight:700;cursor:pointer" onclick="showToast('Showing top 8 -- full list in Keys module')">+${mine.length-8} more keys</span></div>`;
   }
 
   h += `<div class="sh" style="margin-top:14px">NEW ON-SITE (48H)</div>
@@ -1432,9 +1259,9 @@ function renderKeys() {
   el.innerHTML = h;
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // ME TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderMe() {
   const el   = document.getElementById('pv-me');
   const mine = getMyVehicles();
@@ -1457,7 +1284,7 @@ function renderMe() {
     <div class="irow"><span class="irlbl">Vehicles in queue</span><span class="irval">${mine.length}</span></div>
     <div class="irow"><span class="irlbl">Urgent (60d+)</span><span class="irval" style="color:var(--red)">${mine.filter(v=>v.daysInStock>60).length}</span></div>
     <div class="irow"><span class="irlbl">Blocked</span><span class="irval" style="color:var(--orange)">${mine.filter(v=>v.blocked).length}</span></div>
-    <div class="irow"><span class="irlbl">Access level</span><span class="irval">${CU.admin?'Full — Management':'Department only'}</span></div>
+    <div class="irow"><span class="irlbl">Access level</span><span class="irval">${CU.admin?'Full -- Management':'Department only'}</span></div>
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-cog"></i> Settings</div><div class="fsb">
     <div class="irow" style="cursor:pointer" onclick="showToast('Notifications are on')"><span class="irlbl"><i class="fas fa-bell"></i> Push Notifications</span><span class="irval" style="color:var(--green)">On</span></div>
@@ -1465,19 +1292,19 @@ function renderMe() {
     <div class="irow" style="cursor:pointer" onclick="showToast('Dark mode coming in v2')"><span class="irlbl"><i class="fas fa-moon"></i> Dark Mode</span><span class="irval">Off</span></div>
     <div class="irow" style="cursor:pointer" onclick="doLogout()"><span class="irlbl" style="color:var(--red)"><i class="fas fa-sign-out-alt"></i> Sign Out</span><span class="irval" style="color:var(--muted);font-size:10px">Tap to logout</span></div>
   </div></div>
-  <div style="text-align:center;font-size:9px;color:var(--muted);padding:8px 0 16px">CapEye v1.0 — Auto Capital Internal Tool</div>`;
+  <div style="text-align:center;font-size:9px;color:var(--muted);padding:8px 0 16px">CapEye v1.0 -- Auto Capital Internal Tool</div>`;
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // OPEN VEHICLE DETAIL
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function openVehicle(sn) {
   const vs = getVehicles();
   CV = vs.find(v => v.stockNo === sn);
   if (!CV) return;
 
   // Init state for this vehicle
-  if (!STATE.notes[sn])  STATE.notes[sn]  = [{ who:'System', ts:'On arrival', text:`Vehicle added to CapEye — assigned to ${CV.workflowStage}.` }];
+  if (!STATE.notes[sn])  STATE.notes[sn]  = [{ who:'System', ts:'On arrival', text:`Vehicle added to CapEye -- assigned to ${CV.workflowStage}.` }];
   if (!STATE.chk[sn])    STATE.chk[sn]    = {};
   if (!STATE.photos[sn]) STATE.photos[sn] = {};
   if (!STATE.dmg[sn])    STATE.dmg[sn]    = {};
@@ -1486,12 +1313,12 @@ function openVehicle(sn) {
 
   // Header
   document.getElementById('vdTitle').textContent = CV.make + ' ' + CV.model;
-  document.getElementById('vdSub').textContent   = (curSt ? 'Stage '+curSt.id+' · ' : '') + CV.workflowStage;
+  document.getElementById('vdSub').textContent   = (curSt ? 'Stage '+curSt.id+' . ' : '') + CV.workflowStage;
   document.getElementById('vdReg').textContent   = CV.registration;
   // Hero
   document.getElementById('vhMake').textContent  = CV.make + ' ' + CV.model;
   document.getElementById('vhVar').textContent   = CV.variant || '';
-  document.getElementById('vhPrice').textContent = CV.price ? fmt(CV.price) : '—';
+  document.getElementById('vhPrice').textContent = CV.price ? fmt(CV.price) : '--';
   document.getElementById('vhChips').innerHTML   = [
     `<div class="vchip">${CV.colour}</div>`,
     CV.mileage  ? `<div class="vchip">${Number(CV.mileage).toLocaleString('en-GB')} mi</div>` : '',
@@ -1508,7 +1335,7 @@ function openVehicle(sn) {
 }
 
 function buildStageTrack() {
-  const curId = getCurStage()?.id || 1;
+  const curId = (getCurStage() ? getCurStage().id : 1);
   let h = '';
   AC_WORKFLOW_STAGES.forEach((st,i) => {
     const state = st.id < curId ? 'done' : st.id === curId ? 'cur' : 'nxt';
@@ -1521,9 +1348,9 @@ function buildStageTrack() {
   document.getElementById('strack').innerHTML = h;
 }
 
-// ════════════════════════════════════════════════════
-// VD TABS — role-aware
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
+// VD TABS - role-aware
+// ----------------------------------------------------
 function buildVdTabs() {
   const tabs = [
     { id:'stage',    l:'📋 Stage' },
@@ -1557,9 +1384,9 @@ function switchVdt(id) {
   document.getElementById('vdbody').scrollTop = 0;
 }
 
-// ════════════════════════════════════════════════════
-// STAGE FORM — role + stage routing
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
+// STAGE FORM - role + stage routing
+// ----------------------------------------------------
 function renderStageForm() {
   const el    = document.getElementById('vtc-stage');
   if (!el) return;
@@ -1601,12 +1428,12 @@ function toggleChk(k, sn) {
   lbl.className = 'cil' + (on?' on':'');
 }
 
-// checklist builder — uses vehicle stockNo as namespace
+// checklist builder - uses vehicle stockNo as namespace
 function bChk(items) {
   const sn = CV.stockNo;
   return items.map((item,i) => {
     const k  = sn+'_'+i;
-    const on = STATE.chk[sn]?.[k] || false;
+    const on = (STATE.chk[sn] ? STATE.chk[sn][k] : false) || false;
     return `<div class="ci" data-k="${k}" data-sn="${sn}">
       <div class="cib ${on?'on':''}" id="cb_${k}">${on?'<span style="color:#fff;font-size:10px;font-weight:700">✓</span>':''}</div>
       <div class="cil ${on?'on':''}" id="cl_${k}">${item}</div>
@@ -1618,7 +1445,7 @@ function staffOpts(depts) {
   return AC_STAFF.filter(s => depts.includes(s.dept)).map(s=>`<option>${s.name}</option>`).join('');
 }
 
-// ─── INTAKE FORM ───
+// --- INTAKE FORM ---
 function fIntake() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-clipboard-list"></i> Vehicle Intake Details</div><div class="fsb">
@@ -1632,14 +1459,14 @@ function fIntake() {
       <div class="ff"><label>Overall Condition</label><select><option>Excellent</option><option>Good</option><option>Fair</option><option>Poor</option></select></div>
     </div>
     <div class="ff"><label>Received By</label><select>${staffOpts(['Intake','Management'])}</select></div>
-    <div class="ff"><label>Initial Notes</label><textarea rows="2" placeholder="Observations on arrival — any issues, missing items..."></textarea></div>
+    <div class="ff"><label>Initial Notes</label><textarea rows="2" placeholder="Observations on arrival -- any issues, missing items..."></textarea></div>
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> Intake Checklist</div><div class="fsb">
-    ${bChk(['V5 / Logbook present and verified','MOT certificate received','Service history present','All spare keys handed over','HPI check completed — clear','Purchase invoice received','No outstanding finance confirmed','Mileage cross-checked against history','Vehicle photographed on arrival','Condition report completed'])}
+    ${bChk(['V5 / Logbook present and verified','MOT certificate received','Service history present','All spare keys handed over','HPI check completed -- clear','Purchase invoice received','No outstanding finance confirmed','Mileage cross-checked against history','Vehicle photographed on arrival','Condition report completed'])}
   </div></div>`;
 }
 
-// ─── BODYSHOP / PAINT FORM ───
+// --- BODYSHOP / PAINT FORM ---
 function fBodyshop() {
   const isPaint = CV.workflowStage === 'Paint';
   return `
@@ -1655,47 +1482,47 @@ function fBodyshop() {
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> ${isPaint?'Paint':'Bodyshop'} Checklist</div><div class="fsb">
     ${bChk(isPaint
-      ? ['Panel prep / rust treatment complete','Primer applied and cured','Masking applied correctly','Base coat applied evenly','Clear coat applied','Finish quality checked — no orange peel','Colour match confirmed in daylight','Dry / cure time fully observed','Final polish applied']
+      ? ['Panel prep / rust treatment complete','Primer applied and cured','Masking applied correctly','Base coat applied evenly','Clear coat applied','Finish quality checked -- no orange peel','Colour match confirmed in daylight','Dry / cure time fully observed','Final polish applied']
       : ['Damage assessment documented','Job card raised and costed','Structural integrity verified','Parts ordered and received','Dents and creases repaired','Panel alignment checked','Ready for paint or sign-off']
     )}
   </div></div>`;
 }
 
-// ─── DENT REPAIR (PDR) FORM ───
+// --- DENT REPAIR (PDR) FORM ---
 function fDentRepair() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-car-crash"></i> Dent Repair / PDR Details</div><div class="fsb">
     <div class="ff"><label>Assigned Technician</label><select>${staffOpts(['Workshop','Bodyshop'])}</select></div>
-    <div class="ff"><label>Repair Method</label><select><option>PDR — Paintless Dent Repair</option><option>Traditional Body Filler</option><option>Panel Replacement</option><option>Stud Welding</option><option>Hot Glue Pulling</option></select></div>
+    <div class="ff"><label>Repair Method</label><select><option>PDR -- Paintless Dent Repair</option><option>Traditional Body Filler</option><option>Panel Replacement</option><option>Stud Welding</option><option>Hot Glue Pulling</option></select></div>
     <div class="ffrow">
       <div class="ff"><label>Labour Cost £</label><input type="number" placeholder="0"></div>
       <div class="ff"><label>Parts Cost £</label><input type="number" placeholder="0"></div>
     </div>
-    <div class="ff"><label>Panels Worked On</label><textarea rows="2" placeholder="List each panel — e.g. O/S front door, N/S rear quarter..."></textarea></div>
-    <div class="ff"><label>Before Condition</label><select><option>Multiple dents — poor</option><option>Several dents — fair</option><option>Minor dents only</option><option>Single dent</option></select></div>
+    <div class="ff"><label>Panels Worked On</label><textarea rows="2" placeholder="List each panel -- e.g. O/S front door, N/S rear quarter..."></textarea></div>
+    <div class="ff"><label>Before Condition</label><select><option>Multiple dents -- poor</option><option>Several dents -- fair</option><option>Minor dents only</option><option>Single dent</option></select></div>
     <div class="ff"><label>Work Notes</label><textarea rows="2" placeholder="Techniques used, any complications, residual marks..."></textarea></div>
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> PDR / Dent Repair Checklist</div><div class="fsb">
-    ${bChk(['All dents assessed and photographed','Repair method agreed and documented','Panel access confirmed — no obstructions','Dents fully worked out — no residual marks','Paint surface intact — no cracks or chips','Result inspected under lighting','Any non-repairable dents noted for panel replacement','Ready for paint or valeting'])}
+    ${bChk(['All dents assessed and photographed','Repair method agreed and documented','Panel access confirmed -- no obstructions','Dents fully worked out -- no residual marks','Paint surface intact -- no cracks or chips','Result inspected under lighting','Any non-repairable dents noted for panel replacement','Ready for paint or valeting'])}
   </div></div>`;
 }
 
-// ─── LEGAL & DOCS FORM ───
+// --- LEGAL & DOCS FORM ---
 function fLegal() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-file-contract"></i> Legal & Documentation</div><div class="fsb">
-    <div class="ff"><label>V5 / Logbook Status</label><select><option>V5 Received</option><option>V5 Applied For (V62)</option><option>V5 Not Present — Action Required</option></select></div>
+    <div class="ff"><label>V5 / Logbook Status</label><select><option>V5 Received</option><option>V5 Applied For (V62)</option><option>V5 Not Present -- Action Required</option></select></div>
     <div class="ff"><label>HPI Check Reference No.</label><input type="text" placeholder="HPI check reference number"></div>
-    <div class="ff"><label>Outstanding Finance</label><select><option>None — Clear</option><option>Finance Settled — Confirmation Received</option><option>Outstanding — Action Required</option></select></div>
+    <div class="ff"><label>Outstanding Finance</label><select><option>None -- Clear</option><option>Finance Settled -- Confirmation Received</option><option>Outstanding -- Action Required</option></select></div>
     <div class="ff"><label>DVLA Notes</label><textarea rows="2" placeholder="DVLA correspondence, V5 queries..."></textarea></div>
     <div class="ff"><label>Assigned To</label><select>${staffOpts(['Management'])}</select></div>
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> Legal Checklist</div><div class="fsb">
-    ${bChk(['V5 / logbook verified and correct','DVLA check completed','Finance fully settled — evidence received','HPI clear — no write-off, stolen or finance markers','Mileage discrepancy investigated if flagged','Previous keeper history reviewed','Any recalls checked and noted','Ready to proceed to next stage'])}
+    ${bChk(['V5 / logbook verified and correct','DVLA check completed','Finance fully settled -- evidence received','HPI clear -- no write-off, stolen or finance markers','Mileage discrepancy investigated if flagged','Previous keeper history reviewed','Any recalls checked and noted','Ready to proceed to next stage'])}
   </div></div>`;
 }
 
-// ─── MECHANICAL FORM ───
+// --- MECHANICAL FORM ---
 function fMechanical() {
   const isFault = CV.workflowStage === 'Fault Overview';
   return `
@@ -1706,17 +1533,17 @@ function fMechanical() {
       <div class="ff"><label>Parts Cost £</label><input type="number" placeholder="0"></div>
     </div>
     ${isFault ? `<div class="ff"><label>Faults Identified</label><textarea rows="3" placeholder="List all faults found during inspection..."></textarea></div>
-    <div class="ff"><label>Recommended Action</label><select><option>Complete in-house</option><option>External specialist required</option><option>Parts on order</option><option>Sign-off — no action needed</option></select></div>` : `
+    <div class="ff"><label>Recommended Action</label><select><option>Complete in-house</option><option>External specialist required</option><option>Parts on order</option><option>Sign-off -- no action needed</option></select></div>` : `
     <div class="ff"><label>Faults Found</label><textarea rows="2" placeholder="Any faults discovered during work..."></textarea></div>
     <div class="ff"><label>Work Carried Out</label><textarea rows="3" placeholder="Describe all work completed in detail..."></textarea></div>`}
     ${CV.workflowStage === 'External Work' ? `<div class="ff"><label>External Supplier</label><input type="text" placeholder="Name of external garage / supplier"></div>` : ''}
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> Workshop Checklist</div><div class="fsb">
-    ${bChk(['Full mechanical inspection completed','Service carried out if due','Brake test passed — front and rear','Tyre check — depth, pressure, condition','All fluid levels correct and topped up','Engine warning lights cleared','AC / heating checked','Steering and suspension checked','Road test completed','PDI sheet signed off'])}
+    ${bChk(['Full mechanical inspection completed','Service carried out if due','Brake test passed -- front and rear','Tyre check -- depth, pressure, condition','All fluid levels correct and topped up','Engine warning lights cleared','AC / heating checked','Steering and suspension checked','Road test completed','PDI sheet signed off'])}
   </div></div>`;
 }
 
-// ─── VALETING FORM ───
+// --- VALETING FORM ---
 function fValeting() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-spray-can"></i> Valet Details</div><div class="fsb">
@@ -1725,18 +1552,18 @@ function fValeting() {
     <div class="ff"><label>Additional Notes</label><textarea rows="2" placeholder="Special requests, problem areas, additional products used..."></textarea></div>
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> Full Valet Checklist</div><div class="fsb">
-    ${bChk(['Pre-wash foam applied and rinsed','Exterior hand wash and dry','Wheel arches and alloys cleaned','Tyre dressing applied','Exterior glass cleaned — no smears','Door shuts, boot shut, bonnet shut wiped','Interior fully hoovered — under seats, mats, boot','Dashboard, trim and vents wiped clean','Leather / fabric seats cleaned','Centre console and cupholders cleaned','Interior glass cleaned — no smears','Air freshener applied','Exterior wax or sealant applied','Final walk-round inspection — ready for photos'])}
+    ${bChk(['Pre-wash foam applied and rinsed','Exterior hand wash and dry','Wheel arches and alloys cleaned','Tyre dressing applied','Exterior glass cleaned -- no smears','Door shuts, boot shut, bonnet shut wiped','Interior fully hoovered -- under seats, mats, boot','Dashboard, trim and vents wiped clean','Leather / fabric seats cleaned','Centre console and cupholders cleaned','Interior glass cleaned -- no smears','Air freshener applied','Exterior wax or sealant applied','Final walk-round inspection -- ready for photos'])}
   </div></div>`;
 }
 
-// ─── MARKETING FORM ───
+// --- MARKETING FORM ---
 function fMarketing() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-bullhorn"></i> Advertising Details</div><div class="fsb">
     <div class="ff"><label>Retail Price £</label><input type="number" value="${CV.price||''}" placeholder="0"></div>
     <div class="ff"><label>Assigned To</label><select>${staffOpts(['Sales','Marketing'])}</select></div>
     <div class="ff"><label>Key Selling Points</label><textarea rows="2" placeholder="Low mileage, FSH, recent service, new MOT, tow bar..."></textarea></div>
-    <div class="ff"><label>Photo Status</label><select><option>Photos not yet taken</option><option>Photos taken — uploading</option><option>Photos live on platform</option></select></div>
+    <div class="ff"><label>Photo Status</label><select><option>Photos not yet taken</option><option>Photos taken -- uploading</option><option>Photos live on platform</option></select></div>
     <div class="ff"><label>Listing Notes</label><textarea rows="2" placeholder="Any notes for the listing team..."></textarea></div>
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> Advertising Checklist</div><div class="fsb">
@@ -1744,7 +1571,7 @@ function fMarketing() {
   </div></div>`;
 }
 
-// ─── TEST DRIVE FORM ───
+// --- TEST DRIVE FORM ---
 function fTestDrive() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-car"></i> Test Drive Record</div><div class="fsb">
@@ -1760,16 +1587,16 @@ function fTestDrive() {
       <div class="ff"><label>Mileage After</label><input type="number" placeholder="Post-drive reading"></div>
     </div>
     <div class="ff"><label>Duration (minutes)</label><input type="number" placeholder="e.g. 30"></div>
-    <div class="ff"><label>Outcome</label><select><option value="">— Select outcome —</option><option>Customer Proceeding to Purchase</option><option>Customer Considering</option><option>Customer Declined</option><option>Internal Drive Only</option></select></div>
+    <div class="ff"><label>Outcome</label><select><option value="">-- Select outcome --</option><option>Customer Proceeding to Purchase</option><option>Customer Considering</option><option>Customer Declined</option><option>Internal Drive Only</option></select></div>
     <div class="ff"><label>Customer Feedback</label><textarea rows="2" placeholder="Notes from the customer, likes, concerns..."></textarea></div>
-    <div class="ff ff-warn"><label>⚠️ Incidents or Damage?</label><textarea rows="2" placeholder="Leave blank if none — note any incidents here..."></textarea></div>
+    <div class="ff ff-warn"><label>⚠️ Incidents or Damage?</label><textarea rows="2" placeholder="Leave blank if none -- note any incidents here..."></textarea></div>
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-check-square"></i> Pre-Drive Checklist</div><div class="fsb">
-    ${bChk(['Fuel level confirmed adequate','Tyre pressures checked','No active warning lights','Vehicle insurance confirmed for test drive','Customer ID (driving licence) verified and photo taken','Key signed out from eTrack board','Vehicle photographed before drive — all angles'])}
+    ${bChk(['Fuel level confirmed adequate','Tyre pressures checked','No active warning lights','Vehicle insurance confirmed for test drive','Customer ID (driving licence) verified and photo taken','Key signed out from eTrack board','Vehicle photographed before drive -- all angles'])}
   </div></div>`;
 }
 
-// ─── ACCOUNTS FORM ───
+// --- ACCOUNTS FORM ---
 function fAccounts() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-file-invoice-pound"></i> Accounts & Finance</div><div class="fsb">
@@ -1791,11 +1618,11 @@ function fAccounts() {
   </div></div>`;
 }
 
-// ─── MANAGEMENT FORM ───
+// --- MANAGEMENT FORM ---
 function fManagement() {
   return `
   <div class="fs"><div class="fsh"><i class="fas fa-user-tie"></i> Management Review</div><div class="fsb">
-    <div class="ff"><label>Management Decision</label><select><option>Approve for sale — all clear</option><option>Hold — further work required</option><option>Reduce asking price</option><option>Consign to auction</option><option>Write off — uneconomical</option></select></div>
+    <div class="ff"><label>Management Decision</label><select><option>Approve for sale -- all clear</option><option>Hold -- further work required</option><option>Reduce asking price</option><option>Consign to auction</option><option>Write off -- uneconomical</option></select></div>
     <div class="ff"><label>Approved Sale Price £</label><input type="number" value="${CV.price||''}"></div>
     <div class="ff"><label>Target Margin £</label><input type="number" placeholder="Target profit margin"></div>
     <div class="ff"><label>Assigned Sales Person</label><select>${staffOpts(['Sales','Management'])}</select></div>
@@ -1806,25 +1633,25 @@ function fManagement() {
   </div></div>`;
 }
 
-// ─── READ-ONLY VIEW (wrong dept / stage) ───
+// --- READ-ONLY VIEW (wrong dept / stage) ---
 function fReadOnly() {
   const st = AC_WORKFLOW_STAGES.find(s=>s.name===CV.workflowStage);
   return `
   <div class="readonly-notice">
     <i class="fas fa-eye" style="margin-top:1px;flex-shrink:0"></i>
-    <div>This vehicle is currently in the <strong>${CV.workflowStage}</strong> stage (${st?.dept||'—'} department). You can view details, add notes and report damage, but completing this stage is handled by the assigned team.</div>
+    <div>This vehicle is currently in the <strong>${CV.workflowStage}</strong> stage (${st ? st.dept : '--'} department). You can view details, add notes and report damage, but completing this stage is handled by the assigned team.</div>
   </div>
   <div class="fs"><div class="fsh"><i class="fas fa-info-circle"></i> Current Stage: ${CV.workflowStage}</div><div class="fsb">
-    <div class="irow"><span class="irlbl">Department</span><span class="irval">${st?.dept||'—'}</span></div>
+    <div class="irow"><span class="irlbl">Department</span><span class="irval">${st ? st.dept : '--'}</span></div>
     <div class="irow"><span class="irlbl">Days at this stage</span><span class="irval" style="color:${(CV.daysInStage||0)>5?'var(--red)':'var(--text)'}">${CV.daysInStage||0}d</span></div>
     <div class="irow"><span class="irlbl">Days in stock</span><span class="irval" style="color:${CV.daysInStock>60?'var(--red)':CV.daysInStock>30?'var(--gold)':'var(--text)'}">${CV.daysInStock}d</span></div>
     <div class="irow"><span class="irlbl">Status</span><span class="irval">${CV.blocked?'⚠ Blocked':'Active'}</span></div>
   </div></div>`;
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // DAMAGE TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderDamageTab() {
   const el = document.getElementById('vtc-damage');
   if (!el) return;
@@ -1839,7 +1666,7 @@ function renderDamageTab() {
   ];
   let h = `<div class="sh">TAP AREA TO REPORT DAMAGE</div><div class="dmgg">`;
   zones.forEach(z => {
-    const hit = STATE.dmg[sn]?.[z.id] || false;
+    const hit = (STATE.dmg[sn] ? STATE.dmg[sn][z.id] : false) || false;
     h += `<div class="dmgz ${hit?'hit':''}" id="dz_${z.id}" onclick="toggleDmg('${z.id}')">
       <div class="dzpip"></div>
       <div class="dzico">${z.ico}</div>
@@ -1847,7 +1674,7 @@ function renderDamageTab() {
     </div>`;
   });
   h += `</div>
-  <textarea class="dmgnote ${Object.values(STATE.dmg[sn]||{}).some(Boolean)?'show':''}" id="dmnote_${sn}" placeholder="Describe damage — panels, scratches, dents, glass cracks, interior tears..." rows="3"></textarea>
+  <textarea class="dmgnote ${Object.values(STATE.dmg[sn]||{}).some(Boolean)?'show':''}" id="dmnote_${sn}" placeholder="Describe damage -- panels, scratches, dents, glass cracks, interior tears..." rows="3"></textarea>
   <div class="fs" style="margin-top:10px"><div class="fsh"><i class="fas fa-history"></i> Prior Damage Records</div><div class="fsb">
     <div style="font-size:11px;color:var(--muted);text-align:center;padding:6px">No prior damage records on file for this vehicle</div>
   </div></div>`;
@@ -1862,12 +1689,12 @@ window.toggleDmg = function(id) {
   z.classList.toggle('hit', STATE.dmg[sn][id]);
   const n = document.getElementById('dmnote_'+sn);
   n.classList.toggle('show', Object.values(STATE.dmg[sn]).some(Boolean));
-  if (STATE.dmg[sn][id]) showToast('Damage flagged — ' + id);
+  if (STATE.dmg[sn][id]) showToast('Damage flagged -- ' + id);
 };
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // PHOTOS TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderPhotosTab() {
   const el = document.getElementById('vtc-photos');
   if (!el) return;
@@ -1879,7 +1706,7 @@ function renderPhotosTab() {
   ];
   let h = `<div class="sh">TAP SLOT TO CONFIRM PHOTO TAKEN</div><div class="pgrid">`;
   slots.forEach((s,i) => {
-    const taken = STATE.photos[sn]?.[i] || false;
+    const taken = (STATE.photos[sn] ? STATE.photos[sn][i] : false) || false;
     h += `<div class="pslot ${taken?'taken':''}" id="ps_${sn}_${i}" onclick="togglePhoto(${i})">
       <div class="pstick">✓</div>
       <div class="psico"><i class="fas fa-${taken?'check-circle':'camera'}" style="color:${taken?'var(--green)':'var(--muted)'}"></i></div>
@@ -1901,9 +1728,9 @@ window.togglePhoto = function(i) {
   if (STATE.photos[sn][i]) showToast('📸 Photo captured');
 };
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // NOTES TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderNotesTab() {
   const el = document.getElementById('vtc-notes');
   if (!el) return;
@@ -1942,9 +1769,9 @@ window.addNote = function(sn) {
   showToast('Note added');
 };
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // HANDOVER TAB
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderHandoverTab() {
   const el  = document.getElementById('vtc-handover');
   if (!el) return;
@@ -1954,15 +1781,15 @@ function renderHandoverTab() {
   let h = `<div class="hocard">
     <div class="hotitle">Stage Handover</div>
     <div class="horow">
-      <span class="hofrom">${cur?.name||'—'}</span>
+      <span class="hofrom">${cur ? cur.name : '--'}</span>
       <span class="hoarr"><i class="fas fa-arrow-right"></i></span>
-      <span class="hoto">${nxt?.name||'Complete'}</span>
+      <span class="hoto">${nxt ? nxt.name : 'Complete'}</span>
     </div>`;
 
   if (nxt) {
     h += `<div class="hoflds">
       <div class="hofl"><label>Assign To</label><select id="ho_asgn"><option value="">Any in ${nxt.dept}</option>${staffOpts([nxt.dept])}</select></div>
-      <div class="hofl"><label>Priority</label><select id="ho_pri"><option>Normal</option><option>Urgent</option><option>Critical — do today</option></select></div>
+      <div class="hofl"><label>Priority</label><select id="ho_pri"><option>Normal</option><option>Urgent</option><option>Critical -- do today</option></select></div>
       <div class="hofl"><label>Handover Note</label><textarea id="ho_note" rows="3" placeholder="What does the ${nxt.dept} team need to know?"></textarea></div>
     </div>
     <button class="hobtn" onclick="completeStage()"><i class="fas fa-check-circle"></i> Complete & Hand to ${nxt.dept}</button>`;
@@ -1976,7 +1803,7 @@ function renderHandoverTab() {
   h += `</div>`;
 
   // Stage history
-  const past = AC_WORKFLOW_STAGES.filter(s => s.id < (cur?.id||1));
+  const past = AC_WORKFLOW_STAGES.filter(s => s.id < (cur ? cur.id : 1));
   h += `<div class="fs"><div class="fsh"><i class="fas fa-history"></i> Stage History</div><div class="fsb">`;
   if (!past.length) {
     h += `<div style="font-size:11px;color:var(--muted)">No prior stages</div>`;
@@ -1995,54 +1822,54 @@ function renderHandoverTab() {
   el.innerHTML = h;
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // INFO TAB (admin only)
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function renderInfoTab() {
   const el = document.getElementById('vtc-info');
   if (!el) return;
   el.innerHTML = `
   <div class="fs"><div class="fsh"><i class="fas fa-car"></i> Vehicle Details</div><div class="fsb">
     ${[['Stock No.', CV.stockNo],['Registration', CV.registration],['Make & Model', CV.make+' '+CV.model],
-       ['Colour', CV.colour],['Fuel', CV.fuel||'—'],['Gearbox', CV.gearbox||'—'],
-       ['Mileage', CV.mileage ? Number(CV.mileage).toLocaleString('en-GB')+' mi' : '—'],
-       ['Reg Date', CV.regDate||'—'],['MOT Expiry', CV.mot||'—'],['Body Type', CV.body||'—'],
-       ['Doors', CV.doors||'—'],['FSH', CV.fsh==='Y'?'✓ Yes':'No'],
+       ['Colour', CV.colour],['Fuel', CV.fuel||'--'],['Gearbox', CV.gearbox||'--'],
+       ['Mileage', CV.mileage ? Number(CV.mileage).toLocaleString('en-GB')+' mi' : '--'],
+       ['Reg Date', CV.regDate||'--'],['MOT Expiry', CV.mot||'--'],['Body Type', CV.body||'--'],
+       ['Doors', CV.doors||'--'],['FSH', CV.fsh==='Y'?'✓ Yes':'No'],
     ].map(([l,v]) => `<div class="irow"><span class="irlbl">${l}</span><span class="irval" ${l==='Registration'?'style="font-family:DM Mono,monospace;font-size:11px"':''}>${v}</span></div>`).join('')}
   </div></div>
   <div class="fs"><div class="fsh"><i class="fas fa-pound-sign"></i> Financials & Status</div><div class="fsb">
     <div class="irow"><span class="irlbl">Listed Price</span><span class="irval">${CV.price ? fmt(CV.price) : 'Not set'}</span></div>
-    <div class="irow"><span class="irlbl">Road Tax (RFL)</span><span class="irval">${CV.rfl ? fmt(CV.rfl)+'/yr' : '—'}</span></div>
+    <div class="irow"><span class="irlbl">Road Tax (RFL)</span><span class="irval">${CV.rfl ? fmt(CV.rfl)+'/yr' : '--'}</span></div>
     <div class="irow"><span class="irlbl">Days In Stock</span><span class="irval" style="color:${CV.daysInStock>60?'var(--red)':CV.daysInStock>30?'var(--gold)':'var(--green)'}">${CV.daysInStock}d</span></div>
     <div class="irow"><span class="irlbl">Days at Stage</span><span class="irval" style="color:${(CV.daysInStage||0)>5?'var(--orange)':'var(--text)'}">${CV.daysInStage||0}d</span></div>
-    <div class="irow"><span class="irlbl">Location</span><span class="irval">${CV.location||'—'}</span></div>
-    <div class="irow"><span class="irlbl">Status</span><span class="irval">${CV.status||'—'}</span></div>
+    <div class="irow"><span class="irlbl">Location</span><span class="irval">${CV.location||'--'}</span></div>
+    <div class="irow"><span class="irlbl">Status</span><span class="irval">${CV.status||'--'}</span></div>
     <div class="irow"><span class="irlbl">Blocked</span><span class="irval" style="color:${CV.blocked?'var(--red)':'var(--green)'}">${CV.blocked?'⚠ Yes':'No'}</span></div>
   </div></div>`;
 }
 
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 // COMPLETE STAGE
-// ════════════════════════════════════════════════════
+// ----------------------------------------------------
 function completeStage() {
   const cur = getCurStage();
   const nxt = getNextStage();
-  const hn  = document.getElementById('ho_note')?.value || '';
-  const hp  = document.getElementById('ho_pri')?.value  || 'Normal';
-  const ha  = document.getElementById('ho_asgn')?.value || '';
+  const hn  = (document.getElementById('ho_note') ? document.getElementById('ho_note').value : '');
+  const hp  = (document.getElementById('ho_pri') ? document.getElementById('ho_pri').value : 'Normal');
+  const ha  = (document.getElementById('ho_asgn') ? document.getElementById('ho_asgn').value : '');
 
   // Log to notes
   if (!STATE.notes[CV.stockNo]) STATE.notes[CV.stockNo] = [];
   STATE.notes[CV.stockNo].push({
     who: CU.name,
     ts:  ts(),
-    text: `Stage "${cur?.name}" completed and handed over${hn?' — '+hn:''} [${hp} priority]${ha?' → '+ha:''}`
+    text: `Stage "${cur ? cur.name : 'Stage'}" completed and handed over${hn?' -- '+hn:''} [${hp} priority]${ha?' → '+ha:''}`
   });
 
   // Success screen
   document.getElementById('sucH').textContent = nxt ? 'Stage Complete!' : 'Vehicle Complete!';
   document.getElementById('sucS').textContent = nxt
-    ? `"${cur?.name}" signed off. ${ha||nxt.dept} assigned for "${nxt.name}" [${hp}]. Audit trail updated.`
+    ? `"${cur ? cur.name : 'Stage'}" signed off. ${ha||nxt.dept} assigned for "${nxt.name}" [${hp}]. Audit trail updated.`
     : `${CV.registration} has completed all ${AC_WORKFLOW_STAGES.length} workflow stages. Ready for handover to customer. 🎉`;
 
   document.getElementById('vdScreen').classList.remove('active');
@@ -2062,328 +1889,147 @@ function closeVehicle() {
 }
 
 </script>
+
 <script>
-/* ═══ PWA ENHANCEMENTS ═══ */
+/* ----------------------------------------
+   PWA APP LAYER
+---------------------------------------- */
 
-// ═══════════════════════════════════════════════════
-// SPLASH SCREEN
-// ═══════════════════════════════════════════════════
+// -- SCREEN MANAGER ----------------------
+var SCREENS = ['sc-splash','sc-login','sc-app'];
+function showScreen(id) {
+  SCREENS.forEach(function(s) {
+    var el = document.getElementById(s);
+    if (el) el.classList.remove('active');
+  });
+  // Also hide vehicle detail and success
+  document.getElementById('vdScreen').classList.remove('active');
+  document.getElementById('sucScreen').classList.remove('active');
+  var target = document.getElementById(id);
+  if (target) target.classList.add('active');
+  
+  // Status bar colour
+  var sb = document.getElementById('mainSb');
+  if (id === 'sc-app') {
+    sb.style.background = '#fff';
+    sb.style.color = 'var(--text)';
+    sb.querySelectorAll('span,div').forEach(function(el) { el.style.color = 'var(--text)'; });
+    document.getElementById('phoneTime').style.color = 'var(--text)';
+  } else {
+    sb.style.background = '#0B1120';
+    document.getElementById('phoneTime').style.color = '#fff';
+  }
+}
+
+// -- CLOCK -------------------------------
+(function tick() {
+  var d = new Date();
+  var el = document.getElementById('phoneTime');
+  if (el) el.textContent = d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+  setTimeout(tick, 15000);
+})();
+
+// -- SPLASH - LOGIN -----------------------
 window.addEventListener('DOMContentLoaded', function() {
-  // Show splash for 2s then fade out
   setTimeout(function() {
-    var splash = document.getElementById('splashScreen');
+    var splash = document.getElementById('sc-splash');
     if (splash) {
-      splash.classList.add('hide');
-      setTimeout(function() { splash.style.display = 'none'; }, 500);
+      splash.style.transition = 'opacity .5s ease, transform .5s ease';
+      splash.style.opacity = '0';
+      splash.style.transform = 'scale(1.04)';
+      setTimeout(function() { showScreen('sc-login'); }, 480);
     }
-  }, 2000);
+  }, 2200);
 });
 
-// ═══════════════════════════════════════════════════
-// PWA INSTALL PROMPT
-// ═══════════════════════════════════════════════════
-var deferredInstallPrompt = null;
-window.addEventListener('beforeinstallprompt', function(e) {
-  e.preventDefault();
-  deferredInstallPrompt = e;
-  var banner = document.getElementById('installBanner');
-  if (banner && !localStorage.getItem('installDismissed')) {
-    setTimeout(function() { banner.classList.add('show'); }, 3000);
-  }
-});
-window.triggerInstall = function() {
-  if (deferredInstallPrompt) {
-    deferredInstallPrompt.prompt();
-    deferredInstallPrompt.userChoice.then(function(r) {
-      deferredInstallPrompt = null;
-      document.getElementById('installBanner').classList.remove('show');
-    });
-  } else {
-    // iOS instructions
-    showToast('Tap Share → Add to Home Screen');
-  }
-};
-window.dismissInstall = function() {
-  document.getElementById('installBanner').classList.remove('show');
-  localStorage.setItem('installDismissed', '1');
+// -- TOAST -------------------------------
+window.showToast = function(msg, ms) {
+  ms = ms || 2200;
+  document.querySelectorAll('.toast').forEach(function(t) { t.remove(); });
+  var t = document.createElement('div');
+  t.className = 'toast'; t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(function() { t.remove(); }, ms);
 };
 
-// ═══════════════════════════════════════════════════
-// ALERTS TAB
-// ═══════════════════════════════════════════════════
-function getAlertData() {
-  var vs = getVehicles();
-  var alerts = [];
-  vs.forEach(function(v) {
-    if (v.daysInStock > 60) {
-      alerts.push({
-        type: 'AGED STOCK', color: '#C8102E',
-        title: v.registration + ' — ' + v.make + ' ' + v.model,
-        sub: v.daysInStock + ' days in stock · ' + (v.workflowStage || 'Unknown stage'),
-        time: 'Flagged today', sn: v.stockNo
-      });
-    }
-    if (v.blocked) {
-      alerts.push({
-        type: 'VEHICLE BLOCKED', color: '#ea580c',
-        title: v.registration + ' — ' + v.make + ' ' + v.model,
-        sub: 'Blocked at ' + (v.workflowStage || 'stage') + ' · ' + v.daysInStage + 'd at this stage',
-        time: 'Needs attention', sn: v.stockNo
-      });
-    }
-    if (v.daysInStage > 5) {
-      alerts.push({
-        type: 'STAGE OVERDUE', color: '#d4980a',
-        title: v.registration + ' — ' + v.workflowStage,
-        sub: v.make + ' ' + v.model + ' · ' + v.daysInStage + ' days at this stage',
-        time: v.daysInStage + 'd overdue', sn: v.stockNo
-      });
-    }
-  });
-  return alerts.slice(0, 30);
+// -- STAFF LOGIN CARDS --------------------
+var DEPT_COLORS = {
+  Management:'#64748b', Sales:'#3b82f6', Workshop:'#ef4444',
+  Valeting:'#10b981', Intake:'#6366f1', 'Dent Repair':'#06b6d4'
+};
+
+function buildStaffCards() {
+  var wrap = document.getElementById('staffCards');
+  if (!wrap) return;
+  var ops  = ['stanslaw','morteza','marcin','sia','gorgino','germaine'];
+  var mgmt = ['keith','ibrahim'];
+
+  function addLabel(txt) {
+    var d = document.createElement('div');
+    d.className = 'sec-lbl';
+    d.textContent = txt;
+    wrap.appendChild(d);
+  }
+  function ini(n) { return (n||'').split(' ').map(function(p){return p[0];}).join('').toUpperCase().slice(0,2); }
+  function makeCard(key) {
+    if (!USERS[key]) return;
+    var u = USERS[key];
+    var dc = DEPT_COLORS[u.dept] || '#888';
+    var card = document.createElement('div');
+    card.className = 'staff-card';
+    card.style.setProperty('--dc', dc);
+    card.innerHTML =
+      '<div class="sc-av" style="background:' + dc + '">' + ini(u.name) + '</div>' +
+      '<div class="sc-info">' +
+        '<div class="sc-name">' + u.name + '</div>' +
+        '<div class="sc-role">' + u.role + ' &middot; <em>' + u.dept + '</em></div>' +
+      '</div>' +
+      '<div class="sc-arrow"><i class="fas fa-chevron-right"></i></div>';
+
+    card.addEventListener('touchstart', function() {
+      card.classList.add('pressed');
+    }, {passive: true});
+    card.addEventListener('touchend', function() {
+      card.classList.remove('pressed');
+    }, {passive: true});
+
+    card.onclick = function() {
+      // Loading state
+      card.classList.add('loading');
+      document.getElementById('loginUser').value = key;
+      document.getElementById('loginPass').value = 'demo123';
+      setTimeout(function() {
+        card.classList.remove('loading');
+        doLogin();
+      }, 180);
+    };
+    wrap.appendChild(card);
+  }
+
+  addLabel('Operations');
+  ops.forEach(makeCard);
+  addLabel('Management');
+  mgmt.forEach(makeCard);
 }
 
-function renderAlerts() {
-  var el = document.getElementById('pv-alerts');
-  if (!el) return;
-  var alerts = CU && CU.admin ? getAlertData() :
-    getAlertData().filter(function(a) {
-      var v = getVehicles().find(function(vv) { return vv.stockNo === a.sn; });
-      if (!v) return false;
-      var st = AC_WORKFLOW_STAGES.find(function(s) { return s.name === v.workflowStage; });
-      return st && (CU ? st.dept === CU.dept : false);
-    });
+buildStaffCards();
 
-  var count = alerts.length;
-  var badge = document.getElementById('alertCountBadge');
-  if (badge) badge.textContent = count;
-  var pipEl = document.getElementById('alertpip');
-  if (pipEl) pipEl.style.display = count > 0 ? 'block' : 'none';
-
-  if (count === 0) {
-    el.innerHTML = '<div class="emp"><i class="fas fa-check-circle" style="color:var(--green);opacity:1"></i><p>All clear</p><span>No active alerts for your vehicles</span></div>';
-    return;
-  }
-
-  var html = '';
-  alerts.forEach(function(a, i) {
-    html += '<div class="alert-item" style="--ac:' + a.color + '" onclick="openVehicle(\'' + a.sn + '\')">';
-    html += '<div class="alert-item-type">' + a.type + '</div>';
-    html += '<div class="alert-item-title">' + a.title + '</div>';
-    html += '<div class="alert-item-sub">' + a.sub + '</div>';
-    html += '<div class="alert-item-time"><i class="fas fa-clock" style="font-size:9px;margin-right:3px"></i>' + a.time + '</div>';
-    html += '</div>';
-  });
-  el.innerHTML = html;
-}
-
-// ═══════════════════════════════════════════════════
-// CAMERA / PHOTO CAPTURE
-// ═══════════════════════════════════════════════════
-var cameraStream = null;
-var currentPhotoSlot = null;
-var currentPhotoVehicle = null;
-var capturedPhotos = {}; // stockNo -> { slotIdx: dataURL }
-
-window.openCamera = function(slotIdx, vehicleSn, slotLabel) {
-  currentPhotoSlot = slotIdx;
-  currentPhotoVehicle = vehicleSn;
-  var overlay = document.getElementById('cameraOverlay');
-  var video   = document.getElementById('cameraVideo');
-  var labelEl = document.getElementById('cameraSlotLabel');
-  if (labelEl) labelEl.textContent = slotLabel || 'Photo';
-  overlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-
-  // Show existing captures in preview strip
-  updatePreviewStrip(vehicleSn);
-
-  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia({ 
-      video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 960 } }
-    }).then(function(stream) {
-      cameraStream = stream;
-      video.srcObject = stream;
-      video.play();
-    }).catch(function(err) {
-      // No camera — show simulated capture mode
-      video.style.background = 'linear-gradient(135deg, #0B1120, #001750)';
-      video.style.display = 'none';
-      document.getElementById('simModeMsg').style.display = 'flex';
-    });
-  } else {
-    document.getElementById('simModeMsg').style.display = 'flex';
-  }
+// Manual login toggle
+window.toggleManual = function() {
+  var f = document.getElementById('manualFields');
+  var ch = document.getElementById('manualChevron');
+  var open = f.classList.toggle('open');
+  if (ch) ch.style.transform = open ? 'rotate(180deg)' : '';
 };
 
-window.closeCamera = function() {
-  if (cameraStream) {
-    cameraStream.getTracks().forEach(function(t) { t.stop(); });
-    cameraStream = null;
-  }
-  document.getElementById('cameraOverlay').classList.remove('active');
-  document.getElementById('cameraVideo').style.display = 'block';
-  document.getElementById('simModeMsg').style.display = 'none';
-  document.body.style.overflow = '';
-  currentPhotoSlot = null;
-  currentPhotoVehicle = null;
-};
-
-window.capturePhoto = function() {
-  var sn  = currentPhotoVehicle;
-  var idx = currentPhotoSlot;
-  if (!sn) return;
-
-  var video   = document.getElementById('cameraVideo');
-  var canvas  = document.getElementById('cameraCanvas');
-  var ctx     = canvas.getContext('2d');
-  var dataUrl = null;
-
-  if (cameraStream && video.readyState >= 2) {
-    canvas.width  = video.videoWidth  || 640;
-    canvas.height = video.videoHeight || 480;
-    ctx.drawImage(video, 0, 0);
-    dataUrl = canvas.toDataURL('image/jpeg', 0.8);
-  } else {
-    // Simulate: generate a placeholder image
-    canvas.width = 320; canvas.height = 240;
-    ctx.fillStyle = '#0B1120';
-    ctx.fillRect(0, 0, 320, 240);
-    ctx.fillStyle = 'rgba(255,255,255,.08)';
-    for (var i = 0; i < 8; i++) {
-      ctx.fillRect(i * 40, 0, 1, 240);
-      ctx.fillRect(0, i * 30, 320, 1);
-    }
-    ctx.fillStyle = '#C8102E';
-    ctx.fillRect(130, 100, 60, 40);
-    ctx.fillStyle = '#fff';
-    ctx.font = 'bold 11px Arial';
-    ctx.textAlign = 'center';
-    ctx.fillText('Photo Captured', 160, 195);
-    ctx.fillStyle = 'rgba(255,255,255,.4)';
-    ctx.font = '9px Arial';
-    ctx.fillText(new Date().toLocaleTimeString(), 160, 210);
-    dataUrl = canvas.toDataURL('image/jpeg', 0.8);
-  }
-
-  if (!capturedPhotos[sn]) capturedPhotos[sn] = {};
-  capturedPhotos[sn][idx] = dataUrl;
-
-  if (!STATE.photos[sn]) STATE.photos[sn] = {};
-  STATE.photos[sn][idx] = true;
-
-  // Flash effect
-  var flash = document.getElementById('cameraFlash');
-  if (flash) {
-    flash.style.opacity = '1';
-    setTimeout(function() { flash.style.opacity = '0'; }, 150);
-  }
-
-  // Update preview strip
-  updatePreviewStrip(sn);
-
-  // Update photo slot in UI if visible
-  var slotEl = document.getElementById('ps_' + sn + '_' + idx);
-  if (slotEl) {
-    slotEl.classList.add('taken', 'has-img');
-    slotEl.classList.remove('pslot');
-    slotEl.innerHTML = '<img src="' + dataUrl + '" style="width:100%;height:100%;object-fit:cover;border-radius:7px">' +
-      '<div class="pstick" style="display:flex">✓</div>';
-  }
-
-  showToast('📸 Photo saved');
-
-  // Auto-advance to next empty slot
-  if (currentPhotoVehicle) {
-    setTimeout(function() {
-      closeCamera();
-    }, 400);
-  }
-};
-
-function updatePreviewStrip(sn) {
-  var strip = document.getElementById('camPreviewStrip');
-  if (!strip || !capturedPhotos[sn]) return;
-  var html = '';
-  var photos = capturedPhotos[sn];
-  Object.keys(photos).forEach(function(idx) {
-    html += '<img class="cam-thumb" src="' + photos[idx] + '" alt="Photo ' + idx + '">';
-  });
-  strip.innerHTML = html;
-}
-
-// Override the photo tab to use real camera
-window.tPhoto = function(i, sn, label) {
-  var resolvedSn = sn || (CV ? CV.stockNo : null);
-  if (!resolvedSn) return;
-  
-  var photoLabels = ['Front view','Rear view','Driver side','Passenger side',
-    'Dashboard','Odometer','Engine bay','Boot / load area',
-    'Damage 1','Damage 2','Interior','Windscreen'];
-  
-  openCamera(i, resolvedSn, label || photoLabels[i] || 'Photo ' + (i+1));
-};
-
-// ═══════════════════════════════════════════════════
-// NOTIFICATION PANEL
-// ═══════════════════════════════════════════════════
-window.toggleNotifPanel = function() {
-  var panel = document.getElementById('notifPanel');
-  if (!panel) return;
-  panel.classList.toggle('open');
-};
-
-function buildNotifPanel() {
-  var alerts = getAlertData().slice(0, 5);
-  var panel  = document.getElementById('notifPanel');
-  if (!panel) return;
-  var items = alerts.map(function(a) {
-    return '<div class="notif-item" onclick="openVehicle(\'' + a.sn + '\');toggleNotifPanel()">' +
-      '<div class="notif-dot" style="background:' + a.color + '"></div>' +
-      '<div><div class="notif-item-text">' + a.title + '</div>' +
-      '<div class="notif-item-time">' + a.type + ' · ' + a.time + '</div></div>' +
-      '</div>';
-  }).join('');
-  panel.querySelector('.notif-items').innerHTML = items || 
-    '<div style="padding:14px;text-align:center;font-size:12px;color:var(--muted)">All clear ✓</div>';
-}
-
-// Close notification panel on outside click
-document.addEventListener('click', function(e) {
-  var panel = document.getElementById('notifPanel');
-  var btn   = document.getElementById('notifBtn');
-  if (panel && panel.classList.contains('open') && !panel.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
-    panel.classList.remove('open');
-  }
-});
-
-// ═══════════════════════════════════════════════════
-// OVERRIDE setTab to include alerts
-// ═══════════════════════════════════════════════════
-var _origSetTab = setTab;
-window.setTab = function(tab) {
-  activeTab = tab;
-  document.querySelectorAll('.bn').forEach(function(b) { b.classList.remove('active'); });
-  var bnEl = document.getElementById('bn-' + tab);
-  if (bnEl) bnEl.classList.add('active');
-  document.querySelectorAll('.pv').forEach(function(p) { p.classList.remove('active'); });
-  var pv = document.getElementById('pv-' + tab);
-  if (pv) pv.classList.add('active');
-  var bodyEl = document.getElementById('abody');
-  if (bodyEl) bodyEl.scrollTop = 0;
-  var renders = { home: renderHome, tasks: renderTasks, keys: renderKeys, me: renderMe, alerts: renderAlerts };
-  if (renders[tab]) renders[tab]();
-};
-
-// ═══════════════════════════════════════════════════
-// OVERRIDE doLogin to also refresh alerts + notif
-// ═══════════════════════════════════════════════════
+// -- OVERRIDE doLogin to use screen manager --
 var _origDoLogin = doLogin;
 window.doLogin = function() {
-  var u = document.getElementById('loginUser').value.trim().toLowerCase();
-  var p = document.getElementById('loginPass').value;
+  var u    = document.getElementById('loginUser').value.trim().toLowerCase();
+  var p    = document.getElementById('loginPass').value;
   var user = USERS[u];
   var err  = document.getElementById('loginErr');
+
   if (!user || user.pass !== p) {
     err.style.display = 'block';
     setTimeout(function() { err.style.display = 'none'; }, 2500);
@@ -2391,107 +2037,358 @@ window.doLogin = function() {
   }
   CU = user;
   document.getElementById('hdrName').textContent = CU.name;
-  document.getElementById('hdrRole').textContent = CU.role;
-  
-  var allAlerts = getAlertData();
-  var myAlerts = CU.admin ? allAlerts : allAlerts.filter(function(a) {
-    var v = getVehicles().find(function(vv) { return vv.stockNo === a.sn; });
+  document.getElementById('hdrRole').textContent = CU.role + ' . ' + CU.dept;
+
+  // Alert counts
+  var alertData = getAlertData();
+  var myAlerts  = CU.admin ? alertData : alertData.filter(function(a) {
+    var v  = getVehicles().find(function(vv) { return vv.stockNo === a.sn; });
     if (!v) return false;
     var st = AC_WORKFLOW_STAGES.find(function(s) { return s.name === v.workflowStage; });
     return st && st.dept === CU.dept;
   });
-  
-  var urgCount = myAlerts.length;
-  var nbadge = document.getElementById('nbadge');
-  var taskpip = document.getElementById('taskpip');
-  var alertpip = document.getElementById('alertpip');
-  if (nbadge) nbadge.style.display = urgCount > 0 ? 'block' : 'none';
-  if (taskpip) { 
-    var urgTasks = getMyVehicles().filter(function(v) { return v.daysInStock > 60 || v.blocked; });
-    taskpip.style.display = urgTasks.length > 0 ? 'block' : 'none';
+
+  var cnt = myAlerts.length;
+  var urgVehicles = getMyVehicles().filter(function(v) { return v.daysInStock > 60 || v.blocked; });
+
+  // Badge dots
+  if (cnt > 0) {
+    document.getElementById('nbadge').style.display = 'block';
+    var ab = document.getElementById('alertBadge');
+    if (ab) { ab.textContent = cnt > 9 ? '9+' : cnt; ab.style.display = 'flex'; }
   }
-  if (alertpip) alertpip.style.display = urgCount > 0 ? 'block' : 'none';
-  
-  var alertBadge = document.getElementById('alertNavBadge');
-  if (alertBadge && urgCount > 0) {
-    alertBadge.textContent = urgCount > 9 ? '9+' : urgCount;
-    alertBadge.style.display = 'flex';
+  if (urgVehicles.length > 0) {
+    var tp = document.getElementById('taskpip');
+    if (tp) tp.style.display = 'block';
   }
-  
-  buildNotifPanel();
-  
-  document.getElementById('sc-login').classList.remove('active');
-  document.getElementById('appShell').classList.add('active');
+
+  buildNotifItems(myAlerts);
+  showScreen('sc-app');
   setTab('home');
 };
 
-// Override selectUser to also sync login
-window.selectUser = function(key) {
-  window._selectedUser = key;
-  document.querySelectorAll('.selcard').forEach(function(c) { c.classList.remove('selected'); });
-  var card = document.getElementById('sc_' + key);
-  if (card) card.classList.add('selected');
-  document.getElementById('loginUser').value = key;
-  document.getElementById('loginPass').value = 'demo123';
+// -- OVERRIDE doLogout --
+window.doLogout = function() {
+  CU = null; CV = null; activeTab = 'home';
+  // Reset badges
+  document.getElementById('nbadge').style.display = 'none';
+  var ab = document.getElementById('alertBadge');
+  if (ab) ab.style.display = 'none';
+  var tp = document.getElementById('taskpip');
+  if (tp) tp.style.display = 'none';
+  // Reset cards selection
+  document.querySelectorAll('.staff-card').forEach(function(c) { c.classList.remove('pressed','loading'); });
+  showScreen('sc-login');
 };
 
+// -- OVERRIDE closeVehicle / afterSuccess --
+window.closeVehicle = function() {
+  document.getElementById('vdScreen').classList.remove('active');
+  showScreen('sc-app');
+  setTab(activeTab || 'tasks');
+};
+window.afterSuccess = function() {
+  document.getElementById('sucScreen').classList.remove('active');
+  showScreen('sc-app');
+  CV = null;
+  setTab('tasks');
+};
+window.completeStage2 = completeStage; // keep ref
+window.completeStage = function() {
+  var cur = getCurStage ? getCurStage() : null;
+  var nxt = getNextStage ? getNextStage() : null;
+  var hn  = document.getElementById('ho_note') ? document.getElementById('ho_note').value : '';
+  var hp  = document.getElementById('ho_pri')  ? document.getElementById('ho_pri').value  : 'Normal';
+  var ha  = document.getElementById('ho_asgn') ? document.getElementById('ho_asgn').value : '';
+  if (!STATE.notes[CV.stockNo]) STATE.notes[CV.stockNo] = [];
+  var d = new Date(), ts = d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'})+' '+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  STATE.notes[CV.stockNo].push({who:CU.name, ts:ts, text:'"'+(cur?cur.name:'Stage')+'" completed'+(hn?' -- '+hn:'')+' ['+hp+']'+(ha?' → '+ha:'')});
+  document.getElementById('sucH').textContent = nxt ? 'Stage Complete!' : 'Vehicle Complete!';
+  document.getElementById('sucS').textContent = nxt
+    ? '"'+(cur?cur.name:'Stage')+'" signed off. '+(ha||nxt.dept)+' assigned for "'+(nxt.name)+'" ['+hp+']. Audit logged.'
+    : CV.registration+' has completed all workflow stages. 🎉';
+  showScreen('sc-app'); // hide app
+  document.getElementById('vdScreen').classList.remove('active');
+  document.getElementById('sucScreen').classList.add('active');
+};
 
-/* ═══ QUICK-SELECT LOGIN CARDS ═══ */
-(function buildLoginCards() {
-  var ops  = ['stanslaw','morteza','marcin','sia','gorgino','germaine'];
-  var mgmt = ['keith','ibrahim'];
-  var wrap = document.getElementById('loginQuickCards');
-  if (!wrap) return;
+// -- OVERRIDE openVehicle --
+var _origOpenVehicle = openVehicle;
+window.openVehicle = function(sn) {
+  showScreen('sc-app'); // ensure app screen active
+  _origOpenVehicle(sn);
+  document.getElementById('vdScreen').classList.add('active');
+};
 
-  function roleColor(dept) {
-    var m = {Management:'#64748b',Sales:'#3b82f6',Workshop:'#ef4444',Valeting:'#10b981',Intake:'#6366f1','Dent Repair':'#06b6d4'};
-    return m[dept] || '#888';
+// -- TABS (with alerts) --
+window.setTab = function(tab) {
+  activeTab = tab;
+  document.querySelectorAll('.bn').forEach(function(b) { b.classList.remove('active'); });
+  var bn = document.getElementById('bn-'+tab);
+  if (bn) bn.classList.add('active');
+  document.querySelectorAll('.pv').forEach(function(p) { p.classList.remove('active'); });
+  var pv = document.getElementById('pv-'+tab);
+  if (pv) pv.classList.add('active');
+  document.getElementById('abody').scrollTop = 0;
+  var _renders = {home:renderHome, tasks:renderTasks, keys:renderKeys, me:renderMe, alerts:renderAlerts};
+  if (_renders[tab]) _renders[tab]();
+};
+
+// -- ALERTS ------------------------------
+function getAlertData() {
+  var vs = getVehicles(), alerts = [];
+  vs.forEach(function(v) {
+    if (v.daysInStock > 60) alerts.push({
+      type:'AGED STOCK', color:'#C8102E', sn:v.stockNo,
+      title:v.registration+' -- '+v.make+' '+v.model,
+      sub:v.daysInStock+'d in stock . '+v.workflowStage, time:'Flagged today'
+    });
+    if (v.blocked) alerts.push({
+      type:'BLOCKED', color:'#ea580c', sn:v.stockNo,
+      title:v.registration+' -- '+v.make+' '+v.model,
+      sub:'Blocked at '+v.workflowStage+' . '+(v.daysInStage||0)+'d at stage', time:'Needs attention'
+    });
+    if (!v.blocked && (v.daysInStage||0) > 5) alerts.push({
+      type:'STAGE OVERDUE', color:'#d4980a', sn:v.stockNo,
+      title:v.registration+' -- '+v.workflowStage,
+      sub:v.make+' '+v.model+' . '+(v.daysInStage||0)+'d at this stage', time:(v.daysInStage||0)+'d'
+    });
+  });
+  return alerts.slice(0,40);
+}
+
+function renderAlerts() {
+  var el = document.getElementById('pv-alerts');
+  if (!el) return;
+  var all = getAlertData();
+  var mine = CU && CU.admin ? all : all.filter(function(a) {
+    var v  = getVehicles().find(function(vv) { return vv.stockNo === a.sn; });
+    if (!v) return false;
+    var st = AC_WORKFLOW_STAGES.find(function(s) { return s.name === v.workflowStage; });
+    return st && CU && st.dept === CU.dept;
+  });
+  if (!mine.length) {
+    el.innerHTML = '<div class="emp"><i class="fas fa-check-circle" style="color:var(--green);opacity:1"></i><p>All clear</p><span>No active alerts for your vehicles</span></div>';
+    return;
   }
-  function makeCard(key) {
-    if (!USERS[key]) return;
-    var u  = USERS[key];
-    var dc = roleColor(u.dept);
-    var ini = u.name.split(' ').map(function(p){return p[0];}).join('').toUpperCase().slice(0,2);
-    var div = document.createElement('div');
-    div.style.cssText = 'display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:11px;cursor:pointer;border:1.5px solid '+dc+'30;background:'+dc+'08;transition:.14s;-webkit-tap-highlight-color:transparent';
-    div.innerHTML = '<div style="width:36px;height:36px;border-radius:50%;background:'+dc+';color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0">'+ini+'</div>'
-      + '<div style="flex:1"><div style="font-size:13px;font-weight:700;color:var(--text)">'+u.name+'</div>'
-      + '<div style="font-size:10px;color:var(--muted)">'+u.role+' &middot; <span style="color:'+dc+';font-weight:700">'+u.dept+'</span></div></div>'
-      + '<div style="width:24px;height:24px;border-radius:50%;background:'+dc+'18;display:flex;align-items:center;justify-content:center;font-size:10px;color:'+dc+'"><i class="fas fa-chevron-right"></i></div>';
-    div.addEventListener('touchstart', function() { div.style.background = dc+'18'; }, {passive:true});
-    div.addEventListener('touchend',   function() { div.style.background = dc+'08'; }, {passive:true});
-    div.onclick = function() { selectUser(key); doLogin(); };
-    wrap.appendChild(div);
-  }
+  var html = '<div class="sh">ALERTS <span style="font-size:10px;color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0">'+mine.length+' active</span></div>';
+  mine.forEach(function(a) {
+    html += '<div class="alert-item" style="--ac:'+a.color+'" onclick="openVehicle('+a.sn+')">';
+    html += '<div class="ai-type">'+a.type+'</div>';
+    html += '<div class="ai-title">'+a.title+'</div>';
+    html += '<div class="ai-sub">'+a.sub+'</div>';
+    html += '<div class="ai-foot"><div class="ai-time"><i class="fas fa-clock"></i>'+a.time+'</div><div class="ai-open">Open →</div></div>';
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
 
-  // Section label
-  function addLabel(text) {
-    var lbl = document.createElement('div');
-    lbl.style.cssText = 'font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:6px 0 4px';
-    lbl.textContent = text;
-    wrap.appendChild(lbl);
+function buildNotifItems(alerts) {
+  var el = document.getElementById('notifItems');
+  if (!el) return;
+  if (!alerts || !alerts.length) {
+    el.innerHTML = '<div style="padding:14px;text-align:center;font-size:12px;color:var(--muted)">All clear ✓</div>';
+    return;
   }
+  el.innerHTML = alerts.slice(0,5).map(function(a) {
+    return '<div class="nd-item" onclick="openVehicle('+a.sn+');toggleNotif()">' +
+      '<div class="nd-dot" style="background:'+a.color+'"></div>' +
+      '<div><div class="nd-txt">'+a.title+'</div><div class="nd-time">'+a.type+' . '+a.time+'</div></div>' +
+      '</div>';
+  }).join('');
+}
 
-  addLabel('Operations');
-  ops.forEach(makeCard);
-  addLabel('Management');
-  mgmt.forEach(makeCard);
+window.toggleNotif = function() {
+  document.getElementById('notifDrop').classList.toggle('open');
+};
+document.addEventListener('click', function(e) {
+  var drop = document.getElementById('notifDrop');
+  var btn  = document.getElementById('notifBtn');
+  if (drop && drop.classList.contains('open') && !drop.contains(e.target) && btn && !btn.contains(e.target)) {
+    drop.classList.remove('open');
+  }
+});
+
+// -- CAMERA ------------------------------
+var camStream = null, camSlot = null, camSN = null;
+var capturedPhotos = {};
+var PHOTO_LABELS = ['Front view','Rear view','Driver side','Passenger side',
+  'Dashboard','Odometer','Engine bay','Boot / load area',
+  'Damage 1','Damage 2','Interior','Windscreen'];
+
+// Override renderPhotosTab to use camera
+window.renderPhotosTab = function() {
+  var el = document.getElementById('vtc-photos');
+  if (!el) return;
+  var sn = CV.stockNo;
+  var h  = '<div class="sh">TAP TO CAPTURE PHOTO</div><div class="pgrid">';
+  PHOTO_LABELS.forEach(function(lbl, i) {
+    var imgData = capturedPhotos[sn] && capturedPhotos[sn][i];
+    var taken   = imgData || (STATE.photos[sn] && STATE.photos[sn][i]);
+    if (imgData) {
+      h += '<div class="pslot has-photo" id="ps_'+sn+'_'+i+'" onclick="camOpen('+i+',this.dataset.sn,this.dataset.lbl,event)" data-sn="'+sn+'" data-lbl="'+lbl+'">';
+      h += '<img src="'+imgData+'" alt="'+lbl+'">';
+      h += '<div class="pstick">✓</div>';
+    } else {
+      h += '<div class="pslot '+(taken?'taken':'')+'" id="ps_'+sn+'_'+i+'" onclick="camOpen('+i+',this.dataset.sn,this.dataset.lbl,event)" data-sn="'+sn+'" data-lbl="'+lbl+'">';
+      h += '<div class="pstick">✓</div>';
+      h += '<div class="psico"><i class="fas fa-camera" style="font-size:18px;color:var(--muted)"></i></div>';
+      h += '<div class="pslbl">'+lbl+'</div>';
+    }
+    h += '</div>';
+  });
+  h += '</div>';
+  h += '<div class="abanner info"><i class="fas fa-info-circle"></i><span>Tap any slot to open the camera and capture a real photo. Photos save to this vehicle record.</span></div>';
+  el.innerHTML = h;
+};
+
+window.camOpen = function(slot, sn, label, e) {
+  if (e) e.stopPropagation();
+  camSlot = slot;
+  camSN   = sn;
+  document.getElementById('camLabel').textContent = label || 'Photo';
+  document.getElementById('cameraOverlay').classList.add('active');
+  document.getElementById('camVideo').style.display = 'block';
+  document.getElementById('camSimMode').style.display = 'none';
+  updateCamPreview(sn);
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({video:{facingMode:'environment',width:{ideal:1280},height:{ideal:960}},audio:false})
+      .then(function(stream) {
+        camStream = stream;
+        var v = document.getElementById('camVideo');
+        v.srcObject = stream;
+        v.play();
+      }).catch(function() {
+        document.getElementById('camVideo').style.display = 'none';
+        document.getElementById('camSimMode').style.display = 'flex';
+      });
+  } else {
+    document.getElementById('camVideo').style.display = 'none';
+    document.getElementById('camSimMode').style.display = 'flex';
+  }
+};
+
+window.camClose = function() {
+  if (camStream) { camStream.getTracks().forEach(function(t) { t.stop(); }); camStream = null; }
+  document.getElementById('cameraOverlay').classList.remove('active');
+  camSlot = null; camSN = null;
+};
+
+window.camCapture = function() {
+  var sn  = camSN, slot = camSlot;
+  if (sn === null || slot === null) return;
+  var video  = document.getElementById('camVideo');
+  var canvas = document.getElementById('camCanvas');
+  var ctx    = canvas.getContext('2d');
+  var dataUrl;
+  if (camStream && video.readyState >= 2 && video.videoWidth > 0) {
+    canvas.width = video.videoWidth; canvas.height = video.videoHeight;
+    ctx.drawImage(video, 0, 0);
+    dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+  } else {
+    // Simulated capture
+    canvas.width = 640; canvas.height = 480;
+    var grad = ctx.createLinearGradient(0,0,640,480);
+    grad.addColorStop(0,'#0B1120'); grad.addColorStop(1,'#001750');
+    ctx.fillStyle = grad; ctx.fillRect(0,0,640,480);
+    ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=1;
+    for(var xi=0;xi<640;xi+=40){ctx.beginPath();ctx.moveTo(xi,0);ctx.lineTo(xi,480);ctx.stroke();}
+    for(var yi=0;yi<480;yi+=40){ctx.beginPath();ctx.moveTo(0,yi);ctx.lineTo(640,yi);ctx.stroke();}
+    ctx.fillStyle='rgba(200,16,46,.8)';ctx.fillRect(270,190,100,60);
+    ctx.fillStyle='#fff';ctx.font='bold 13px Arial';ctx.textAlign='center';
+    ctx.fillText(PHOTO_LABELS[slot]||'Photo',320,295);
+    ctx.fillStyle='rgba(255,255,255,.35)';ctx.font='11px Arial';
+    ctx.fillText(new Date().toLocaleTimeString(),320,315);
+    dataUrl = canvas.toDataURL('image/jpeg',0.8);
+  }
+  // Save
+  if (!capturedPhotos[sn]) capturedPhotos[sn] = {};
+  capturedPhotos[sn][slot] = dataUrl;
+  if (!STATE.photos[sn]) STATE.photos[sn] = {};
+  STATE.photos[sn][slot] = true;
+  // Flash
+  var fl = document.getElementById('camFlash');
+  fl.style.opacity = '1'; setTimeout(function(){fl.style.opacity='0';},120);
+  // Update slot in UI
+  var slotEl = document.getElementById('ps_'+sn+'_'+slot);
+  if (slotEl) {
+    slotEl.className = 'pslot has-photo';
+    slotEl.innerHTML = '<img src="'+dataUrl+'" alt="'+PHOTO_LABELS[slot]+'">' +
+      '<div class="pstick" style="display:flex">✓</div>';
+    slotEl.onclick = (function(s,sn2,lbl) { return function(e) { camOpen(s,sn2,lbl,e); }; })(slot, sn, PHOTO_LABELS[slot]);
+  }
+  updateCamPreview(sn);
+  showToast('📸 Photo saved');
+  setTimeout(camClose, 350);
+};
+
+function updateCamPreview(sn) {
+  var strip = document.getElementById('camPreview');
+  if (!strip || !capturedPhotos[sn]) return;
+  strip.innerHTML = Object.values(capturedPhotos[sn]).map(function(d) {
+    return '<img class="cam-thumb" src="'+d+'" alt="">';
+  }).join('');
+}
+
+// -- PWA INSTALL --------------------------
+var deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', function(e) {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (!localStorage.getItem('ce_install_dismissed')) {
+    setTimeout(function() { document.getElementById('installBanner').classList.add('show'); }, 4000);
+  }
+});
+window.installApp = function() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function() {
+      deferredPrompt = null;
+      document.getElementById('installBanner').classList.remove('show');
+    });
+  } else {
+    showToast('Tap Share → Add to Home Screen (iOS)');
+  }
+};
+window.dismissInstall = function() {
+  document.getElementById('installBanner').classList.remove('show');
+  localStorage.setItem('ce_install_dismissed','1');
+};
+window.addEventListener('appinstalled', function() {
+  document.getElementById('installBanner').classList.remove('show');
+});
+
+// -- PWA MANIFEST ------------------------
+(function() {
+  var m = {name:"CapEye -- Auto Capital",short_name:"CapEye",description:"Vehicle workflow staff app",start_url:"./",display:"standalone",background_color:"#0B1120",theme_color:"#001A5E",orientation:"portrait-primary",
+    icons:[{src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=",sizes:"192x192",type:"image/svg+xml",purpose:"any maskable"},{src:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MCIgZmlsbD0iIzAwMUE1RSIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxNzYiIGhlaWdodD0iMTc2IiByeD0iMzQiIGZpbGw9IiMwMDFBNUUiLz4KICA8cmVjdCB4PSIyMCIgeT0iODIiIHdpZHRoPSIxNTIiIGhlaWdodD0iMjgiIHJ4PSI0IiBmaWxsPSIjQzgxMDJFIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI5NiIgeT0iNzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2FwPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSI3MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNDODEwMkUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR4PSIyOCI+RXllPC90ZXh0PgogIDx0ZXh0IHg9Ijk2IiB5PSIxMjQiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkFVVE8gQ0FQSVRBTDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI5NiIgY3k9IjE1MiIgcj0iOCIgZmlsbD0iI0M4MTAyRSIvPgo8L3N2Zz4=",sizes:"512x512",type:"image/svg+xml",purpose:"any maskable"}]};
+  try {
+    var b = new Blob([JSON.stringify(m)],{type:'application/manifest+json'});
+    var l = document.createElement('link');
+    l.rel='manifest'; l.href=URL.createObjectURL(b);
+    document.head.appendChild(l);
+  } catch(e) {}
 })();
-</script>
 
-<!-- Service Worker -->
-<script>
+// -- SERVICE WORKER -----------------------
 if ('serviceWorker' in navigator) {
-  // Register inline service worker for offline caching
-  var swCode = [
-    "const CACHE='capeye-v1';",
-    "const ASSETS=['./','/'];",
-    "self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});",
-    "self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));})"
+  var swSrc = [
+    "var C='capeye-v1';",
+    "self.addEventListener('install',function(e){self.skipWaiting();});",
+    "self.addEventListener('activate',function(e){e.waitUntil(clients.claim());});",
+    "self.addEventListener('fetch',function(e){",
+    "  e.respondWith(caches.open(C).then(function(cache){",
+    "    return fetch(e.request).then(function(r){",
+    "      if(e.request.method==='GET')cache.put(e.request,r.clone());",
+    "      return r;",
+    "    }).catch(function(){return caches.match(e.request);});",
+    "  }));",
+    "})"
   ].join('\n');
-  var swBlob = new Blob([swCode], {type:'text/javascript'});
-  var swUrl  = URL.createObjectURL(swBlob);
-  navigator.serviceWorker.register(swUrl).catch(function(){});
+  try {
+    var swBlob = new Blob([swSrc],{type:'text/javascript'});
+    navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(function(){});
+  } catch(e) {}
 }
 </script>
 </body>
